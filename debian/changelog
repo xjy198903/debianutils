@@ -1,3 +1,9 @@
+debianutils (4.3.1) unstable; urgency=low
+
+  * Updated Spanish man page translation from Omar Campagne.  closes: #673631.
+
+ -- Clint Adams <clint@debian.org>  Thu, 31 May 2012 20:56:30 -0400
+
 debianutils (4.3) unstable; urgency=low
 
   * Patch from Wookey to set Multi-Arch: foreign.  closes: #665964.
