@@ -1,3 +1,13 @@
+debianutils (4.3.2) unstable; urgency=low
+
+  * Fix list of utilities in long description.  closes: #666077.
+  * run-parts(8): clarify that run-parts execution order is not
+    locale-dependent.  closes: #654340.
+  * tempfile(1): note that tempfile cannot create directories.
+    closes: #457974.
+
+ -- Clint Adams <clint@debian.org>  Wed, 27 Jun 2012 21:44:53 -0400
+
 debianutils (4.3.1) unstable; urgency=low
 
   * Updated Spanish man page translation from Omar Campagne.  closes: #673631.
