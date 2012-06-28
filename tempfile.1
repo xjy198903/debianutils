@@ -1,5 +1,5 @@
 .\" -*- nroff -*-
-.TH TEMPFILE 1 "30 May 2011" "Debian"
+.TH TEMPFILE 1 "27 Jun 2012" "Debian"
 .SH NAME
 tempfile \- create a temporary file in a safe manner
 .SH SYNOPSIS
@@ -72,8 +72,8 @@ An exit status of 0 means the temporary file was created successfully.
 Any other exit status indicates an error.
 .SH BUGS
 Exclusive creation is not guaranteed when creating files on NFS
-partitions.  tempfile is deprecated; you should use mktemp(1)
-instead.
+partitions.  tempfile cannot make temporary directories.
+tempfile is deprecated; you should use mktemp(1) instead.
 .SH EXAMPLE
 
 .RS
