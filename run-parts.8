@@ -5,7 +5,7 @@
 .\"
 .\" This is free software; see the GNU General Public Licence version 2
 .\" or later for copying conditions.  There is NO warranty.
-.TH RUN\-PARTS 8 "14 Nov 2010" "Debian"
+.TH RUN\-PARTS 8 "27 Jun 2012" "Debian"
 .SH NAME
 run\-parts \- run scripts or programs in a directory
 .SH SYNOPSIS
@@ -39,7 +39,8 @@ and the Debian cron script namespace (^[a\-zA-Z0\-9_\-]+$).
 If the \-\-regex option is given, the names must match the custom
 extended regular expression specified as that option's argument.
 
-Files are run in the lexical sort order of their names unless the
+Files are run in the lexical sort order (according to the C/POSIX
+locale character collation rules) of their names unless the
 \-\-reverse option is given, in which case they are run in the
 opposite order.
 
