@@ -1,3 +1,11 @@
+debianutils (4.3.3) unstable; urgency=low
+
+  * Japanese man page translations from KURASAWA Nozomu.  closes: #682721.
+  * French man page translation update from David Prévot.  closes: #683122.
+  * German man page translation update from Helge Kreutzmann.  closes: #682449.
+
+ -- Clint Adams <clint@debian.org>  Sat, 28 Jul 2012 21:32:11 -0400
+
 debianutils (4.3.2) unstable; urgency=low
 
   * Fix list of utilities in long description.  closes: #666077.
