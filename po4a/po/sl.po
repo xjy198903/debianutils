@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-05-30 10:55-0300\n"
-"PO-Revision-Date: 2010-09-29 07:21+0000\n"
-"Last-Translator: Andrej Znidarsic <andrej.znidarsic@gmail.com>\n"
+"POT-Creation-Date: 2012-07-28 21:48-0400\n"
+"PO-Revision-Date: 2012-07-29 11:31+0100\n"
+"Last-Translator: Andrej Žnidaršič <andrej.znidarsic@gmail.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -26,10 +26,9 @@ msgstr "ADD-SHELL"
 
 #. type: TH
 #: ../add-shell.8:1
-#, fuzzy, no-wrap
-#| msgid "1 May 2009"
+#, no-wrap
 msgid "12 May 2011"
-msgstr "1 maj 2009"
+msgstr "12. maj 2011"
 
 #. type: SH
 #: ../add-shell.8:2 ../installkernel.8:2 ../ischroot.1:3 ../remove-shell.8:2
@@ -161,14 +160,13 @@ msgstr ""
 #: ../ischroot.1:2
 #, no-wrap
 msgid "ISCHROOT"
-msgstr ""
+msgstr "ISCHROOT"
 
 #. type: TH
-#: ../ischroot.1:2 ../tempfile.1:2
-#, fuzzy, no-wrap
-#| msgid "1 May 2009"
+#: ../ischroot.1:2
+#, no-wrap
 msgid "30 May 2011"
-msgstr "1 maj 2009"
+msgstr "30. maj 2011"
 
 #. type: TH
 #: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2
@@ -180,49 +178,47 @@ msgstr "Debian"
 #. type: Plain text
 #: ../ischroot.1:5
 msgid "ischroot - detect if running in a chroot"
-msgstr ""
+msgstr "ischroot - zazna, če se izvaja v chroot"
 
 #. type: Plain text
 #: ../ischroot.1:8
 msgid "B<ischroot> [--default-false] [--default-true] [--help] [--version]"
-msgstr ""
+msgstr "B<ischroot> [--default-false] [--default-true] [--help] [--version]"
 
 #. type: Plain text
 #: ../ischroot.1:12
 msgid ""
 "B<ischroot> detects if it is currently running in a chroot. The exit status "
 "is:"
-msgstr ""
+msgstr "B<ischroot> zazna, le se trenutno izvaja v chroot. Stanje končanja je:"
 
 #. type: TP
 #: ../ischroot.1:12
 #, no-wrap
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #. type: Plain text
 #: ../ischroot.1:15
 msgid "if currently running in a chroot"
-msgstr ""
+msgstr "Če se ne izvaja v chroot"
 
 #. type: TP
 #: ../ischroot.1:15
-#, fuzzy, no-wrap
-#| msgid "1)"
+#, no-wrap
 msgid "1"
-msgstr "1)"
+msgstr "1"
 
 #. type: Plain text
 #: ../ischroot.1:18
 msgid "if currently not running in a chroot"
-msgstr ""
+msgstr "Če se ne izvaja v chroot"
 
 #. type: TP
 #: ../ischroot.1:18
-#, fuzzy, no-wrap
-#| msgid "2)"
+#, no-wrap
 msgid "2"
-msgstr "2)"
+msgstr "2"
 
 #. type: Plain text
 #: ../ischroot.1:22
@@ -230,9 +226,11 @@ msgid ""
 "if the detection is not possible (On GNU/Linux this happens if the script is "
 "not run as root)."
 msgstr ""
+"če zaznava ni mogoča (na GNU/Linux se to zgodi, če skript ni zagnan kot "
+"skrbnik.)"
 
 #. type: SH
-#: ../ischroot.1:22 ../run-parts.8:46 ../savelog.8:92 ../tempfile.1:46
+#: ../ischroot.1:22 ../run-parts.8:47 ../savelog.8:92 ../tempfile.1:46
 #: ../which.1:14
 #, no-wrap
 msgid "OPTIONS"
@@ -242,23 +240,23 @@ msgstr "MOŽNOSTI"
 #: ../ischroot.1:23
 #, no-wrap
 msgid "B<-f, --default-false >"
-msgstr ""
+msgstr "B<-f, --default-false >"
 
 #. type: Plain text
 #: ../ischroot.1:26
 msgid "Exit with status 1 if the detection is not possible."
-msgstr ""
+msgstr "Končaj s stanjem 1, če zaznava ni mogoča."
 
 #. type: TP
 #: ../ischroot.1:26
 #, no-wrap
 msgid "B<-t, --default-true >"
-msgstr ""
+msgstr "B<-t, --default-true >"
 
 #. type: Plain text
 #: ../ischroot.1:29
 msgid "Exit with status 0 if the detection is not possible."
-msgstr ""
+msgstr "Končaj s stanjem 0, če zaznava ni mogoča."
 
 #. type: TP
 #: ../ischroot.1:29 ../tempfile.1:64
@@ -288,6 +286,8 @@ msgid ""
 "On GNU/Linux, chroot detection is not possible when not root. This works "
 "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgstr ""
+"Na GNU/Linux zaznavanje chroot ni mogoče, če niste skrbnik. To deluje "
+"pravilno na GNU/Hura in GNU/kFreeBSD."
 
 #. type: TH
 #: ../remove-shell.8:1
@@ -329,10 +329,10 @@ msgid "RUN-PARTS"
 msgstr "RUN-PARTS"
 
 #. type: TH
-#: ../run-parts.8:8
+#: ../run-parts.8:8 ../tempfile.1:2
 #, no-wrap
-msgid "14 Nov 2010"
-msgstr ""
+msgid "27 Jun 2012"
+msgstr "27. jun 2012"
 
 #. type: Plain text
 #: ../run-parts.8:11
@@ -368,19 +368,14 @@ msgstr ""
 
 #. type: Plain text
 #: ../run-parts.8:31
-#, fuzzy
-#| msgid ""
-#| "If neither the --lsbsysinit option nor the --regex option is given then "
-#| "the names must consist entirely of upper and lower case letters, digits, "
-#| "underscores, and hyphens."
 msgid ""
 "If neither the --lsbsysinit option nor the --regex option is given then the "
 "names must consist entirely of ASCII upper- and lower-case letters, ASCII "
 "digits, ASCII underscores, and ASCII minus-hyphens."
 msgstr ""
 "Če nista podani možnost --lsbsysinit ali pa možnost --regex, morajo biti "
-"imena sestavljena samo iz velikih in majhnih črk, številk, podčrtajev in "
-"vezajev."
+"imena sestavljena samo iz ASCII velikih in majhnih črk, številk, podčrtajev "
+"in vezajev."
 
 #. type: Plain text
 #: ../run-parts.8:38
@@ -407,35 +402,37 @@ msgstr ""
 "razširjenemu logičnemu izrazu določenemu kot argument te možnosti."
 
 #. type: Plain text
-#: ../run-parts.8:45
+#: ../run-parts.8:46
 msgid ""
-"Files are run in the lexical sort order of their names unless the --reverse "
-"option is given, in which case they are run in the opposite order."
+"Files are run in the lexical sort order (according to the C/POSIX locale "
+"character collation rules) of their names unless the --reverse option is "
+"given, in which case they are run in the opposite order."
 msgstr ""
-"Datoteke se zaganjajo po abecednem vrstnem redu njihovih imen, razen če je "
-"podana možnost --reverse. Takrat se zaganjajo v obratnem vrstnem redu."
+"Datoteke se zaganjajo po abecednem vrstnem redu njihovih imen (glede na "
+"pravila krajevnih oznak C/POSIX), razen če je podana možnost --reverse. "
+"Takrat se zaganjajo v obratnem vrstnem redu."
 
 #. type: TP
-#: ../run-parts.8:47
+#: ../run-parts.8:48
 #, no-wrap
 msgid "B<--test>"
 msgstr "B<--test>"
 
 #. type: Plain text
-#: ../run-parts.8:51
+#: ../run-parts.8:52
 msgid ""
 "print the names of the scripts which would be run, but don't actually run "
 "them."
 msgstr "izpiše imena skript, ki bi se pognale, vendar jih ne zažene."
 
 #. type: TP
-#: ../run-parts.8:51
+#: ../run-parts.8:52
 #, no-wrap
 msgid "B<--list>"
 msgstr "B<--list>"
 
 #. type: Plain text
-#: ../run-parts.8:55
+#: ../run-parts.8:56
 msgid ""
 "print the names of the all matching files (not limited to executables), but "
 "don't actually run them. This option cannot be used with --test."
@@ -444,24 +441,24 @@ msgstr ""
 "vendar jih ne zaženi. Te možnosti ni mogoče uporabiti skupaj s --test."
 
 #. type: TP
-#: ../run-parts.8:55
+#: ../run-parts.8:56
 #, no-wrap
 msgid "B<-v, --verbose>"
 msgstr "B<-v, --verbose>"
 
 #. type: Plain text
-#: ../run-parts.8:58
+#: ../run-parts.8:59
 msgid "print the name of each script to stderr before running."
 msgstr "izpiše ime vsake skripte na stderr pred zagonom"
 
 #. type: TP
-#: ../run-parts.8:58
+#: ../run-parts.8:59
 #, no-wrap
 msgid "B<--report>"
 msgstr "B<--report>"
 
 #. type: Plain text
-#: ../run-parts.8:63
+#: ../run-parts.8:64
 msgid ""
 "similar to B<--verbose>, but only prints the name of scripts which produce "
 "output.  The script's name is printed to whichever of stdout or stderr the "
@@ -472,46 +469,46 @@ msgstr ""
 "izhod skripte."
 
 #. type: TP
-#: ../run-parts.8:63
+#: ../run-parts.8:64
 #, no-wrap
 msgid "B<--reverse>"
 msgstr "B<--reverse>"
 
 #. type: Plain text
-#: ../run-parts.8:66
+#: ../run-parts.8:67
 msgid "reverse the scripts' execution order."
 msgstr "obrni vrstni red izvajanja skript"
 
 #. type: TP
-#: ../run-parts.8:66
+#: ../run-parts.8:67
 #, no-wrap
 msgid "B<--exit-on-error>"
 msgstr "B<--exit-on-error>"
 
 #. type: Plain text
-#: ../run-parts.8:69
+#: ../run-parts.8:70
 msgid "exit as soon as a script returns with a non-zero exit code."
 msgstr "končaj takoj, ko skript vrne ne ničelno izstopno kodo."
 
 #. type: TP
-#: ../run-parts.8:69
+#: ../run-parts.8:70
 #, no-wrap
 msgid "B<--lsbsysinit>"
 msgstr "B<--lsbsysinit>"
 
 #. type: Plain text
-#: ../run-parts.8:72
+#: ../run-parts.8:73
 msgid "use LSB namespaces instead of classical behavior."
 msgstr "uporabi imenski prostor LSB namesto običajnega obnašanja."
 
 #. type: TP
-#: ../run-parts.8:72
+#: ../run-parts.8:73
 #, no-wrap
 msgid "B<--new-session>"
 msgstr "B<--new-session>"
 
 #. type: Plain text
-#: ../run-parts.8:77
+#: ../run-parts.8:78
 msgid ""
 "run each script in a separate process session.  If you use this option, "
 "killing run-parts will not kill the currently running script, it will run "
@@ -522,13 +519,13 @@ msgstr ""
 "tekle do zaključka."
 
 #. type: TP
-#: ../run-parts.8:77
+#: ../run-parts.8:78
 #, no-wrap
 msgid "B<--regex=>I<RE>"
 msgstr "B<--regex=>I<RE>"
 
 #. type: Plain text
-#: ../run-parts.8:82
+#: ../run-parts.8:83
 msgid ""
 "validate filenames against custom extended regular expression I<RE>.  See "
 "the EXAMPLES section for an example."
@@ -537,13 +534,13 @@ msgstr ""
 "izraz I<RE>. Glej odstavek PRIMERI za primere."
 
 #. type: TP
-#: ../run-parts.8:82
+#: ../run-parts.8:83
 #, no-wrap
 msgid "B<-u, --umask=>I<umask>"
 msgstr "B<-u, --umask=>I<umask>"
 
 #. type: Plain text
-#: ../run-parts.8:89
+#: ../run-parts.8:90
 msgid ""
 "sets the umask to I<umask> before running the scripts.  I<umask> should be "
 "specified in octal.  By default the umask is set to 022."
@@ -552,13 +549,13 @@ msgstr ""
 "določen osmiško. Privzeto je umask nastavljen na 022."
 
 #. type: TP
-#: ../run-parts.8:89
+#: ../run-parts.8:90
 #, no-wrap
 msgid "B<-a, --arg=>I<argument>"
 msgstr "B<-a, --arg=>I<argument>"
 
 #. type: Plain text
-#: ../run-parts.8:96
+#: ../run-parts.8:97
 msgid ""
 "pass I<argument> to the scripts.  Use B<--arg> once for each argument you "
 "want passed."
@@ -567,13 +564,13 @@ msgstr ""
 "želite podati."
 
 #. type: TP
-#: ../run-parts.8:96
+#: ../run-parts.8:97
 #, no-wrap
 msgid "B<-->"
 msgstr "B<-->"
 
 #. type: Plain text
-#: ../run-parts.8:102
+#: ../run-parts.8:103
 msgid ""
 "specifies that this is the end of the options.  Any filename after B<--> "
 "will be not be interpreted as an option even if it starts with a hyphen."
@@ -582,68 +579,68 @@ msgstr ""
 "tolmačeno kot možnost, tudi če se začne z vezajem."
 
 #. type: TP
-#: ../run-parts.8:102
+#: ../run-parts.8:103
 #, no-wrap
 msgid "B<-h, --help>"
 msgstr "B<-h, --help>"
 
 #. type: Plain text
-#: ../run-parts.8:105
+#: ../run-parts.8:106
 msgid "display usage information and exit."
 msgstr "prikaže podatke o uporabi in konča."
 
 #. type: TP
-#: ../run-parts.8:105
+#: ../run-parts.8:106
 #, no-wrap
 msgid "B<-V, --version>"
 msgstr "B<-V, --version>"
 
 #. type: Plain text
-#: ../run-parts.8:108
+#: ../run-parts.8:109
 msgid "display version and copyright and exit."
 msgstr "prikaže različico in avtorske pravice in konča."
 
 #. type: SH
-#: ../run-parts.8:109
+#: ../run-parts.8:110
 #, no-wrap
 msgid "EXAMPLES"
 msgstr "PRIMERI"
 
 #. type: Plain text
-#: ../run-parts.8:112
+#: ../run-parts.8:113
 msgid ""
 "Print the names of all files in /etc that start with `p' and end with `d':"
 msgstr ""
 "Prikaže imena vseh datotek v /etc, ki se začnejo s `p' in končajo z `d':"
 
 #. type: Plain text
-#: ../run-parts.8:114
+#: ../run-parts.8:115
 msgid "run-parts --list --regex \\[aq]^p.*d$\\[aq] /etc"
 msgstr "run-parts --list --regex \\[aq]^p.*d$\\[aq] /etc"
 
 #. type: SH
-#: ../run-parts.8:115
+#: ../run-parts.8:116
 #, no-wrap
 msgid "COPYRIGHT"
 msgstr "AVTORSKE PRAVICE"
 
 #. type: Plain text
-#: ../run-parts.8:118
+#: ../run-parts.8:119
 msgid "Copyright (C) 1994 Ian Jackson."
 msgstr "Avtorske pravice (C) 1994 Ian Jackson."
 
 #. type: Plain text
-#: ../run-parts.8:120
+#: ../run-parts.8:121
 msgid "Copyright (C) 1996 Jeff Noxon."
 msgstr "Avtorske pravice (C) 1996 Jeff Noxon."
 
 #. type: Plain text
-#: ../run-parts.8:122
+#: ../run-parts.8:123
 msgid "Copyright (C) 1996, 1997, 1998 Guy Maor"
 msgstr "Avtorske pravice (C) 1996, 1997, 1998 Guy Maor"
 
 #. type: Plain text
-#: ../run-parts.8:124
+#: ../run-parts.8:125
 msgid ""
 "Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Clint Adams"
 msgstr ""
@@ -651,7 +648,7 @@ msgstr ""
 "Adams"
 
 #. type: Plain text
-#: ../run-parts.8:129
+#: ../run-parts.8:130
 msgid ""
 "B<run-parts> is free software; see the GNU General Public License version 2 "
 "or later for copying conditions.  There is I<no> warranty."
@@ -667,10 +664,9 @@ msgstr "SAVELOG"
 
 #. type: TH
 #: ../savelog.8:2
-#, fuzzy, no-wrap
-#| msgid "7 Jan 2001"
+#, no-wrap
 msgid "30 Jun 2010"
-msgstr "7 jan 2001"
+msgstr "30. jun 2010"
 
 #. type: Plain text
 #: ../savelog.8:5
@@ -679,10 +675,6 @@ msgstr "savelog - shrani datoteko dnevnika"
 
 #. type: Plain text
 #: ../savelog.8:9
-#, fuzzy
-#| msgid ""
-#| "B<savelog> [-m mode] [-u user] [-g group] [-t] [-p] [-c cycle] [-l] [-j] "
-#| "[-C] [-d] [-l] [-r rolldir] [-n] [-q] [-D dateformat] file ..."
 msgid ""
 "B<savelog> [-m mode] [-u user] [-g group] [-t] [-p] [-c cycle] [-l] [-j] [-"
 "J] [-1\\ .\\|.\\ -9] [-C] [-d] [-l] [-r rolldir] [-n] [-q] [-D dateformat] "
@@ -906,14 +898,12 @@ msgstr "stisni z bzip2 namesto z gzip"
 #: ../savelog.8:122
 #, no-wrap
 msgid "B<-J>"
-msgstr ""
+msgstr "B<-J>"
 
 #. type: Plain text
 #: ../savelog.8:125
-#, fuzzy
-#| msgid "compress with bzip2 instead of gzip"
 msgid "compress with xz instead of gzip"
-msgstr "stisni z bzip2 namesto z gzip"
+msgstr "stisni z xz2 namesto z gzip"
 
 #. type: Plain text
 #: ../savelog.8:127
@@ -922,17 +912,20 @@ msgid ""
 "total amount of physical RAM. Note that xz can use a very large amount of "
 "memory for the higher compression levels."
 msgstr ""
+"Za xz možnost moči ni nastavljena. Privzeta možnost bo določena na osnovi "
+"celotne količine fizičnega RAM-a. Za višje ravni stiskanje lahko xz porabi "
+"zelo veliko količino pomnilnika."
 
 #. type: TP
 #: ../savelog.8:127
 #, no-wrap
 msgid "B<-1\\ .\\|.\\ -9>"
-msgstr ""
+msgstr "B<-1\\ .\\|.\\ -9>"
 
 #. type: Plain text
 #: ../savelog.8:130
 msgid "compression strength or memory usage (default: 9, except for xz)"
-msgstr ""
+msgstr "moč stiskanja ali poraba pomnilnika (privzeto: 9, razen za xz)"
 
 #. type: TP
 #: ../savelog.8:130
@@ -1012,7 +1005,7 @@ msgstr ""
 #. type: Plain text
 #: ../savelog.8:159
 msgid "B<logrotate>(8)"
-msgstr ""
+msgstr "B<logrotate>(8)"
 
 #. type: TH
 #: ../tempfile.1:2
@@ -1188,16 +1181,14 @@ msgstr ""
 
 #. type: Plain text
 #: ../tempfile.1:77
-#, fuzzy
-#| msgid ""
-#| "Exclusive creation is not guaranteed when creating files on NFS "
-#| "partitions."
 msgid ""
 "Exclusive creation is not guaranteed when creating files on NFS partitions.  "
-"tempfile is deprecated; you should use mktemp(1)  instead."
+"tempfile cannot make temporary directories.  tempfile is deprecated; you "
+"should use mktemp(1) instead."
 msgstr ""
-"Izključno ustvarjanje ni zagotovljeno, ko ustvarjate datoteke na razdelkih "
-"NFS."
+"Izključno ustvarjanje ni zagotovljeno ob ustvarjanju datotek na razdelkih "
+"NFS. začasna datoteka ne more ustvariti začasnih map. začasna datoteka je "
+"zastarela, namesto nje uporabite mktemp(1)."
 
 #. type: SH
 #: ../tempfile.1:77
