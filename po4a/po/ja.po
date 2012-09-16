@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
-"POT-Creation-Date: 2012-07-25 07:06+0900\n"
+"POT-Creation-Date: 2012-07-31 07:50+0900\n"
 "PO-Revision-Date: 2012-07-28 22:56+0900\n"
 "Last-Translator: KURASAWA Nozomu <nabetaro@debian.or.jp>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -331,7 +331,6 @@ msgstr "RUN-PARTS"
 #. type: TH
 #: ../run-parts.8:8 ../tempfile.1:2
 #, no-wrap
-#| msgid "7 Jan 2001"
 msgid "27 Jun 2012"
 msgstr "27 Jun 2012"
 
@@ -404,9 +403,6 @@ msgstr ""
 
 #. type: Plain text
 #: ../run-parts.8:46
-#| msgid ""
-#| "Files are run in the lexical sort order of their names unless the --"
-#| "reverse option is given, in which case they are run in the opposite order."
 msgid ""
 "Files are run in the lexical sort order (according to the C/POSIX locale "
 "character collation rules) of their names unless the --reverse option is "
@@ -1184,9 +1180,6 @@ msgstr ""
 
 #. type: Plain text
 #: ../tempfile.1:77
-#| msgid ""
-#| "Exclusive creation is not guaranteed when creating files on NFS "
-#| "partitions.  tempfile is deprecated; you should use mktemp(1)  instead."
 msgid ""
 "Exclusive creation is not guaranteed when creating files on NFS partitions.  "
 "tempfile cannot make temporary directories.  tempfile is deprecated; you "
