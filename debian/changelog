@@ -1,3 +1,17 @@
+debianutils (4.3.4) unstable; urgency=low
+
+  [ David Prévot ]
+  * French man page translation proofread by Stéphane Blondon.
+    closes: #684074.
+
+  [ Clint Adams ]
+  * Slovenian man page translation update from Andrej Žnidarši.
+  * Patch from KURASAWA Nozomu to fix Japanese man page build.
+    closes: #683405.
+  * Updated Spanish man page from Omar Campagne.  closes: #684132.
+
+ -- Clint Adams <clint@debian.org>  Sun, 16 Sep 2012 18:56:57 -0400
+
 debianutils (4.3.3) unstable; urgency=low
 
   * Japanese man page translations from KURASAWA Nozomu.  closes: #682721.
