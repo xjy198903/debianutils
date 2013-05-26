@@ -11,6 +11,7 @@ Package: debianutils
 Architecture: any
 Pre-Depends: ${shlibs:Depends}
 Depends: sensible-utils
+Replaces: manpages-pl (<< 1:0.5)
 Section: utils
 Essential: yes
 Multi-Arch: foreign
