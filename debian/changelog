@@ -1,3 +1,19 @@
+debianutils (4.4) unstable; urgency=low
+
+  [ Robert Luberda ]
+  * Initial translation of manual pages into Polish.  closes: #709945.
+
+  [ Clint Adams ]
+  * Bump to Standards-Version 3.9.4.
+  * savelog: patch from Bob Proulx to silence ls error message with
+    savelog -C.  closes: #653940.
+  * Patch from Robert Collins to fix compiler warnings.  closes: #699315.
+  * add-shell: use awk to replace the final newline in /etc/shells
+    even if the admin has removed it for some reason.  closes: #698874.
+  * Add Italian man pages from Beatrice Torracca.  closes: #708753.
+
+ -- Clint Adams <clint@debian.org>  Sat, 27 Jul 2013 21:19:15 -0400
+
 debianutils (4.3.4) unstable; urgency=low
 
   [ David Prévot ]
