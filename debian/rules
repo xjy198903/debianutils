@@ -24,6 +24,8 @@ CFLAGS := $(shell dpkg-buildflags --get CFLAGS)
 CPPFLAGS := $(shell dpkg-buildflags --get CPPFLAGS)
 LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS)
 
+BUILD_DATE := $(shell dpkg-parsechangelog | sed -n -e 's/^Date: //p')
+
 build: build-indep build-arch
 build-indep:
 
@@ -104,6 +106,8 @@ endif
 			debian/tmp/bin/tempfile \
 			debian/tmp/usr/bin/ischroot
 	dpkg-gencontrol -isp
+	find debian/tmp -depth -newermt '$(BUILD_DATE)' -print0 | \
+		xargs -0r touch --no-dereference --date='$(BUILD_DATE)'
 	dpkg --build debian/tmp ..
 
 define checkdir
