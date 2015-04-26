@@ -75,9 +75,6 @@ ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 	   	debian/tmp/usr/bin/ischroot
 endif
 
-ifneq ($(DEB_HOST_ARCH_OS),hurd)
-	ln -s /bin/which debian/tmp/usr/bin/which
-endif
 ifeq ($(DEB_HOST_ARCH_OS),linux)
 	mv debian/tmp/usr/sbin/installkernel debian/tmp/sbin/
 else
