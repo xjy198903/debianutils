@@ -1,3 +1,22 @@
+debianutils (4.5) unstable; urgency=medium
+
+  [ Clint Adams ]
+  * Update .gitignore for "new" po4a-generated man pages
+
+  [ Jérémy Bobbio ]
+  * Stop recording current time when using gzip
+  * Sort file list when generating md5sums
+  * Fix mtimes before building binary packages
+
+  [ Clint Adams ]
+  * Bump to Standards-Version 3.9.6.
+  * (tweaked) Portuguese man page translations from Américo
+    Monteiro.  closes: #751932.
+  * Tweaked patch from Marco d'Itri to support everything-in-usr.
+    closes: #767924.
+
+ -- Clint Adams <clint@debian.org>  Sun, 26 Apr 2015 11:03:51 -0400
+
 debianutils (4.4) unstable; urgency=low
 
   [ Robert Luberda ]
