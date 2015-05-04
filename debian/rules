@@ -99,6 +99,8 @@ endif
 
 	cd debian/tmp && find * -type f ! -regex '^DEBIAN/.*' -print0 | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums
 
+	find debian/tmp ! -type l -print0 | xargs -0r chmod go=rX,u+rw,a-s
+
 	dpkg-shlibdeps debian/tmp/bin/run-parts \
 			debian/tmp/bin/tempfile \
 			debian/tmp/usr/bin/ischroot
