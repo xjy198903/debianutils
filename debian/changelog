@@ -1,3 +1,10 @@
+debianutils (4.5.1) unstable; urgency=medium
+
+  [ Jérémy Bobbio ]
+  * Ensure consistent permissions with different umasks.  closes: #774504.
+
+ -- Clint Adams <clint@debian.org>  Mon, 25 May 2015 21:35:19 -0400
+
 debianutils (4.5) unstable; urgency=medium
 
   [ Clint Adams ]
