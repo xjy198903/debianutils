@@ -1,3 +1,22 @@
+debianutils (4.6) unstable; urgency=medium
+
+  [ Ben Hutchings ]
+  * installkernel: Only run postinst scripts when installing in /boot
+    closes: #812266.
+  * installkernel: Make sure the PATH for postinst scripts includes
+    /usr/sbin and /sbin
+
+  [ Clint Adams ]
+  * Patch from Christoph Biedl to fix the lsbsysinit regex.
+    closes: #802502.
+  * Patch from Andreas Henriksson to make ischroot work as non-root
+    on Linux.  closes: #670119.
+  * add-shell: use grep instead of awk, thanks to Carsten Hey.
+    closes: #796848.
+  * Add LFS check to configure.
+
+ -- Clint Adams <clint@debian.org>  Thu, 21 Jan 2016 22:53:54 -0500
+
 debianutils (4.5.1) unstable; urgency=medium
 
   [ Jérémy Bobbio ]
