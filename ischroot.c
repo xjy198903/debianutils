@@ -2,6 +2,7 @@
  *
  * Debian ischroot program
  * Copyright (C) 2011 Aurelien Jarno <aurel32@debian.org>
+ * Copyright (C) 2015 Andreas Henriksson <andreas@fatal.se>
  *
  * This is free software; see the GNU General Public License version 2
  * or later for copying conditions.  There is NO warranty.
@@ -13,6 +14,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <fcntl.h>
 #include <unistd.h>
 #ifdef HAVE_GETOPT_H
 #include <getopt.h>
@@ -51,6 +53,73 @@ int isfakechroot()
 
 #if defined (__linux__)
 
+/* ischroot_mountinfo returns:
+ *   negative value on failure,
+ *   0 on chroot detected,
+ *   1 on no chroot detected.
+ */
+static int ischroot_mountinfo()
+{
+  char buf1[1024], buf2[1024];
+  int fd1, fd2;
+  ssize_t rlen1, rlen2;
+  int ret;
+
+  fd1 = open("/proc/1/mountinfo", O_RDONLY);
+  fd2 = open("/proc/self/mountinfo", O_RDONLY);
+
+  if (fd1 < 0 || fd2 < 0) {
+    ret = -1;
+    goto out;
+  }
+
+  do {
+    rlen1 = read(fd1, buf1, sizeof(buf1));
+    rlen2 = read(fd2, buf2, sizeof(buf2));
+
+    if (rlen1 < 0 || rlen2 < 0) {
+      /* TODO: could do a better job of handling errors like EAGAIN here if
+       * relevant. Investigate possible error codes returned for procfs by
+       * kernel.
+       */
+      ret = -1;
+      goto out;
+    }
+
+    /* FIXME: we assume read always fills up the buffer if there are more
+     * contents to read, which is not correct. Theoretically read can return
+     * smaller chunks, so we should probably memcmp the minimum of the return
+     * values and shift both buffer contents and try to fill it up by
+     * appending and continue comparing.
+     * Check if this is a problem in practise...
+     */
+
+    if (rlen1 != rlen2) {
+      ret = 0;
+      goto out;
+    }
+
+    if (memcmp(buf1, buf2, rlen1) != 0) {
+      ret = 0;
+      goto out;
+    }
+
+  } while (rlen1 > 0 && rlen2 > 0);
+
+  if (rlen1 == 0 && rlen2 == 0)
+    ret = 1;
+  else
+    ret = -1;
+
+out:
+  if (fd1 >= 0)
+    close(fd1);
+  if (fd2 >= 0)
+    close(fd2);
+
+  return ret;
+}
+
 /* On Linux we can detect chroots by checking if the
  * devicenumber/inode pair of / are the same as that of
  * /sbin/init's. This may fail if not running as root or if
@@ -64,6 +133,11 @@ int isfakechroot()
 static int ischroot()
 {
   struct stat st1, st2;
+  int ret;
+
+  ret = ischroot_mountinfo();
+  if (ret >= 0)
+    return ret;
 
   if (stat("/", &st1))
     return 2;
