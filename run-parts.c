@@ -579,7 +579,7 @@ regex_compile_pattern (void)
                     REG_EXTENDED | REG_NOSUB)) != 0)
             pt_regex = &hierre;
 
-        else if ( (err = regcomp(&excsre, "^[a-z0-9-].*dpkg-(old|dist|new|tmp)$",
+        else if ( (err = regcomp(&excsre, "^[a-z0-9-].*\\.dpkg-(old|dist|new|tmp)$",
                     REG_EXTENDED | REG_NOSUB)) != 0)
             pt_regex = &excsre;
 
