@@ -1,3 +1,9 @@
+debianutils (4.7) unstable; urgency=medium
+
+  * Revert "add-shell: use grep instead of awk."  closes: #812784.
+
+ -- Clint Adams <clint@debian.org>  Tue, 26 Jan 2016 13:17:55 -0500
+
 debianutils (4.6) unstable; urgency=medium
 
   [ Ben Hutchings ]
