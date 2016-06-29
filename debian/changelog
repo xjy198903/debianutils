@@ -1,3 +1,13 @@
+debianutils (4.8) unstable; urgency=medium
+
+  [ Andreas Henriksson ]
+  * add/remove-shell: also add/remove shells' real path.  closes: #817168.
+
+  [ Clint Adams ]
+  * which.1: tweak wording about symlinks.  closes: #819403.
+
+ -- Clint Adams <clint@debian.org>  Wed, 29 Jun 2016 20:17:09 +0200
+
 debianutils (4.7) unstable; urgency=medium
 
   * Revert "add-shell: use grep instead of awk."  closes: #812784.
