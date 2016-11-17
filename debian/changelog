@@ -1,3 +1,10 @@
+debianutils (4.8.1) unstable; urgency=medium
+
+  * po4a/po/fr.po: French man page translation update from
+    Baptiste Jammet.  closes: #844656.
+
+ -- Clint Adams <clint@debian.org>  Thu, 17 Nov 2016 15:37:53 -0500
+
 debianutils (4.8) unstable; urgency=medium
 
   [ Andreas Henriksson ]
