@@ -11,18 +11,19 @@
 # et savelog.8 (Antoine Gémis, 13 janvier 2003).
 # Christian Perrier <bubulle@debian.org>, 2010, 2011.
 # David Prévot <taffit@debian.org>, 2012.
+# Baptiste Jammet <baptiste@mailoo.org>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
-"POT-Creation-Date: 2012-06-27 21:51-0300\n"
-"PO-Revision-Date: 2012-07-28 18:33:19-0400\n"
-"Last-Translator: Christian Perrier <bubulle@debian.org>\n"
+"POT-Creation-Date: 2016-06-29 20:20+0200\n"
+"PO-Revision-Date: 2016-10-26 18:11+0200\n"
+"Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # type: TH
@@ -202,8 +203,7 @@ msgstr "30 mai 2011"
 
 # type: TH
 #. type: TH
-#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2
-#: ../which.1:2
+#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2 ../which.1:2
 #, no-wrap
 msgid "Debian"
 msgstr "Debian GNU/Linux"
@@ -387,6 +387,7 @@ msgstr "RUN-PARTS"
 # type: TH
 #. type: TH
 #: ../run-parts.8:8 ../tempfile.1:2
+#, no-wrap
 msgid "27 Jun 2012"
 msgstr "27 juin 2012"
 
@@ -1220,10 +1221,10 @@ msgstr ""
 #. type: Plain text
 #: ../tempfile.1:18
 msgid ""
-"B<tempfile> creates a temporary file in a safe manner.  It uses B<tempnam>"
-"(3)  to choose the name and opens it with O_RDWR | O_CREAT | O_EXCL.  The "
-"filename is printed on standard output. See B<tempnam>(3)  for the actual "
-"steps involved in directory selection."
+"B<tempfile> creates a temporary file in a safe manner.  It uses "
+"B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
+"O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  for "
+"the actual steps involved in directory selection."
 msgstr ""
 "Le programme B<tempfile> crée un fichier temporaire de façon sûre. Il "
 "utilise B<tempnam>(3) pour choisir un nom et l'ouvre dans le mode O_RDWR | "
@@ -1450,8 +1451,9 @@ msgstr "WHICH"
 #. type: TH
 #: ../which.1:2
 #, no-wrap
-msgid "1 May 2009"
-msgstr "1 mai 2009"
+#| msgid "27 Jun 2012"
+msgid "29 Jun 2016"
+msgstr "29 juin 2016"
 
 # type: Plain text
 #. type: Plain text
@@ -1468,19 +1470,24 @@ msgstr "B<which> [B<-a>] I<nom_de_fichier>..."
 # type: Plain text
 #. type: Plain text
 #: ../which.1:14
+#| msgid ""
+#| "B<which> returns the pathnames of the files (or links) which would be "
+#| "executed in the current environment, had its arguments been given as "
+#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
+#| "the PATH for executable files matching the names of the arguments. It "
+#| "does not follow symbolic links."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
 "commands in a strictly POSIX-conformant shell.  It does this by searching "
 "the PATH for executable files matching the names of the arguments. It does "
-"not follow symbolic links."
+"not canonicalize path names."
 msgstr ""
-"B<which> retourne le chemin des fichiers qui seraient exécutés dans "
+"B<which> renvoie le chemin des fichiers (ou liens) qui seraient exécutés dans "
 "l'environnement courant si ses arguments avaient été donnés comme commandes "
 "dans un interpréteur de commandes strictement conforme à POSIX. Pour ce "
 "faire, B<which> cherche dans la variable B<PATH> les fichiers exécutables "
-"correspondants aux noms des arguments. B<which> ne déréférence pas les liens "
-"symboliques."
+"correspondant aux noms des arguments. B<which> ne normalise pas les chemins."
 
 # type: TP
 #. type: TP
@@ -1542,6 +1549,10 @@ msgstr "B<2>"
 #: ../which.1:27
 msgid "if an invalid option is specified"
 msgstr "si une option non valable est spécifiée."
+
+# type: TH
+#~ msgid "1 May 2009"
+#~ msgstr "1 mai 2009"
 
 #~ msgid "14 Nov 2010"
 #~ msgstr "14 novembre 2010"
