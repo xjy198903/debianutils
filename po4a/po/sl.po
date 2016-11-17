@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-07-28 21:48-0400\n"
+"POT-Creation-Date: 2016-11-17 15:39-0500\n"
 "PO-Revision-Date: 2012-07-29 11:31+0100\n"
 "Last-Translator: Andrej Žnidaršič <andrej.znidarsic@gmail.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -169,8 +169,7 @@ msgid "30 May 2011"
 msgstr "30. maj 2011"
 
 #. type: TH
-#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2
-#: ../which.1:2
+#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2 ../which.1:2
 #, no-wrap
 msgid "Debian"
 msgstr "Debian"
@@ -1032,15 +1031,15 @@ msgstr ""
 #. type: Plain text
 #: ../tempfile.1:18
 msgid ""
-"B<tempfile> creates a temporary file in a safe manner.  It uses B<tempnam>"
-"(3)  to choose the name and opens it with O_RDWR | O_CREAT | O_EXCL.  The "
-"filename is printed on standard output. See B<tempnam>(3)  for the actual "
-"steps involved in directory selection."
+"B<tempfile> creates a temporary file in a safe manner.  It uses "
+"B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
+"O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  for "
+"the actual steps involved in directory selection."
 msgstr ""
-"B<tempfile> ustvari začasno datoteko na varnen način.  Uporabi B<tempnam>"
-"(3)  za izbor imena in ga odpre z O_RDWR | O_CREAT | O_EXCL.  Ime datoteke "
-"je izpisano na standardnem izhodu.Glej B<tempnam>(3)  za dejanske korake pri "
-"izboru mape."
+"B<tempfile> ustvari začasno datoteko na varnen način.  Uporabi "
+"B<tempnam>(3)  za izbor imena in ga odpre z O_RDWR | O_CREAT | O_EXCL.  Ime "
+"datoteke je izpisano na standardnem izhodu.Glej B<tempnam>(3)  za dejanske "
+"korake pri izboru mape."
 
 #. type: Plain text
 #: ../tempfile.1:23
@@ -1231,9 +1230,10 @@ msgstr "WHICH"
 
 #. type: TH
 #: ../which.1:2
-#, no-wrap
-msgid "1 May 2009"
-msgstr "1 maj 2009"
+#, fuzzy, no-wrap
+#| msgid "27 Jun 2012"
+msgid "29 Jun 2016"
+msgstr "27. jun 2012"
 
 #. type: Plain text
 #: ../which.1:5
@@ -1247,12 +1247,19 @@ msgstr "which [-a] imedatoteke ..."
 
 #. type: Plain text
 #: ../which.1:14
+#, fuzzy
+#| msgid ""
+#| "B<which> returns the pathnames of the files (or links) which would be "
+#| "executed in the current environment, had its arguments been given as "
+#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
+#| "the PATH for executable files matching the names of the arguments. It "
+#| "does not follow symbolic links."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
 "commands in a strictly POSIX-conformant shell.  It does this by searching "
 "the PATH for executable files matching the names of the arguments. It does "
-"not follow symbolic links."
+"not canonicalize path names."
 msgstr ""
 "B<which> vrne imena poti datotek (ali povezav), ki bi se izvedla v trenutnem "
 "okolju, če bi bil njihov argument podan kot ukaz v strogo POSIX skladni "
@@ -1308,6 +1315,9 @@ msgstr "B<2>"
 #: ../which.1:27
 msgid "if an invalid option is specified"
 msgstr "Če je navedena neveljavna možnost"
+
+#~ msgid "1 May 2009"
+#~ msgstr "1 maj 2009"
 
 #~ msgid "9 Aug 2009"
 #~ msgstr "9 avg 2009"

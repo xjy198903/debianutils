@@ -16,7 +16,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils 4.3.4\n"
-"POT-Creation-Date: 2013-05-26 20:22+0300\n"
+"POT-Creation-Date: 2016-11-17 15:39-0500\n"
 "PO-Revision-Date: 2013-05-26 22:18+0200\n"
 "Last-Translator: Robert Luberda <robert@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -181,8 +181,7 @@ msgid "30 May 2011"
 msgstr "30 maja 2011"
 
 #. type: TH
-#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2
-#: ../which.1:2
+#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2 ../which.1:2
 #, no-wrap
 msgid "Debian"
 msgstr "Debian"
@@ -1083,10 +1082,10 @@ msgstr ""
 #. type: Plain text
 #: ../tempfile.1:18
 msgid ""
-"B<tempfile> creates a temporary file in a safe manner.  It uses B<tempnam>"
-"(3)  to choose the name and opens it with O_RDWR | O_CREAT | O_EXCL.  The "
-"filename is printed on standard output. See B<tempnam>(3)  for the actual "
-"steps involved in directory selection."
+"B<tempfile> creates a temporary file in a safe manner.  It uses "
+"B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
+"O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  for "
+"the actual steps involved in directory selection."
 msgstr ""
 "B<tempfile> w bezpieczny sposób tworzy plik tymczasowy. Do wyboru nazwy "
 "korzysta z B<tempnam>(3)  i otwiera plik, używając znaczników O_RDWR | "
@@ -1292,9 +1291,10 @@ msgstr "WHICH"
 
 #. type: TH
 #: ../which.1:2
-#, no-wrap
-msgid "1 May 2009"
-msgstr "1 maja 2009"
+#, fuzzy, no-wrap
+#| msgid "27 Jun 2012"
+msgid "29 Jun 2016"
+msgstr "27 czerwca 2012"
 
 #. type: Plain text
 #: ../which.1:5
@@ -1308,12 +1308,19 @@ msgstr "which [-a] nazwa_pliku ..."
 
 #. type: Plain text
 #: ../which.1:14
+#, fuzzy
+#| msgid ""
+#| "B<which> returns the pathnames of the files (or links) which would be "
+#| "executed in the current environment, had its arguments been given as "
+#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
+#| "the PATH for executable files matching the names of the arguments. It "
+#| "does not follow symbolic links."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
 "commands in a strictly POSIX-conformant shell.  It does this by searching "
 "the PATH for executable files matching the names of the arguments. It does "
-"not follow symbolic links."
+"not canonicalize path names."
 msgstr ""
 "B<which> zwraca ścieżki plików (lub dowiązań), które zostałyby wykonane w "
 "bieżącym środowisku, gdyby przekazane mu argumenty był użyty jako polecenia "
@@ -1370,6 +1377,9 @@ msgstr "B<2>"
 #: ../which.1:27
 msgid "if an invalid option is specified"
 msgstr "jeśli podano nieprawidłową opcję"
+
+#~ msgid "1 May 2009"
+#~ msgstr "1 maja 2009"
 
 #~ msgid ""
 #~ "Version numbered files are cycled.  Version I<file>.I<2> is moved to "

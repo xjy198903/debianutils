@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debianutils 4.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-28 21:29-0400\n"
+"POT-Creation-Date: 2016-11-17 15:39-0500\n"
 "PO-Revision-Date: 2012-08-07 11:43+0200\n"
 "Last-Translator: Omar Campagne <ocampagne@gmail.com>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -196,8 +196,7 @@ msgid "30 May 2011"
 msgstr "30 de mayo de 2011"
 
 #. type: TH
-#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2
-#: ../which.1:2
+#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2 ../which.1:2
 #, no-wrap
 msgid "Debian"
 msgstr "Debian"
@@ -1010,8 +1009,8 @@ msgstr "B<-D formato-fecha>"
 #: ../savelog.8:140
 msgid "override date format, in the form of I<[MMDDhhmm[[CC]YY][.ss]]>"
 msgstr ""
-"Sobreescribe el formato de fecha, con el siguiente formato I<[MMDDhhmm[[CC]"
-"YY][.ss]]>"
+"Sobreescribe el formato de fecha, con el siguiente formato "
+"I<[MMDDhhmm[[CC]YY][.ss]]>"
 
 #. type: TP
 #: ../savelog.8:140
@@ -1085,10 +1084,10 @@ msgstr ""
 #. type: Plain text
 #: ../tempfile.1:18
 msgid ""
-"B<tempfile> creates a temporary file in a safe manner.  It uses B<tempnam>"
-"(3)  to choose the name and opens it with O_RDWR | O_CREAT | O_EXCL.  The "
-"filename is printed on standard output. See B<tempnam>(3)  for the actual "
-"steps involved in directory selection."
+"B<tempfile> creates a temporary file in a safe manner.  It uses "
+"B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
+"O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  for "
+"the actual steps involved in directory selection."
 msgstr ""
 "B<tempfile> crea un fichero temporal de manera segura. Utiliza B<tempnam>(3) "
 "para seleccionar un nombre, y lo abre con « O_RDWR | O_CREAT | O_EXCL». El "
@@ -1286,9 +1285,10 @@ msgstr "WHICH"
 
 #. type: TH
 #: ../which.1:2
-#, no-wrap
-msgid "1 May 2009"
-msgstr "1 de mayo de 2009"
+#, fuzzy, no-wrap
+#| msgid "27 Jun 2012"
+msgid "29 Jun 2016"
+msgstr "27 de junio de 2012"
 
 #. type: Plain text
 #: ../which.1:5
@@ -1302,12 +1302,19 @@ msgstr "which [-a] nombre-de-fichero ..."
 
 #. type: Plain text
 #: ../which.1:14
+#, fuzzy
+#| msgid ""
+#| "B<which> returns the pathnames of the files (or links) which would be "
+#| "executed in the current environment, had its arguments been given as "
+#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
+#| "the PATH for executable files matching the names of the arguments. It "
+#| "does not follow symbolic links."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
 "commands in a strictly POSIX-conformant shell.  It does this by searching "
 "the PATH for executable files matching the names of the arguments. It does "
-"not follow symbolic links."
+"not canonicalize path names."
 msgstr ""
 "B<which> devuelve los nombres de ruta de ficheros (o enlaces) que se "
 "ejecutarían en el entorno actual, en el caso de haber introducido sus "
@@ -1366,3 +1373,5 @@ msgstr "B<2>"
 msgid "if an invalid option is specified"
 msgstr "La opción definida no es válida."
 
+#~ msgid "1 May 2009"
+#~ msgstr "1 de mayo de 2009"

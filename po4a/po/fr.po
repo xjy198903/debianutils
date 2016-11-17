@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
-"POT-Creation-Date: 2016-06-29 20:20+0200\n"
+"POT-Creation-Date: 2016-11-17 15:39-0500\n"
 "PO-Revision-Date: 2016-10-26 18:11+0200\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -1451,7 +1451,6 @@ msgstr "WHICH"
 #. type: TH
 #: ../which.1:2
 #, no-wrap
-#| msgid "27 Jun 2012"
 msgid "29 Jun 2016"
 msgstr "29 juin 2016"
 
@@ -1470,12 +1469,6 @@ msgstr "B<which> [B<-a>] I<nom_de_fichier>..."
 # type: Plain text
 #. type: Plain text
 #: ../which.1:14
-#| msgid ""
-#| "B<which> returns the pathnames of the files (or links) which would be "
-#| "executed in the current environment, had its arguments been given as "
-#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
-#| "the PATH for executable files matching the names of the arguments. It "
-#| "does not follow symbolic links."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
@@ -1483,11 +1476,12 @@ msgid ""
 "the PATH for executable files matching the names of the arguments. It does "
 "not canonicalize path names."
 msgstr ""
-"B<which> renvoie le chemin des fichiers (ou liens) qui seraient exécutés dans "
-"l'environnement courant si ses arguments avaient été donnés comme commandes "
-"dans un interpréteur de commandes strictement conforme à POSIX. Pour ce "
-"faire, B<which> cherche dans la variable B<PATH> les fichiers exécutables "
-"correspondant aux noms des arguments. B<which> ne normalise pas les chemins."
+"B<which> renvoie le chemin des fichiers (ou liens) qui seraient exécutés "
+"dans l'environnement courant si ses arguments avaient été donnés comme "
+"commandes dans un interpréteur de commandes strictement conforme à POSIX. "
+"Pour ce faire, B<which> cherche dans la variable B<PATH> les fichiers "
+"exécutables correspondant aux noms des arguments. B<which> ne normalise pas "
+"les chemins."
 
 # type: TP
 #. type: TP

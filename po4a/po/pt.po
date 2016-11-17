@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils 4.4\n"
-"POT-Creation-Date: 2012-06-27 21:51-0300\n"
+"POT-Creation-Date: 2016-11-17 15:39-0500\n"
 "PO-Revision-Date: 2014-06-18 00:42+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -77,9 +77,9 @@ msgid ""
 "shells to this file if they are not already present, and copies this "
 "temporary file back to I</etc/shells>."
 msgstr ""
-"B<add-shell> copia I</etc/shells> para I</etc/shells.tmp>, adiciona as shells "
-"fornecidas a este ficheiro se não estiverem já presentes, e copia este "
-"ficheiro temporário de volta para I</etc/shells>."
+"B<add-shell> copia I</etc/shells> para I</etc/shells.tmp>, adiciona as "
+"shells fornecidas a este ficheiro se não estiverem já presentes, e copia "
+"este ficheiro temporário de volta para I</etc/shells>."
 
 # type: Plain text
 #. type: Plain text
@@ -154,10 +154,10 @@ msgid ""
 "making a link from I<{directory}/vmlinuz> to the new kernel, and the "
 "previously installed kernel is available as I<{directory}/vmlinuz.old>."
 msgstr ""
-"O novo kernel é instalado para I<{directório}/vmlinuz-{versão}>. Se um "
-"link simbólico I<{directório}/vmlinuz> já existir, este é refrescado ao "
-"fazer um link de I<{directório}/vmlinuz> para o novo kernel, e o kernel "
-"instalado anteriormente fica disponível como I<{directório}/vmlinuz.old>."
+"O novo kernel é instalado para I<{directório}/vmlinuz-{versão}>. Se um link "
+"simbólico I<{directório}/vmlinuz> já existir, este é refrescado ao fazer um "
+"link de I<{directório}/vmlinuz> para o novo kernel, e o kernel instalado "
+"anteriormente fica disponível como I<{directório}/vmlinuz.old>."
 
 # type: SH
 #. type: SH
@@ -193,8 +193,7 @@ msgstr "30 May 2011"
 
 # type: TH
 #. type: TH
-#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2
-#: ../which.1:2
+#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2 ../which.1:2
 #, no-wrap
 msgid "Debian"
 msgstr "Debian"
@@ -215,8 +214,8 @@ msgid ""
 "B<ischroot> detects if it is currently running in a chroot. The exit status "
 "is:"
 msgstr ""
-"B<ischroot> detecta se está presentemente a correr numa chroot. O estado "
-"ao terminar é:"
+"B<ischroot> detecta se está presentemente a correr numa chroot. O estado ao "
+"terminar é:"
 
 #. type: TP
 #: ../ischroot.1:12
@@ -320,8 +319,8 @@ msgid ""
 "On GNU/Linux, chroot detection is not possible when not root. This works "
 "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgstr ""
-"Em GNU/Linux, a detecção de chroot não é possível quando não se é root. "
-"Isto funciona bem em GNU/Hurd e GNU/kFreeBSD."
+"Em GNU/Linux, a detecção de chroot não é possível quando não se é root. Isto "
+"funciona bem em GNU/Hurd e GNU/kFreeBSD."
 
 # type: TH
 #. type: TH
@@ -357,8 +356,8 @@ msgid ""
 "etc/shells.tmp2> to remove the given shells from the list of valid login "
 "shells, and copy the result back to I</etc/shells>."
 msgstr ""
-"B<remove-shell> opera nos ficheiros temporários I</etc/shells.tmp> e I</"
-"etc/shells.tmp2> para remover as shells indicadas da lista de shells de login "
+"B<remove-shell> opera nos ficheiros temporários I</etc/shells.tmp> e I</etc/"
+"shells.tmp2> para remover as shells indicadas da lista de shells de login "
 "válidas, e copia o resultado de volta para I</etc/shells>."
 
 # type: TH
@@ -371,6 +370,7 @@ msgstr "RUN-PARTS"
 # type: TH
 #. type: TH
 #: ../run-parts.8:8 ../tempfile.1:2
+#, no-wrap
 msgid "27 Jun 2012"
 msgstr "27 Jun 2012"
 
@@ -407,9 +407,9 @@ msgid ""
 "described below, found in directory I<directory>.  Other files and "
 "directories are silently ignored."
 msgstr ""
-"B<run-parts> corre todos os ficheiros executáveis chamados dentro dos limites "
-"descritos em baixo, encontrados no directório I<directório>. Os outros "
-"ficheiros e directórios são ignorados em silêncio."
+"B<run-parts> corre todos os ficheiros executáveis chamados dentro dos "
+"limites descritos em baixo, encontrados no directório I<directório>. Os "
+"outros ficheiros e directórios são ignorados em silêncio."
 
 # type: Plain text
 #. type: Plain text
@@ -419,8 +419,8 @@ msgid ""
 "names must consist entirely of ASCII upper- and lower-case letters, ASCII "
 "digits, ASCII underscores, and ASCII minus-hyphens."
 msgstr ""
-"Se nenhuma das opções  --lsbsysinit ou --regex for indicada, então os "
-"nomes devem consistir inteiramente de letras ASCII maiúsculas ou minúsculas "
+"Se nenhuma das opções  --lsbsysinit ou --regex for indicada, então os nomes "
+"devem consistir inteiramente de letras ASCII maiúsculas ou minúsculas "
 "números ASCII, underscores do ASCII, e traços menos (-) do ASCII."
 
 # type: Plain text
@@ -433,12 +433,11 @@ msgid ""
 "the LSB hierarchical and reserved namespaces (^_?([a-z0-9_.]+-)+[a-z0-9]+$); "
 "and the Debian cron script namespace (^[a-zA-Z0-9_-]+$)."
 msgstr ""
-"Se a opção --lsbsysinit for usada, então os nomes não podem terminar em "
-".dpkg-old nem .dpkg-dist nem .dpkg-new nem .dpkg-tmp, e têm de pertencer "
-"a um ou mais dos seguintes 'namespaces': o namespace atribuído a LANANA "
-"(^[a-z0-9]+$); os namespaces hierárquicos e reservados LSB "
-"(^_?([a-z0-9_.]+-)+[a-z0-9]+$); e o namespace do script cron de Debian "
-"(^[a-zA-Z0-9_-]+$)."
+"Se a opção --lsbsysinit for usada, então os nomes não podem terminar em ."
+"dpkg-old nem .dpkg-dist nem .dpkg-new nem .dpkg-tmp, e têm de pertencer a um "
+"ou mais dos seguintes 'namespaces': o namespace atribuído a LANANA (^[a-"
+"z0-9]+$); os namespaces hierárquicos e reservados LSB (^_?([a-z0-9_.]+-)+[a-"
+"z0-9]+$); e o namespace do script cron de Debian (^[a-zA-Z0-9_-]+$)."
 
 # type: Plain text
 #. type: Plain text
@@ -459,8 +458,8 @@ msgid ""
 "given, in which case they are run in the opposite order."
 msgstr ""
 "OS ficheiros serão executados em ordem léxica (de acordo com as regras de "
-"ordenação de caracteres do C/POSIX) dos seus nomes a menos que a opção "
-"--reverse seja usada, o que nesse caso serão executados pela ordem oposta."
+"ordenação de caracteres do C/POSIX) dos seus nomes a menos que a opção --"
+"reverse seja usada, o que nesse caso serão executados pela ordem oposta."
 
 # type: TP
 #. type: TP
@@ -494,8 +493,8 @@ msgid ""
 "don't actually run them. This option cannot be used with --test."
 msgstr ""
 "escreve os nomes de todos os ficheiros correspondentes (não limitado aos "
-"executáveis), mas na realidade não os executa. Esta opção não pode ser "
-"usada com --test."
+"executáveis), mas na realidade não os executa. Esta opção não pode ser usada "
+"com --test."
 
 # type: TP
 #. type: TP
@@ -585,8 +584,8 @@ msgid ""
 "until completion."
 msgstr ""
 "corre cada script numa sessão de processo separado. Se usar esta opção, "
-"matar o run-parts não irá terminar o script a correr presentemente, este "
-"irá correr até o seu trabalho estar completo."
+"matar o run-parts não irá terminar o script a correr presentemente, este irá "
+"correr até o seu trabalho estar completo."
 
 # type: TP
 #. type: TP
@@ -601,8 +600,8 @@ msgid ""
 "validate filenames against custom extended regular expression I<RE>.  See "
 "the EXAMPLES section for an example."
 msgstr ""
-"valida nomes de ficheiros contra a expressão regular extensa e "
-"personalizada I<RE>. Veja a secção EXEMPLOS para um exemplo."
+"valida nomes de ficheiros contra a expressão regular extensa e personalizada "
+"I<RE>. Veja a secção EXEMPLOS para um exemplo."
 
 # type: TP
 #. type: TP
@@ -618,8 +617,8 @@ msgid ""
 "sets the umask to I<umask> before running the scripts.  I<umask> should be "
 "specified in octal.  By default the umask is set to 022."
 msgstr ""
-"define a umask para I<umask> antes de correr os scripts. I<umask> deve "
-"ser especificado em octal. Por predefinição o umask é definido para 022."
+"define a umask para I<umask> antes de correr os scripts. I<umask> deve ser "
+"especificado em octal. Por predefinição o umask é definido para 022."
 
 # type: TP
 #. type: TP
@@ -635,8 +634,8 @@ msgid ""
 "pass I<argument> to the scripts.  Use B<--arg> once for each argument you "
 "want passed."
 msgstr ""
-"passa I<argumento> aos scripts. Use B<--arg> uma vez por cada argumento "
-"que deseja passar."
+"passa I<argumento> aos scripts. Use B<--arg> uma vez por cada argumento que "
+"deseja passar."
 
 # type: TP
 #. type: TP
@@ -653,8 +652,8 @@ msgid ""
 "specifies that this is the end of the options.  Any filename after B<--> "
 "will be not be interpreted as an option even if it starts with a hyphen."
 msgstr ""
-"especifica que é o fim das opções. Qualquer nome de ficheiro após B<--> "
-"não será interpretado como uma opção mesmo que comece com um hífen."
+"especifica que é o fim das opções. Qualquer nome de ficheiro após B<--> não "
+"será interpretado como uma opção mesmo que comece com um hífen."
 
 # type: TP
 #. type: TP
@@ -695,8 +694,8 @@ msgstr "EXEMPLOS"
 msgid ""
 "Print the names of all files in /etc that start with `p' and end with `d':"
 msgstr ""
-"Escreve os nomes de todos os ficheiros em /etc que começam com um 'p' "
-"e terminam com um 'd':"
+"Escreve os nomes de todos os ficheiros em /etc que começam com um 'p' e "
+"terminam com um 'd':"
 
 # type: Plain text
 #. type: Plain text
@@ -744,8 +743,8 @@ msgid ""
 "B<run-parts> is free software; see the GNU General Public License version 2 "
 "or later for copying conditions.  There is I<no> warranty."
 msgstr ""
-"B<run-parts> é software livre; veja a GNU General Public License versão 2 "
-"ou mais recente para condições ao copiar. I<Não> tem garantia."
+"B<run-parts> é software livre; veja a GNU General Public License versão 2 ou "
+"mais recente para condições ao copiar. I<Não> tem garantia."
 
 # type: TH
 #. type: TH
@@ -776,9 +775,9 @@ msgid ""
 "J] [-1\\ .\\|.\\ -9] [-C] [-d] [-l] [-r rolldir] [-n] [-q] [-D dateformat] "
 "file ..."
 msgstr ""
-"B<savelog> [-m modo] [-u utilizador] [-g grupo] [-t] [-p] [-c ciclo] [-l] "
-"[-j] [-J] [-1\\ .\\|.\\ -9] [-C] [-d] [-l] [-r rolldir] [-n] [-q] [-D "
-"formato-data] ficheiro ..."
+"B<savelog> [-m modo] [-u utilizador] [-g grupo] [-t] [-p] [-c ciclo] [-l] [-"
+"j] [-J] [-1\\ .\\|.\\ -9] [-C] [-d] [-l] [-r rolldir] [-n] [-q] [-D formato-"
+"data] ficheiro ..."
 
 # type: Plain text
 #. type: Plain text
@@ -787,8 +786,8 @@ msgid ""
 "The B<savelog> command saves and optionally compresses old copies of files.  "
 "Older versions of I<file> are named:"
 msgstr ""
-"O comando B<savelog> grava e opcionalmente comprime as cópias antigas "
-"dos ficheiro. As versões antigas do I<ficheiro> são chamadas:"
+"O comando B<savelog> grava e opcionalmente comprime as cópias antigas dos "
+"ficheiro. As versões antigas do I<ficheiro> são chamadas:"
 
 # type: Plain text
 #. type: Plain text
@@ -806,9 +805,9 @@ msgid ""
 "for I/O.  Only I<cycle> versions of the file are kept."
 msgstr ""
 "onde I<E<lt>numberE<gt>> é o número da versão, sendo 0 a mais recente.  "
-"Números de versão E<gt> maiores que 0 são comprimidos a menos que B<-l> "
-"o previna. O número de versão 0 não é comprimido porque um processo pode "
-"ainda ter o I<ficheiro> aberto para escrita/leitura. Apenas as versões com "
+"Números de versão E<gt> maiores que 0 são comprimidos a menos que B<-l> o "
+"previna. O número de versão 0 não é comprimido porque um processo pode ainda "
+"ter o I<ficheiro> aberto para escrita/leitura. Apenas as versões com "
 "I<ciclo> do ficheiro são mantidas."
 
 # type: Plain text
@@ -844,13 +843,13 @@ msgid ""
 "version I<file> is deleted.  Both compressed names and uncompressed names "
 "are cycled, regardless of B<-l>.  Missing version files are ignored."
 msgstr ""
-"É feito um ciclo aos ficheiros com número de versão. O I<ficheiro> versão "
-".I<2> é movido para I<ficheiro> versão .I<3>, o O I<ficheiro> versão I<1> "
-"é movido para I<ficheiro> versão .I<2>, e assim sucessivamente. Finalmente "
-"o I<ficheiro> versão .I<0> é movido para I<ficheiro> versão .I<1>, e o "
+"É feito um ciclo aos ficheiros com número de versão. O I<ficheiro> versão ."
+"I<2> é movido para I<ficheiro> versão .I<3>, o O I<ficheiro> versão I<1> é "
+"movido para I<ficheiro> versão .I<2>, e assim sucessivamente. Finalmente o "
+"I<ficheiro> versão .I<0> é movido para I<ficheiro> versão .I<1>, e o "
 "I<ficheiro> versão é apagado. É feito este ciclo a ambos nomes comprimidos e "
-"nomes não comprimidos, independentemente de B<-l>. Os ficheiros de versão "
-"em falta são ignorados."
+"nomes não comprimidos, independentemente de B<-l>. Os ficheiros de versão em "
+"falta são ignorados."
 
 # type: IP
 #. type: IP
@@ -866,8 +865,8 @@ msgid ""
 "The new I<file>.I<1> is compressed unless the B<-l> flag was given.  It is "
 "changed subject to the B<-m>, B<-u>, and B<-g> flags."
 msgstr ""
-"O novo I<ficheiro>.I<1> é comprimido a menos que a flag B<-l> seja usada. "
-"É alterado de acordo com as flags B<-m>, B<-u>, e B<-g>."
+"O novo I<ficheiro>.I<1> é comprimido a menos que a flag B<-l> seja usada. É "
+"alterado de acordo com as flags B<-m>, B<-u>, e B<-g>."
 
 # type: IP
 #. type: IP
@@ -914,8 +913,8 @@ msgstr "5)"
 msgid ""
 "The new I<file>.I<0> is changed subject to the B<-m>, B<-u>, and B<-g> flags."
 msgstr ""
-"O novo I<ficheiro>.I<0> é alterado de acordo com as flags B<-m>, B<-u>, e B<"
-"-g>."
+"O novo I<ficheiro>.I<0> é alterado de acordo com as flags B<-m>, B<-u>, e B<-"
+"g>."
 
 # type: TP
 #. type: TP
@@ -970,8 +969,8 @@ msgid ""
 "Save cycle versions of the logfile (default: 7). The I<cycle> count must be "
 "at least 2."
 msgstr ""
-"Grava versões de ciclo do ficheiro de relatório (predefinição: 7). A contagem "
-"de I<ciclo> tem de ser pelo menos 2."
+"Grava versões de ciclo do ficheiro de relatório (predefinição: 7). A "
+"contagem de I<ciclo> tem de ser pelo menos 2."
 
 # type: TP
 #. type: TP
@@ -1059,8 +1058,8 @@ msgstr "B<-1\\ .\\|.\\ -9>"
 #: ../savelog.8:130
 msgid "compression strength or memory usage (default: 9, except for xz)"
 msgstr ""
-"força de compressão ou utilização de memória (predefinição: 9, excepto "
-"para xz)"
+"força de compressão ou utilização de memória (predefinição: 9, excepto para "
+"xz)"
 
 # type: TP
 #. type: TP
@@ -1148,8 +1147,8 @@ msgid ""
 "If a process is still writing to I<file.0>, and savelog moves it to "
 "I<file.1> and compresses it, data could be lost."
 msgstr ""
-"Se um processo ainda estiver a escrever no I<ficheiro.0>, e o savelog "
-"movê-lo para I<ficheiro.1> e o comprimir, pode-se perder dados."
+"Se um processo ainda estiver a escrever no I<ficheiro.0>, e o savelog movê-"
+"lo para I<ficheiro.1> e o comprimir, pode-se perder dados."
 
 #. type: Plain text
 #: ../savelog.8:159
@@ -1185,10 +1184,10 @@ msgstr ""
 #. type: Plain text
 #: ../tempfile.1:18
 msgid ""
-"B<tempfile> creates a temporary file in a safe manner.  It uses B<tempnam>"
-"(3)  to choose the name and opens it with O_RDWR | O_CREAT | O_EXCL.  The "
-"filename is printed on standard output. See B<tempnam>(3)  for the actual "
-"steps involved in directory selection."
+"B<tempfile> creates a temporary file in a safe manner.  It uses "
+"B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
+"O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  for "
+"the actual steps involved in directory selection."
 msgstr ""
 "B<tempfile> cria um ficheiro temporário num modo seguro. Usa o B<tempnam>(3) "
 "para escolher o nome e abre-o com O_RDWR | O_CREAT | O_EXCL. O nome do "
@@ -1410,9 +1409,10 @@ msgstr "WHICH"
 # type: TH
 #. type: TH
 #: ../which.1:2
-#, no-wrap
-msgid "1 May 2009"
-msgstr "1 May 2009"
+#, fuzzy, no-wrap
+#| msgid "27 Jun 2012"
+msgid "29 Jun 2016"
+msgstr "27 Jun 2012"
 
 # type: Plain text
 #. type: Plain text
@@ -1429,18 +1429,25 @@ msgstr "which [-a] nome_de_ficheiro ..."
 # type: Plain text
 #. type: Plain text
 #: ../which.1:14
+#, fuzzy
+#| msgid ""
+#| "B<which> returns the pathnames of the files (or links) which would be "
+#| "executed in the current environment, had its arguments been given as "
+#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
+#| "the PATH for executable files matching the names of the arguments. It "
+#| "does not follow symbolic links."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
 "commands in a strictly POSIX-conformant shell.  It does this by searching "
 "the PATH for executable files matching the names of the arguments. It does "
-"not follow symbolic links."
+"not canonicalize path names."
 msgstr ""
-"B<which> retorna os nomes de caminho dos ficheiros (ou links) que podem "
-"ser executados no ambiente actual, tendo os seus argumentos sendo dados "
-"como comandos numa shell estritamente compatível com POSIX. Ele faz isto "
-"ao pesquisar a PATH por ficheiros executáveis que correspondem aos nomes "
-"dos argumentos. Não segue os links simbólicos."
+"B<which> retorna os nomes de caminho dos ficheiros (ou links) que podem ser "
+"executados no ambiente actual, tendo os seus argumentos sendo dados como "
+"comandos numa shell estritamente compatível com POSIX. Ele faz isto ao "
+"pesquisar a PATH por ficheiros executáveis que correspondem aos nomes dos "
+"argumentos. Não segue os links simbólicos."
 
 # type: TP
 #. type: TP
@@ -1501,6 +1508,10 @@ msgstr "B<2>"
 #: ../which.1:27
 msgid "if an invalid option is specified"
 msgstr "se for especificada uma opção inválida"
+
+# type: TH
+#~ msgid "1 May 2009"
+#~ msgstr "1 May 2009"
 
 #~ msgid "14 Nov 2010"
 #~ msgstr "14 novembre 2010"
