@@ -1,12 +1,12 @@
 # Italian translation of debianutils man pages
-# Copyright (C) 2012 Free Software Foundation, Inc.
+# Copyright (C) 2017 Free Software Foundation, Inc.
 # This file is distributed under the same license as the debian-utils package.
-# Beatrice Torracca <beatricet@libero.it>, 2012.
+# Beatrice Torracca <beatricet@libero.it>, 2012, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
 "POT-Creation-Date: 2016-11-17 15:39-0500\n"
-"PO-Revision-Date: 2012-08-23 12:28+0200\n"
+"PO-Revision-Date: 2017-03-28 07:45+0200\n"
 "Last-Translator: Beatrice Torracca <beatricet@libero.it>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "Language: it\n"
@@ -1258,10 +1258,9 @@ msgstr "WHICH"
 
 #. type: TH
 #: ../which.1:2
-#, fuzzy, no-wrap
-#| msgid "27 Jun 2012"
+#, no-wrap
 msgid "29 Jun 2016"
-msgstr "27 giugno 2012"
+msgstr "29 giugno 2016"
 
 #. type: Plain text
 #: ../which.1:5
@@ -1275,13 +1274,6 @@ msgstr "which [-a] nomefile ..."
 
 #. type: Plain text
 #: ../which.1:14
-#, fuzzy
-#| msgid ""
-#| "B<which> returns the pathnames of the files (or links) which would be "
-#| "executed in the current environment, had its arguments been given as "
-#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
-#| "the PATH for executable files matching the names of the arguments. It "
-#| "does not follow symbolic links."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
@@ -1292,8 +1284,8 @@ msgstr ""
 "B<which> restituisce i nomi di percorso dei file (o collegamenti) che "
 "verrebbero eseguiti nell'ambiente attuale, se i suoi argomenti venissero "
 "forniti come comandi in una shell rigorosamente conforme a POSIX. Ciò viene "
-"fatto cercando in PATH file eseguibili che corrispondano ai nomi degli "
-"argomenti. Non segue i collegamenti simbolici."
+"fatto cercando in PATH file eseguibili che corrispondono ai nomi degli "
+"argomenti. Non rende canonici i nomi di percorso."
 
 #. type: TP
 #: ../which.1:15
