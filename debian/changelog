@@ -1,3 +1,12 @@
+debianutils (4.8.1.1) unstable; urgency=medium
+
+  * de.po: German man page translation update from Helge
+    Kreutzmann.  closes: #858850.
+  * it.po: Italian man page translation update from Beatrice
+    Torracca.  closes: #858878.
+
+ -- Clint Adams <clint@debian.org>  Sun, 02 Apr 2017 13:10:33 -0400
+
 debianutils (4.8.1) unstable; urgency=medium
 
   * po4a/po/fr.po: French man page translation update from
