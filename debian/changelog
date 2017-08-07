@@ -1,3 +1,9 @@
+debianutils (4.8.2) unstable; urgency=medium
+
+  * Drop dependency on sensible-utils.  closes: #871260.
+
+ -- Clint Adams <clint@debian.org>  Mon, 07 Aug 2017 10:40:54 -0400
+
 debianutils (4.8.1.1) unstable; urgency=medium
 
   * de.po: German man page translation update from Helge
