@@ -4,10 +4,10 @@ package = debianutils
 
 CFLAGS = -Wall -g
 INSTALL = install
-INSTALL_FILE    = $(INSTALL) -p    -o root -g root  -m  644
-INSTALL_PROGRAM = $(INSTALL) -p    -o root -g root  -m  755
-INSTALL_SCRIPT  = $(INSTALL) -p    -o root -g root  -m  755
-INSTALL_DIR     = $(INSTALL) -p -d -o root -g root  -m  755
+INSTALL_FILE    = $(INSTALL) -p    -m  644
+INSTALL_PROGRAM = $(INSTALL) -p    -m  755
+INSTALL_SCRIPT  = $(INSTALL) -p    -m  755
+INSTALL_DIR     = $(INSTALL) -p -d -m  755
 
 DEB_BUILD_ARCH_OS ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH_OS)
 DEB_BUILD_GNU_TYPE = $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
@@ -47,10 +47,10 @@ clean:
 	$(RM) build-arch debian/files* debian/substvars
 	find . -name '*~' -print0 | xargs -0 rm -f
 
-binary-indep:	checkroot build
+binary-indep:	build
 	$(checkdir)
 
-binary-arch:	checkroot build
+binary-arch:	build
 	$(checkdir)
 	-rm -rf debian/tmp
 	$(INSTALL_DIR) debian/tmp/DEBIAN \
@@ -107,17 +107,13 @@ endif
 	dpkg-gencontrol -isp
 	find debian/tmp -depth -newermt '$(BUILD_DATE)' -print0 | \
 		xargs -0r touch --no-dereference --date='$(BUILD_DATE)'
-	dpkg --build debian/tmp ..
+	dpkg-deb --root-owner-group --build debian/tmp ..
 
 define checkdir
 	test -f run-parts.c && test -f debian/rules
 endef
 
 binary:	binary-indep binary-arch
-
-checkroot:
-	$(checkdir)
-	test 0 = `id -u`
 
 prebuild:
 	printf "define(DEBIANUTILS_VERSION, %s)\n" $$(dpkg-parsechangelog | sed -n '/^Version: \(.*\)$$/ {s//\1/;p}') >acinclude.m4
@@ -128,7 +124,7 @@ prebuild:
 	cd po4a && po4a --no-backups po4a.conf
 
 
-.PHONY: build build-indep binary binary-arch binary-indep clean checkroot prebuild
+.PHONY: build build-indep binary binary-arch binary-indep clean prebuild
 
 # Local Variables:
 # mode:Makefile

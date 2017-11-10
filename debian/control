@@ -3,7 +3,9 @@ Section: utils
 Priority: required
 Maintainer: Clint Adams <clint@debian.org>
 Uploaders: Manoj Srivastava <srivasta@debian.org>
-Standards-Version: 4.0.1
+Standards-Version: 4.1.1
+Build-Depends: dpkg (>= 1.19.0.3~)
+Rules-Requires-Root: no
 Vcs-Git: https://anonscm.debian.org/git/users/clint/debianutils.git
 Vcs-Browser: https://anonscm.debian.org/cgit/users/clint/debianutils.git
 
