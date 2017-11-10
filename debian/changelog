@@ -1,3 +1,9 @@
+debianutils (4.8.3) unstable; urgency=medium
+
+  * Rules-Requires-Root: no
+
+ -- Clint Adams <clint@debian.org>  Fri, 10 Nov 2017 13:55:46 -0500
+
 debianutils (4.8.2) unstable; urgency=medium
 
   * Drop dependency on sensible-utils.  closes: #871260.
