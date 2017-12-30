@@ -1,3 +1,10 @@
+debianutils (4.8.4) unstable; urgency=medium
+
+  * savelog.8: specify that the dateformat uses the date(1)
+    syntax.  closes: #709944.
+
+ -- Clint Adams <clint@debian.org>  Sat, 30 Dec 2017 13:15:02 -0500
+
 debianutils (4.8.3) unstable; urgency=medium
 
   * Rules-Requires-Root: no
