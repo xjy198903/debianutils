@@ -10,16 +10,12 @@ tempfile \- create a temporary file in a safe manner
 .PP
 .B tempfile
 creates a temporary file in a safe manner.  It uses
-.BR tempnam (3)
+.BR mkstemps (3)
 to choose the name and opens it with O_RDWR | O_CREAT | O_EXCL.  The filename
-is printed on standard output. See
-.BR tempnam (3)
-for the actual steps involved in directory selection.
+is printed on standard output.
 .PP
 The directory in which to create the file might be searched for in this
-order (but refer to
-.BR tempnam (3)
-for authoritative answers):
+order:
 .TP 3
 a)
 In case the environment variable

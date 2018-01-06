@@ -59,7 +59,7 @@ parsemode (const char *in, mode_t *out)
 int
 main (int argc, char **argv)
 {
-  char *name=0, *dir=0, *pfx=0, *sfx=0, *filename=0;
+  char *name=0, *dir=0, *pfx="file", *sfx=0, *filename=0;
   mode_t mode = 0600;
   int fd, optc;
   struct option long_options[] = {
@@ -115,29 +115,56 @@ main (int argc, char **argv)
     filename = name;
   }
   else {
-    for (;;) {
-      if (!(name = tempnam(dir, pfx)))
-	syserror("tempnam");
-      if(sfx) {
-        char *namesfx;
-        if (!(namesfx = (char *)malloc(strlen(name) + strlen(sfx) + 1)))
-          syserror("malloc");
-        strcpy(namesfx, name);
-        strcat(namesfx, sfx);
-        filename = namesfx;
-      }
-      else
-        filename = name;
+    /*
+       a) In case the environment variable TMPDIR exists
+          and contains the name of an appropriate directory,
+          that is used.
+       b) Otherwise, if the --directory argument is specified
+          and appropriate, it is used.
+       c) Otherwise, P_tmpdir (as defined in <stdio.h>) is used
+          when appropriate.
+       d) Finally an implementation-defined directory (/tmp)
+          may be used.
+    */
 
-      if ((fd = open(filename, O_RDWR | O_CREAT | O_EXCL, mode)) < 0) {
+    char *tmpdirs[] = {
+	getenv("TMPDIR"),
+	dir,
+	P_tmpdir,
+	"/tmp"
+    };
+    int i;
+
+    for (i = 0; i < sizeof(tmpdirs) / sizeof(char *); i++) {
+      char *tmpdir = tmpdirs[i];
+      if (!tmpdir)
+	continue;
+
+      size_t len =
+	strlen(tmpdir) + 1 + /* / */
+	(pfx ? strlen(pfx) : 0) +
+	6 + /* XXXXXX */
+	(sfx ? strlen(sfx) : 0) +
+	1; /* NUL */
+
+      if (!(filename = malloc(len)))
+	syserror("malloc");
+
+      snprintf(filename, len, "%s/%sXXXXXX%s",
+	tmpdir,
+	pfx ? pfx : "",
+	sfx ? sfx : "");
+
+      if ((fd = mkstemps(filename, sfx ? strlen(sfx) : 0)) < 0) {
 	if (errno == EEXIST) {
-          if(name != filename)
-            free(name);
 	  free(filename);
 	  continue;
 	}
-	syserror("open");
+	syserror("mkstemps");
       }
+
+      if (fchmod(fd, mode) < 0)
+	syserror("fchmod");
       break;
     }
   }
