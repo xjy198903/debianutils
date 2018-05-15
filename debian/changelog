@@ -1,3 +1,10 @@
+debianutils (4.8.6) unstable; urgency=medium
+
+  * run-parts.8: man page fixes from Bjarni Ingi Gislason.
+    closes: #894530.
+
+ -- Clint Adams <clint@debian.org>  Tue, 15 May 2018 07:58:37 -0400
+
 debianutils (4.8.5) unstable; urgency=medium
 
   [ Andrew Shadura ]
@@ -5,7 +12,8 @@ debianutils (4.8.5) unstable; urgency=medium
 
   [ Clint Adams ]
   * Use /usr/share/dpkg/architecture.mk
-  * Updated German man page translation from Helge Kreutzmann.  closes: #898036.
+  * Updated German man page translation from Helge Kreutzmann.
+    closes: #898036.
 
  -- Clint Adams <clint@debian.org>  Tue, 15 May 2018 07:43:16 -0400
 
