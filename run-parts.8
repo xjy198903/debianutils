@@ -52,7 +52,8 @@ them.
 .TP
 .B \-\-list
 print the names of the all matching files (not limited to executables),
-but don't actually run them. This option cannot be used with --test.
+but don't actually run them.
+This option cannot be used with \-\-test.
 .TP
 .B \-v, \-\-verbose
 print the name of each script to stderr before running.
@@ -60,7 +61,9 @@ print the name of each script to stderr before running.
 .B \-\-report
 similar to
 .BR \-\-verbose ,
-but only prints the name of scripts which produce output.  The script's name is printed to whichever of stdout or stderr the script first produces output on.
+but only prints the name of scripts which produce output.
+The script's name is printed to whichever of stdout or stderr the
+script first produces output on.
 .TP
 .B \-\-reverse
 reverse the scripts' execution order.
@@ -92,7 +95,7 @@ should be specified in octal.  By default the umask is set to 022.
 pass
 .I argument
 to the scripts.  Use
-.B --arg
+.B \-\-arg
 once for each argument you want passed.
 .TP
 .B "\-\-"
