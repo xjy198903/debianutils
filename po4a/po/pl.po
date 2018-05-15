@@ -16,7 +16,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils 4.3.4\n"
-"POT-Creation-Date: 2018-05-15 07:39-0400\n"
+"POT-Creation-Date: 2018-05-15 07:57-0400\n"
 "PO-Revision-Date: 2013-05-26 22:18+0200\n"
 "Last-Translator: Robert Luberda <robert@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -457,37 +457,41 @@ msgstr "B<--list>"
 
 #
 #. type: Plain text
-#: ../run-parts.8:56
+#: ../run-parts.8:57
+#, fuzzy
+#| msgid ""
+#| "print the names of the all matching files (not limited to executables), "
+#| "but don't actually run them. This option cannot be used with --test."
 msgid ""
 "print the names of the all matching files (not limited to executables), but "
-"don't actually run them. This option cannot be used with --test."
+"don't actually run them.  This option cannot be used with --test."
 msgstr ""
 "wypisuje nazwy wszystkich plików (nie tylko wykonywalnych), ale faktycznie "
 "ich nie uruchamia. Ta opcja nie może być użyta z --test."
 
 #. type: TP
-#: ../run-parts.8:56
+#: ../run-parts.8:57
 #, no-wrap
 msgid "B<-v, --verbose>"
 msgstr "B<--verbose>"
 
 #
 #. type: Plain text
-#: ../run-parts.8:59
+#: ../run-parts.8:60
 msgid "print the name of each script to stderr before running."
 msgstr ""
 "przed uruchomieniem każdego ze skryptów wypisuje jego nazwę na standardowe "
 "wyjście błędów."
 
 #. type: TP
-#: ../run-parts.8:59
+#: ../run-parts.8:60
 #, no-wrap
 msgid "B<--report>"
 msgstr "B<--report>"
 
 #
 #. type: Plain text
-#: ../run-parts.8:64
+#: ../run-parts.8:67
 msgid ""
 "similar to B<--verbose>, but only prints the name of scripts which produce "
 "output.  The script's name is printed to whichever of stdout or stderr the "
@@ -498,50 +502,50 @@ msgstr ""
 "zależności od tego, gdzie skrypt wysyła swoje pierwsze wyniki."
 
 #. type: TP
-#: ../run-parts.8:64
+#: ../run-parts.8:67
 #, no-wrap
 msgid "B<--reverse>"
 msgstr "B<--reverse>"
 
 #
 #. type: Plain text
-#: ../run-parts.8:67
+#: ../run-parts.8:70
 msgid "reverse the scripts' execution order."
 msgstr "odwraca porządek wykonywania skryptów."
 
 #. type: TP
-#: ../run-parts.8:67
+#: ../run-parts.8:70
 #, no-wrap
 msgid "B<--exit-on-error>"
 msgstr "B<--exit-on-error>"
 
 #
 #. type: Plain text
-#: ../run-parts.8:70
+#: ../run-parts.8:73
 msgid "exit as soon as a script returns with a non-zero exit code."
 msgstr ""
 "kończy pracę, gdy tylko któryś ze skryptów zakończy się niezerowym kodem "
 "wyjścia."
 
 #. type: TP
-#: ../run-parts.8:70
+#: ../run-parts.8:73
 #, no-wrap
 msgid "B<--lsbsysinit>"
 msgstr "B<--lsbsysinit>"
 
 #. type: Plain text
-#: ../run-parts.8:73
+#: ../run-parts.8:76
 msgid "use LSB namespaces instead of classical behavior."
 msgstr "używa konwencji nazw LSB, zamiast zwykłej."
 
 #. type: TP
-#: ../run-parts.8:73
+#: ../run-parts.8:76
 #, no-wrap
 msgid "B<--new-session>"
 msgstr "B<--new-session>"
 
 #. type: Plain text
-#: ../run-parts.8:78
+#: ../run-parts.8:81
 msgid ""
 "run each script in a separate process session.  If you use this option, "
 "killing run-parts will not kill the currently running script, it will run "
@@ -552,13 +556,13 @@ msgstr ""
 "działał, aż się zakończy."
 
 #. type: TP
-#: ../run-parts.8:78
+#: ../run-parts.8:81
 #, no-wrap
 msgid "B<--regex=>I<RE>"
 msgstr "B<--regex=>I<RE>"
 
 #. type: Plain text
-#: ../run-parts.8:83
+#: ../run-parts.8:86
 msgid ""
 "validate filenames against custom extended regular expression I<RE>.  See "
 "the EXAMPLES section for an example."
@@ -567,13 +571,13 @@ msgstr ""
 "Przykład można znaleźć w rozdziale PRZYKŁADY."
 
 #. type: TP
-#: ../run-parts.8:83
+#: ../run-parts.8:86
 #, no-wrap
 msgid "B<-u, --umask=>I<umask>"
 msgstr "B<-u, --umask=>I<umask>"
 
 #. type: Plain text
-#: ../run-parts.8:90
+#: ../run-parts.8:93
 msgid ""
 "sets the umask to I<umask> before running the scripts.  I<umask> should be "
 "specified in octal.  By default the umask is set to 022."
@@ -582,13 +586,13 @@ msgstr ""
 "zostać podana ósemkowo. Domyślnie umask otrzymuje wartość 022."
 
 #. type: TP
-#: ../run-parts.8:90
+#: ../run-parts.8:93
 #, no-wrap
 msgid "B<-a, --arg=>I<argument>"
 msgstr "B<-a, --arg=>I<argument>"
 
 #. type: Plain text
-#: ../run-parts.8:97
+#: ../run-parts.8:100
 msgid ""
 "pass I<argument> to the scripts.  Use B<--arg> once for each argument you "
 "want passed."
@@ -597,13 +601,13 @@ msgstr ""
 "każdego argumentu, który chce się przekazać."
 
 #. type: TP
-#: ../run-parts.8:97
+#: ../run-parts.8:100
 #, no-wrap
 msgid "B<-->"
 msgstr "B<-->"
 
 #. type: Plain text
-#: ../run-parts.8:103
+#: ../run-parts.8:106
 msgid ""
 "specifies that this is the end of the options.  Any filename after B<--> "
 "will be not be interpreted as an option even if it starts with a hyphen."
@@ -612,36 +616,36 @@ msgstr ""
 "będzie interpretowana jako opcja, nawet jeśli zaczyna się od myślnika."
 
 #. type: TP
-#: ../run-parts.8:103
+#: ../run-parts.8:106
 #, no-wrap
 msgid "B<-h, --help>"
 msgstr "B<-h, --help>"
 
 #. type: Plain text
-#: ../run-parts.8:106
+#: ../run-parts.8:109
 msgid "display usage information and exit."
 msgstr "wyświetla informację o sposobie wywołania i kończy pracę."
 
 #. type: TP
-#: ../run-parts.8:106
+#: ../run-parts.8:109
 #, no-wrap
 msgid "B<-V, --version>"
 msgstr "B<-V, --version>"
 
 #. type: Plain text
-#: ../run-parts.8:109
+#: ../run-parts.8:112
 msgid "display version and copyright and exit."
 msgstr ""
 "wyświetla numer wersji, informację o prawach autorskich i kończy pracę."
 
 #. type: SH
-#: ../run-parts.8:110
+#: ../run-parts.8:113
 #, no-wrap
 msgid "EXAMPLES"
 msgstr "PRZYKŁADY"
 
 #. type: Plain text
-#: ../run-parts.8:113
+#: ../run-parts.8:116
 msgid ""
 "Print the names of all files in /etc that start with `p' and end with `d':"
 msgstr ""
@@ -649,36 +653,36 @@ msgstr ""
 "i kończących się na \"d\":"
 
 #. type: Plain text
-#: ../run-parts.8:115
+#: ../run-parts.8:118
 msgid "run-parts --list --regex \\[aq]^p.*d$\\[aq] /etc"
 msgstr "run-parts --list --regex \\[aq]^p.*d$\\[aq] /etc"
 
 #. type: SH
-#: ../run-parts.8:116
+#: ../run-parts.8:119
 #, no-wrap
 msgid "COPYRIGHT"
 msgstr "COPYRIGHT"
 
 #
 #. type: Plain text
-#: ../run-parts.8:119
+#: ../run-parts.8:122
 msgid "Copyright (C) 1994 Ian Jackson."
 msgstr "Copyright (C) 1994 Ian Jackson."
 
 #
 #. type: Plain text
-#: ../run-parts.8:121
+#: ../run-parts.8:124
 msgid "Copyright (C) 1996 Jeff Noxon."
 msgstr "Copyright (C) 1996 Jeff Noxon."
 
 #
 #. type: Plain text
-#: ../run-parts.8:123
+#: ../run-parts.8:126
 msgid "Copyright (C) 1996, 1997, 1998 Guy Maor"
 msgstr "Copyright (C) 1996, 1997, 1998 Guy Maor"
 
 #. type: Plain text
-#: ../run-parts.8:125
+#: ../run-parts.8:128
 msgid ""
 "Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Clint Adams"
 msgstr ""
@@ -686,7 +690,7 @@ msgstr ""
 
 #
 #. type: Plain text
-#: ../run-parts.8:130
+#: ../run-parts.8:133
 msgid ""
 "B<run-parts> is free software; see the GNU General Public License version 2 "
 "or later for copying conditions.  There is I<no> warranty."

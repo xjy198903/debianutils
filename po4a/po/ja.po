@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
-"POT-Creation-Date: 2018-05-15 07:39-0400\n"
+"POT-Creation-Date: 2018-05-15 07:57-0400\n"
 "PO-Revision-Date: 2012-07-28 22:56+0900\n"
 "Last-Translator: KURASAWA Nozomu <nabetaro@debian.or.jp>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -430,33 +430,37 @@ msgid "B<--list>"
 msgstr "B<--list>"
 
 #. type: Plain text
-#: ../run-parts.8:56
+#: ../run-parts.8:57
+#, fuzzy
+#| msgid ""
+#| "print the names of the all matching files (not limited to executables), "
+#| "but don't actually run them. This option cannot be used with --test."
 msgid ""
 "print the names of the all matching files (not limited to executables), but "
-"don't actually run them. This option cannot be used with --test."
+"don't actually run them.  This option cannot be used with --test."
 msgstr ""
 "マッチしたファイルすべて (実行ファイルに限らない) を表示しますが、実際には実"
 "行しません。このオプションは --test と同時に指定できません。"
 
 #. type: TP
-#: ../run-parts.8:56
+#: ../run-parts.8:57
 #, no-wrap
 msgid "B<-v, --verbose>"
 msgstr "B<-v, --verbose>"
 
 #. type: Plain text
-#: ../run-parts.8:59
+#: ../run-parts.8:60
 msgid "print the name of each script to stderr before running."
 msgstr "各スクリプトの実行前に、ファイル名を標準エラー出力に出力します。"
 
 #. type: TP
-#: ../run-parts.8:59
+#: ../run-parts.8:60
 #, no-wrap
 msgid "B<--report>"
 msgstr "B<--report>"
 
 #. type: Plain text
-#: ../run-parts.8:64
+#: ../run-parts.8:67
 msgid ""
 "similar to B<--verbose>, but only prints the name of scripts which produce "
 "output.  The script's name is printed to whichever of stdout or stderr the "
@@ -467,46 +471,46 @@ msgstr ""
 "クリプト名を出力します。"
 
 #. type: TP
-#: ../run-parts.8:64
+#: ../run-parts.8:67
 #, no-wrap
 msgid "B<--reverse>"
 msgstr "B<--reverse>"
 
 #. type: Plain text
-#: ../run-parts.8:67
+#: ../run-parts.8:70
 msgid "reverse the scripts' execution order."
 msgstr "スクリプトの実行順を逆にします。"
 
 #. type: TP
-#: ../run-parts.8:67
+#: ../run-parts.8:70
 #, no-wrap
 msgid "B<--exit-on-error>"
 msgstr "B<--exit-on-error>"
 
 #. type: Plain text
-#: ../run-parts.8:70
+#: ../run-parts.8:73
 msgid "exit as soon as a script returns with a non-zero exit code."
 msgstr "スクリプトが終了コードに非 0 を返すと、すぐに終了します。"
 
 #. type: TP
-#: ../run-parts.8:70
+#: ../run-parts.8:73
 #, no-wrap
 msgid "B<--lsbsysinit>"
 msgstr "B<--lsbsysinit>"
 
 #. type: Plain text
-#: ../run-parts.8:73
+#: ../run-parts.8:76
 msgid "use LSB namespaces instead of classical behavior."
 msgstr "古典的な挙動に代えて、LSB 名前空間を使用します。"
 
 #. type: TP
-#: ../run-parts.8:73
+#: ../run-parts.8:76
 #, no-wrap
 msgid "B<--new-session>"
 msgstr "B<--new-session>"
 
 #. type: Plain text
-#: ../run-parts.8:78
+#: ../run-parts.8:81
 msgid ""
 "run each script in a separate process session.  If you use this option, "
 "killing run-parts will not kill the currently running script, it will run "
@@ -517,13 +521,13 @@ msgstr ""
 "完了するまで動き続けます。"
 
 #. type: TP
-#: ../run-parts.8:78
+#: ../run-parts.8:81
 #, no-wrap
 msgid "B<--regex=>I<RE>"
 msgstr "B<--regex=>I<RE>"
 
 #. type: Plain text
-#: ../run-parts.8:83
+#: ../run-parts.8:86
 msgid ""
 "validate filenames against custom extended regular expression I<RE>.  See "
 "the EXAMPLES section for an example."
@@ -531,13 +535,13 @@ msgstr ""
 "ファイル名を拡張正規表現 I<RE> で検証します。例セクションを参照してください。"
 
 #. type: TP
-#: ../run-parts.8:83
+#: ../run-parts.8:86
 #, no-wrap
 msgid "B<-u, --umask=>I<umask>"
 msgstr "B<-u, --umask=>I<umask>"
 
 #. type: Plain text
-#: ../run-parts.8:90
+#: ../run-parts.8:93
 msgid ""
 "sets the umask to I<umask> before running the scripts.  I<umask> should be "
 "specified in octal.  By default the umask is set to 022."
@@ -546,13 +550,13 @@ msgstr ""
 "てください。デフォルトの umask は 022 です。"
 
 #. type: TP
-#: ../run-parts.8:90
+#: ../run-parts.8:93
 #, no-wrap
 msgid "B<-a, --arg=>I<argument>"
 msgstr "B<-a, --arg=>I<argument>"
 
 #. type: Plain text
-#: ../run-parts.8:97
+#: ../run-parts.8:100
 msgid ""
 "pass I<argument> to the scripts.  Use B<--arg> once for each argument you "
 "want passed."
@@ -561,13 +565,13 @@ msgstr ""
 "を指定してください。"
 
 #. type: TP
-#: ../run-parts.8:97
+#: ../run-parts.8:100
 #, no-wrap
 msgid "B<-->"
 msgstr "B<-->"
 
 #. type: Plain text
-#: ../run-parts.8:103
+#: ../run-parts.8:106
 msgid ""
 "specifies that this is the end of the options.  Any filename after B<--> "
 "will be not be interpreted as an option even if it starts with a hyphen."
@@ -576,35 +580,35 @@ msgstr ""
 "で始まっていたとしても、オプションとして解釈されません。"
 
 #. type: TP
-#: ../run-parts.8:103
+#: ../run-parts.8:106
 #, no-wrap
 msgid "B<-h, --help>"
 msgstr "B<-h, --help>"
 
 #. type: Plain text
-#: ../run-parts.8:106
+#: ../run-parts.8:109
 msgid "display usage information and exit."
 msgstr "使用方法を表示して終了します。"
 
 #. type: TP
-#: ../run-parts.8:106
+#: ../run-parts.8:109
 #, no-wrap
 msgid "B<-V, --version>"
 msgstr "B<-V, --version>"
 
 #. type: Plain text
-#: ../run-parts.8:109
+#: ../run-parts.8:112
 msgid "display version and copyright and exit."
 msgstr "バージョンや著作権を表示して終了します。"
 
 #. type: SH
-#: ../run-parts.8:110
+#: ../run-parts.8:113
 #, no-wrap
 msgid "EXAMPLES"
 msgstr "例"
 
 #. type: Plain text
-#: ../run-parts.8:113
+#: ../run-parts.8:116
 msgid ""
 "Print the names of all files in /etc that start with `p' and end with `d':"
 msgstr ""
@@ -612,40 +616,40 @@ msgstr ""
 "にしてください。"
 
 #. type: Plain text
-#: ../run-parts.8:115
+#: ../run-parts.8:118
 msgid "run-parts --list --regex \\[aq]^p.*d$\\[aq] /etc"
 msgstr "run-parts --list --regex \\[aq]^p.*d$\\[aq] /etc"
 
 #. type: SH
-#: ../run-parts.8:116
+#: ../run-parts.8:119
 #, no-wrap
 msgid "COPYRIGHT"
 msgstr "著作権"
 
 #. type: Plain text
-#: ../run-parts.8:119
+#: ../run-parts.8:122
 msgid "Copyright (C) 1994 Ian Jackson."
 msgstr "Copyright (C) 1994 Ian Jackson."
 
 #. type: Plain text
-#: ../run-parts.8:121
+#: ../run-parts.8:124
 msgid "Copyright (C) 1996 Jeff Noxon."
 msgstr "Copyright (C) 1996 Jeff Noxon."
 
 #. type: Plain text
-#: ../run-parts.8:123
+#: ../run-parts.8:126
 msgid "Copyright (C) 1996, 1997, 1998 Guy Maor"
 msgstr "Copyright (C) 1996, 1997, 1998 Guy Maor"
 
 #. type: Plain text
-#: ../run-parts.8:125
+#: ../run-parts.8:128
 msgid ""
 "Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Clint Adams"
 msgstr ""
 "Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Clint Adams"
 
 #. type: Plain text
-#: ../run-parts.8:130
+#: ../run-parts.8:133
 msgid ""
 "B<run-parts> is free software; see the GNU General Public License version 2 "
 "or later for copying conditions.  There is I<no> warranty."
