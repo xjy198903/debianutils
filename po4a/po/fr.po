@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
-"POT-Creation-Date: 2016-11-17 15:39-0500\n"
+"POT-Creation-Date: 2018-05-15 07:39-0400\n"
 "PO-Revision-Date: 2016-10-26 18:11+0200\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -98,7 +98,7 @@ msgstr "Le chemin complet des interpréteurs doit être fourni."
 
 # type: SH
 #. type: SH
-#: ../add-shell.8:15 ../remove-shell.8:13 ../savelog.8:158 ../tempfile.1:90
+#: ../add-shell.8:15 ../remove-shell.8:13 ../savelog.8:159 ../tempfile.1:86
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "VOIR AUSSI"
@@ -170,7 +170,7 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: ../installkernel.8:22 ../ischroot.1:35 ../savelog.8:151 ../tempfile.1:73
+#: ../installkernel.8:22 ../ischroot.1:35 ../savelog.8:152 ../tempfile.1:69
 #, no-wrap
 msgid "BUGS"
 msgstr "BOGUES"
@@ -271,7 +271,7 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: ../ischroot.1:22 ../run-parts.8:47 ../savelog.8:92 ../tempfile.1:46
+#: ../ischroot.1:22 ../run-parts.8:47 ../savelog.8:92 ../tempfile.1:42
 #: ../which.1:14
 #, no-wrap
 msgid "OPTIONS"
@@ -301,28 +301,28 @@ msgstr "Sort avec l'état 0 si la détection est impossible."
 
 # type: TP
 #. type: TP
-#: ../ischroot.1:29 ../tempfile.1:64
+#: ../ischroot.1:29 ../tempfile.1:60
 #, no-wrap
 msgid "B<--help>"
 msgstr "B<--help>"
 
 # type: Plain text
 #. type: Plain text
-#: ../ischroot.1:32 ../tempfile.1:67
+#: ../ischroot.1:32 ../tempfile.1:63
 msgid "Print a usage message on standard output and exit successfully."
 msgstr ""
 "affiche un message d'aide sur la sortie standard, puis quitte sans erreur."
 
 # type: TP
 #. type: TP
-#: ../ischroot.1:32 ../tempfile.1:67
+#: ../ischroot.1:32 ../tempfile.1:63
 #, no-wrap
 msgid "B<--version>"
 msgstr "B<--version>"
 
 # type: Plain text
 #. type: Plain text
-#: ../ischroot.1:35 ../tempfile.1:70
+#: ../ischroot.1:35 ../tempfile.1:66
 msgid "Print version information on standard output and exit successfully."
 msgstr "affiche les informations sur la version, puis quitte sans erreur."
 
@@ -777,9 +777,10 @@ msgstr "SAVELOG"
 # type: TH
 #. type: TH
 #: ../savelog.8:2
-#, no-wrap
-msgid "30 Jun 2010"
-msgstr "30 juin 2010"
+#, fuzzy, no-wrap
+#| msgid "30 May 2011"
+msgid "30 Dec 2017"
+msgstr "30 mai 2011"
 
 # type: Plain text
 #. type: Plain text
@@ -1128,23 +1129,23 @@ msgstr "utilise la date (AAMMJJhhmmss) au lieu du numéro de version."
 msgid "B<-D dateformat>"
 msgstr "B<-D> I<format_de_date>"
 
-# type: Plain text
 #. type: Plain text
-#: ../savelog.8:140
-msgid "override date format, in the form of I<[MMDDhhmm[[CC]YY][.ss]]>"
-msgstr "remplace le format de la date sous la forme I<[MMJJhhmm[[CC]AA][.ss]]>"
+#: ../savelog.8:141
+msgid ""
+"override date format, in the syntax understood by the B<date>(1)  command"
+msgstr ""
 
 # NOTE : manque rolldir
 # type: TP
 #. type: TP
-#: ../savelog.8:140
+#: ../savelog.8:141
 #, no-wrap
 msgid "B<-r>"
 msgstr "B<-r> I<répertoire_cyclique>"
 
 # type: Plain text
 #. type: Plain text
-#: ../savelog.8:145
+#: ../savelog.8:146
 msgid "use I<rolldir> instead of . to roll files"
 msgstr ""
 "sauvegarde les fichiers journaux dans le répertoire I<répertoire_cyclique> "
@@ -1152,33 +1153,33 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: ../savelog.8:145
+#: ../savelog.8:146
 #, no-wrap
 msgid "B<-n>"
 msgstr "B<-n>"
 
 # type: Plain text
 #. type: Plain text
-#: ../savelog.8:148
+#: ../savelog.8:149
 msgid "do not rotate empty files"
 msgstr "ne sauvegarde pas les fichiers vides."
 
 # type: TP
 #. type: TP
-#: ../savelog.8:148
+#: ../savelog.8:149
 #, no-wrap
 msgid "B<-q>"
 msgstr "B<-q>"
 
 # type: Plain text
 #. type: Plain text
-#: ../savelog.8:151
+#: ../savelog.8:152
 msgid "be quiet"
 msgstr "n'affiche pas de message."
 
 # type: Plain text
 #. type: Plain text
-#: ../savelog.8:157
+#: ../savelog.8:158
 msgid ""
 "If a process is still writing to I<file.0>, and savelog moves it to "
 "I<file.1> and compresses it, data could be lost."
@@ -1187,7 +1188,7 @@ msgstr ""
 "renomme I<fichier.1> et le compresse, des données peuvent être perdues."
 
 #. type: Plain text
-#: ../savelog.8:159
+#: ../savelog.8:160
 msgid "B<logrotate>(8)"
 msgstr "B<logrotate>(8)"
 
@@ -1219,12 +1220,17 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:18
+#: ../tempfile.1:16
+#, fuzzy
+#| msgid ""
+#| "B<tempfile> creates a temporary file in a safe manner.  It uses "
+#| "B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
+#| "O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  "
+#| "for the actual steps involved in directory selection."
 msgid ""
 "B<tempfile> creates a temporary file in a safe manner.  It uses "
-"B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
-"O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  for "
-"the actual steps involved in directory selection."
+"B<mkstemps>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
+"O_EXCL.  The filename is printed on standard output."
 msgstr ""
 "Le programme B<tempfile> crée un fichier temporaire de façon sûre. Il "
 "utilise B<tempnam>(3) pour choisir un nom et l'ouvre dans le mode O_RDWR | "
@@ -1233,10 +1239,14 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:23
+#: ../tempfile.1:19
+#, fuzzy
+#| msgid ""
+#| "The directory in which to create the file might be searched for in this "
+#| "order (but refer to B<tempnam>(3)  for authoritative answers):"
 msgid ""
 "The directory in which to create the file might be searched for in this "
-"order (but refer to B<tempnam>(3)  for authoritative answers):"
+"order:"
 msgstr ""
 "Une recherche peut être effectuée dans le répertoire où le fichier sera "
 "créé, dans l'ordre suivant (se référer toutefois à B<tempnam>(3) pour des "
@@ -1244,13 +1254,13 @@ msgstr ""
 
 # type: IP
 #. type: TP
-#: ../tempfile.1:23
+#: ../tempfile.1:19
 #, no-wrap
 msgid "a)"
 msgstr "a)"
 
 #. type: Plain text
-#: ../tempfile.1:29
+#: ../tempfile.1:25
 msgid ""
 "In case the environment variable B<TMPDIR> exists and contains the name of "
 "an appropriate directory, that is used."
@@ -1260,14 +1270,14 @@ msgstr ""
 
 # type: IP
 #. type: TP
-#: ../tempfile.1:29
+#: ../tempfile.1:25
 #, no-wrap
 msgid "b)"
 msgstr "b)"
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:34
+#: ../tempfile.1:30
 msgid ""
 "Otherwise, if the I<--directory> argument is specified and appropriate, it "
 "is used."
@@ -1277,13 +1287,13 @@ msgstr ""
 
 # type: IP
 #. type: TP
-#: ../tempfile.1:34
+#: ../tempfile.1:30
 #, no-wrap
 msgid "c)"
 msgstr "c)"
 
 #. type: Plain text
-#: ../tempfile.1:41
+#: ../tempfile.1:37
 msgid ""
 "Otherwise, I<P_tmpdir> (as defined in I<E<lt>stdio.hE<gt>>)  is used when "
 "appropriate."
@@ -1292,13 +1302,13 @@ msgstr ""
 "est utilisé s'il est valide ;"
 
 #. type: TP
-#: ../tempfile.1:41
+#: ../tempfile.1:37
 #, no-wrap
 msgid "d)"
 msgstr "d)"
 
 #. type: Plain text
-#: ../tempfile.1:46
+#: ../tempfile.1:42
 msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
 msgstr ""
 "enfin, un répertoire I<(/tmp)> défini par l'implémentation peut être "
@@ -1306,40 +1316,40 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: ../tempfile.1:47
+#: ../tempfile.1:43
 #, no-wrap
 msgid "B<-d, --directory >I<DIR>"
 msgstr "B<-d>, B<--directory> I<REP>"
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:50
+#: ../tempfile.1:46
 msgid "Place the file in DIR."
 msgstr "place le fichier dans I<REP>."
 
 # type: TP
 #. type: TP
-#: ../tempfile.1:50
+#: ../tempfile.1:46
 #, no-wrap
 msgid "B<-m, --mode >I<MODE>"
 msgstr "B<-m>, B<--mode> I<MODE>"
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:53
+#: ../tempfile.1:49
 msgid "Open the file with MODE instead of 0600."
 msgstr "ouvre le fichier dans le mode I<MODE> plutôt que 0600."
 
 # type: TP
 #. type: TP
-#: ../tempfile.1:53
+#: ../tempfile.1:49
 #, no-wrap
 msgid "B<-n, --name >I<FILE>"
 msgstr "B<-n>, B<--name> I<FICHIER>"
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:58
+#: ../tempfile.1:54
 msgid ""
 "Use FILE for the name instead of B<tempnam>(3)B<.> The options -d, -p, and -"
 "s are ignored if this option is given."
@@ -1349,40 +1359,40 @@ msgstr ""
 
 # type: TP
 #. type: TP
-#: ../tempfile.1:58
+#: ../tempfile.1:54
 #, no-wrap
 msgid "B<-p, --prefix >I<STRING>"
 msgstr "B<-p>, B<--prefix> I<CHAÎNE>"
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:61
+#: ../tempfile.1:57
 msgid "Use up to five letters of STRING to generate the name."
 msgstr "utilise jusqu'à cinq lettres de I<CHAÎNE> pour générer le nom."
 
 # type: TP
 #. type: TP
-#: ../tempfile.1:61
+#: ../tempfile.1:57
 #, no-wrap
 msgid "B<-s, --suffix >I<STRING>"
 msgstr "B<-s>, B<--suffix> I<CHAÎNE>"
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:64
+#: ../tempfile.1:60
 msgid "Generate the file with STRING as the suffix."
 msgstr "génère le fichier en utilisant I<CHAÎNE> comme suffixe."
 
 # type: SH
 #. type: SH
-#: ../tempfile.1:70
+#: ../tempfile.1:66
 #, no-wrap
 msgid "RETURN VALUES"
 msgstr "VALEUR DE RETOUR"
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:73
+#: ../tempfile.1:69
 msgid ""
 "An exit status of 0 means the temporary file was created successfully.  Any "
 "other exit status indicates an error."
@@ -1392,7 +1402,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:77
+#: ../tempfile.1:73
 msgid ""
 "Exclusive creation is not guaranteed when creating files on NFS partitions.  "
 "tempfile cannot make temporary directories.  tempfile is deprecated; you "
@@ -1406,14 +1416,14 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: ../tempfile.1:77
+#: ../tempfile.1:73
 #, no-wrap
 msgid "EXAMPLE"
 msgstr "EXEMPLES"
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:89
+#: ../tempfile.1:85
 #, no-wrap
 msgid ""
 "#!/bin/sh\n"
@@ -1436,7 +1446,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: ../tempfile.1:92
+#: ../tempfile.1:88
 msgid "B<tempnam>(3), B<mktemp>(1)"
 msgstr "B<tempnam>(3), B<mktemp>(1)"
 
@@ -1543,6 +1553,15 @@ msgstr "B<2>"
 #: ../which.1:27
 msgid "if an invalid option is specified"
 msgstr "si une option non valable est spécifiée."
+
+# type: TH
+#~ msgid "30 Jun 2010"
+#~ msgstr "30 juin 2010"
+
+# type: Plain text
+#~ msgid "override date format, in the form of I<[MMDDhhmm[[CC]YY][.ss]]>"
+#~ msgstr ""
+#~ "remplace le format de la date sous la forme I<[MMJJhhmm[[CC]AA][.ss]]>"
 
 # type: TH
 #~ msgid "1 May 2009"
