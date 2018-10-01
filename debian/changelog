@@ -1,3 +1,9 @@
+debianutils (4.8.7) UNRELEASED; urgency=medium
+
+  * d/changelog: Remove trailing whitespaces
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 01 Oct 2018 10:43:35 +0200
+
 debianutils (4.8.6) unstable; urgency=medium
 
   * run-parts.8: man page fixes from Bjarni Ingi Gislason.
@@ -1658,7 +1664,7 @@ debianutils (1.10) unstable; urgency=low
 
 debianutils (1.9) frozen unstable; urgency=high
 
-  * run-parts: close unused fd's to prevent hang. fixes: #20678.	
+  * run-parts: close unused fd's to prevent hang. fixes: #20678.
   * run-parts: flush buffers after printing message. fixes: #20287.
   * run-parts: fix error message. fixes: #19741.
   * mktemp manpage corrections. fixes: #20224, #20225.
