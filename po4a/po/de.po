@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debianutils man page 4.8.4\n"
+"Project-Id-Version: debianutils man page 4.8.6\n"
 "POT-Creation-Date: 2018-05-15 07:57-0400\n"
-"PO-Revision-Date: 2018-05-06 08:59+0200\n"
+"PO-Revision-Date: 2018-06-17 10:01+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -444,10 +444,6 @@ msgstr "B<--list>"
 
 #. type: Plain text
 #: ../run-parts.8:57
-#, fuzzy
-#| msgid ""
-#| "print the names of the all matching files (not limited to executables), "
-#| "but don't actually run them. This option cannot be used with --test."
 msgid ""
 "print the names of the all matching files (not limited to executables), but "
 "don't actually run them.  This option cannot be used with --test."
@@ -1061,36 +1057,23 @@ msgstr ""
 
 #. type: Plain text
 #: ../tempfile.1:16
-#, fuzzy
-#| msgid ""
-#| "B<tempfile> creates a temporary file in a safe manner.  It uses "
-#| "B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
-#| "O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  "
-#| "for the actual steps involved in directory selection."
 msgid ""
 "B<tempfile> creates a temporary file in a safe manner.  It uses "
 "B<mkstemps>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
 "O_EXCL.  The filename is printed on standard output."
 msgstr ""
 "B<tempfile> erstellt eine temporäre Datei auf eine sichere Art und Weise. Es "
-"verwendet B<tempnam>(3), um den Namen zu wählen und öffnet sie mit O_RDWR | "
+"verwendet B<mkstemps>(3), um den Namen zu wählen und öffnet sie mit O_RDWR | "
 "O_CREAT | O_EXCL. Der Dateiname wird auf der Standardausgabe ausgegeben. "
-"Lesen Sie B<tempnam>(3) für die tatsächlichen Schritte, die in der "
-"Verzeichnisauswahl durchlaufen werden."
 
 #. type: Plain text
 #: ../tempfile.1:19
-#, fuzzy
-#| msgid ""
-#| "The directory in which to create the file might be searched for in this "
-#| "order (but refer to B<tempnam>(3)  for authoritative answers):"
 msgid ""
 "The directory in which to create the file might be searched for in this "
 "order:"
 msgstr ""
 "Die Verzeichnisse, in der die Datei erstellt wird, könnten in dieser "
-"Reihenfolge durchsucht werden (lesen Sie aber B<tempnam>(3) für verbindliche "
-"Antworten):"
+"Reihenfolge durchsucht werden:"
 
 #. type: TP
 #: ../tempfile.1:19
