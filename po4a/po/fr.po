@@ -11,19 +11,19 @@
 # et savelog.8 (Antoine Gémis, 13 janvier 2003).
 # Christian Perrier <bubulle@debian.org>, 2010, 2011.
 # David Prévot <taffit@debian.org>, 2012.
-# Baptiste Jammet <baptiste@mailoo.org>, 2016.
+# Baptiste Jammet <baptiste@mailoo.org>, 2016, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
 "POT-Creation-Date: 2018-05-15 07:57-0400\n"
-"PO-Revision-Date: 2016-10-26 18:11+0200\n"
+"PO-Revision-Date: 2018-11-06 21:42+0100\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # type: TH
@@ -234,7 +234,7 @@ msgstr ""
 #: ../ischroot.1:12
 #, no-wrap
 msgid "0"
-msgstr "0"
+msgstr "B<0>"
 
 #. type: Plain text
 #: ../ischroot.1:15
@@ -246,7 +246,7 @@ msgstr "si l'exécution a lieu dans un environnement fermé"
 #: ../ischroot.1:15
 #, no-wrap
 msgid "1"
-msgstr "1"
+msgstr "B<1>"
 
 #. type: Plain text
 #: ../ischroot.1:18
@@ -258,7 +258,7 @@ msgstr "si l'exécution n'a pas lieu dans un environnement fermé"
 #: ../ischroot.1:18
 #, no-wrap
 msgid "2"
-msgstr "2"
+msgstr "B<2>"
 
 #. type: Plain text
 #: ../ischroot.1:22
@@ -286,7 +286,7 @@ msgstr "B<-f>, B<--default-false>"
 #. type: Plain text
 #: ../ischroot.1:26
 msgid "Exit with status 1 if the detection is not possible."
-msgstr "Sort avec l'état 1 si la détection est impossible."
+msgstr "Sort avec l'état B<1> si la détection est impossible."
 
 #. type: TP
 #: ../ischroot.1:26
@@ -297,7 +297,7 @@ msgstr "B<-t>, B<--default-true>"
 #. type: Plain text
 #: ../ischroot.1:29
 msgid "Exit with status 0 if the detection is not possible."
-msgstr "Sort avec l'état 0 si la détection est impossible."
+msgstr "Sort avec l'état B<0> si la détection est impossible."
 
 # type: TP
 #. type: TP
@@ -508,7 +508,6 @@ msgstr "B<--list>"
 # type: Plain text
 #. type: Plain text
 #: ../run-parts.8:57
-#, fuzzy
 #| msgid ""
 #| "print the names of the all matching files (not limited to executables), "
 #| "but don't actually run them. This option cannot be used with --test."
@@ -769,7 +768,7 @@ msgid ""
 "or later for copying conditions.  There is I<no> warranty."
 msgstr ""
 "B<run-parts> est un logiciel libre ; voyez la « GNU General Public Licence » "
-"version 2 ou supérieure pour le copyright. Il n'y a I<pas> de garantie."
+"version 2 ou supérieure pour le copyright. Il n'y a I<pas> de garantie."
 
 # type: TH
 #. type: TH
@@ -781,10 +780,10 @@ msgstr "SAVELOG"
 # type: TH
 #. type: TH
 #: ../savelog.8:2
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid "30 May 2011"
 msgid "30 Dec 2017"
-msgstr "30 mai 2011"
+msgstr "30 décembre 2017"
 
 # type: Plain text
 #. type: Plain text
@@ -832,8 +831,8 @@ msgid ""
 "for I/O.  Only I<cycle> versions of the file are kept."
 msgstr ""
 "où I<E<lt>numéroE<gt>> est le numéro de version, la version la plus récente "
-"portant le numéro 0. Si l'option B<-l> n'est pas spécifiée, les versions "
-"dont le numéro est supérieur à 0 sont compressées.  La version 0 n'est pas "
+"portant le numéro 0. Si l'option B<-l> n'est pas spécifiée, les versions "
+"dont le numéro est supérieur à 0 sont compressées.  La version 0 n'est pas "
 "compressée car le I<fichier> est peut-être utilisé par un programme. Le "
 "paramètre I<cycle> indique le nombre de versions à conserver."
 
@@ -894,7 +893,7 @@ msgid ""
 msgstr ""
 "le nouveau I<fichier>.I<1> est compressé sauf si l'option B<-l> est "
 "utilisée. Il est modifié en tenant compte des paramètres des options B<-m>, "
-"B<-u>, et B<-g> ;"
+"B<-u> et B<-g> ;"
 
 # type: IP
 #. type: IP
@@ -924,7 +923,7 @@ msgid ""
 "I<file> is created subject to the given flags.  With the B<-p> flag, the "
 "file is created with the same owner, group, and permissions as before."
 msgstr ""
-"si les options B<-m>, B<-u>, B<-g>, B<-t>, ou B<-p> sont utilisées, un "
+"si les options B<-m>, B<-u>, B<-g>, B<-t> ou B<-p> sont utilisées, un "
 "I<fichier> vide est créé en tenant compte des arguments de ces options. En "
 "utilisant l'option B<-p>, le fichier est créé avec les mêmes utilisateur, "
 "groupe et permissions que l'ancien fichier ;"
@@ -943,7 +942,7 @@ msgid ""
 "The new I<file>.I<0> is changed subject to the B<-m>, B<-u>, and B<-g> flags."
 msgstr ""
 "le nouveau I<fichier>.I<0> est modifié en fonction des arguments des options "
-"B<-m>, B<-u>, et B<-g>."
+"B<-m>, B<-u> et B<-g>."
 
 # type: TP
 #. type: TP
@@ -1005,7 +1004,7 @@ msgid ""
 "at least 2."
 msgstr ""
 "sauvegarde I<cycle> versions du fichier de journalisation (7 par défaut). Le "
-"nombre de I<cycle> doit être au minimum de 2."
+"nombre de I<cycle> doit être au minimum de 2."
 
 # type: TP
 #. type: TP
@@ -1082,7 +1081,7 @@ msgid ""
 "total amount of physical RAM. Note that xz can use a very large amount of "
 "memory for the higher compression levels."
 msgstr ""
-"Pour xz, aucune option de compression n'est choisie, xz choisira la valeur "
+"Pour xz, aucune option de compression n'est fixée, xz choisira la valeur "
 "par défaut en fonction de la quantité disponible de mémoire physique. "
 "Veuillez noter que xz peut utiliser des quantités importantes de mémoire "
 "pour les niveaux de compression les plus élevés."
@@ -1138,6 +1137,7 @@ msgstr "B<-D> I<format_de_date>"
 msgid ""
 "override date format, in the syntax understood by the B<date>(1)  command"
 msgstr ""
+"force le format de date, en utilisant la syntaxe de la commande B<date>(1)"
 
 # NOTE : manque rolldir
 # type: TP
@@ -1225,7 +1225,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../tempfile.1:16
-#, fuzzy
 #| msgid ""
 #| "B<tempfile> creates a temporary file in a safe manner.  It uses "
 #| "B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
@@ -1237,14 +1236,12 @@ msgid ""
 "O_EXCL.  The filename is printed on standard output."
 msgstr ""
 "Le programme B<tempfile> crée un fichier temporaire de façon sûre. Il "
-"utilise B<tempnam>(3) pour choisir un nom et l'ouvre dans le mode O_RDWR | "
-"O_CREAT | O_EXCL. Le nom du fichier est affiché sur la sortie standard. Voir "
-"B<tempnam>(3) pour les différentes étapes de la sélection des répertoires."
+"utilise B<mkstemps>(3) pour choisir un nom et l'ouvre dans le mode O_RDWR | "
+"O_CREAT | O_EXCL. Le nom du fichier est affiché sur la sortie standard."
 
 # type: Plain text
 #. type: Plain text
 #: ../tempfile.1:19
-#, fuzzy
 #| msgid ""
 #| "The directory in which to create the file might be searched for in this "
 #| "order (but refer to B<tempnam>(3)  for authoritative answers):"
@@ -1253,8 +1250,7 @@ msgid ""
 "order:"
 msgstr ""
 "Une recherche peut être effectuée dans le répertoire où le fichier sera "
-"créé, dans l'ordre suivant (se référer toutefois à B<tempnam>(3) pour des "
-"réponses faisant autorité à ce sujet) :"
+"créé, dans l'ordre suivant :"
 
 # type: IP
 #. type: TP
@@ -1401,8 +1397,8 @@ msgid ""
 "An exit status of 0 means the temporary file was created successfully.  Any "
 "other exit status indicates an error."
 msgstr ""
-"Une valeur de retour 0 signifie que le fichier a été créé avec succès. Toute "
-"autre valeur de retour indique une erreur."
+"Une valeur de retour B<0> signifie que le fichier a été créé avec succès. "
+"Toute autre valeur de retour indique une erreur."
 
 # type: Plain text
 #. type: Plain text
@@ -1414,7 +1410,7 @@ msgid ""
 msgstr ""
 "Une création exclusive ([ NdT : pour éviter toute situation de compétition, "
 "ou « race condition » ]) n'est pas garantie lorsque le fichier est créé sur "
-"une partition NFS. tempfile ne peut pas faire de répertoire temporaire. Le "
+"une partition NFS. tempfile ne peut pas créer de répertoire temporaire. Le "
 "programme tempfile est obsolète. Il est conseillé d'utiliser mktemp(1) à la "
 "place."
 
