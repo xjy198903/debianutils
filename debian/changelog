@@ -1,3 +1,10 @@
+debianutils (4.8.6.2) unstable; urgency=medium
+
+  * fr.po: updated French translation from Baptiste Jammet.
+    closes: #921009
+
+ -- Clint Adams <clint@debian.org>  Wed, 10 Jul 2019 20:27:38 -0400
+
 debianutils (4.8.6.1) unstable; urgency=medium
 
   [ Ondřej Nový ]
