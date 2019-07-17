@@ -4,19 +4,19 @@
 # Copyright (C) 2014 the debianutils copyright holder
 # This file is distributed under the same license as the debianutils package.
 #
-# Américo Monteiro <a_monteiro@gmx.com>, 2014.
+# Américo Monteiro <a_monteiro@gmx.com>, 2014 - 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: debianutils 4.4\n"
+"Project-Id-Version: debianutils 4.8.6.1\n"
 "POT-Creation-Date: 2018-05-15 07:57-0400\n"
-"PO-Revision-Date: 2014-06-18 00:42+0100\n"
+"PO-Revision-Date: 2019-04-19 01:11+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
-"Language-Team: Portuguese <traduz@debianpt.org>\n"
+"Language-Team: Portuguese <>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # type: TH
@@ -488,7 +488,6 @@ msgstr "B<--list>"
 # type: Plain text
 #. type: Plain text
 #: ../run-parts.8:57
-#, fuzzy
 #| msgid ""
 #| "print the names of the all matching files (not limited to executables), "
 #| "but don't actually run them. This option cannot be used with --test."
@@ -760,10 +759,10 @@ msgstr "SAVELOG"
 # type: TH
 #. type: TH
 #: ../savelog.8:2
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid "30 May 2011"
 msgid "30 Dec 2017"
-msgstr "30 May 2011"
+msgstr "30 Dez 2011"
 
 # type: Plain text
 #. type: Plain text
@@ -1104,6 +1103,7 @@ msgstr "B<-D formato-data>"
 msgid ""
 "override date format, in the syntax understood by the B<date>(1)  command"
 msgstr ""
+"sobrepõe o formato da data, na sintaxe compreendida pelo comando B<date>(1)"
 
 # NOTE : manque rolldir
 # type: TP
@@ -1188,7 +1188,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../tempfile.1:16
-#, fuzzy
 #| msgid ""
 #| "B<tempfile> creates a temporary file in a safe manner.  It uses "
 #| "B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
@@ -1199,15 +1198,13 @@ msgid ""
 "B<mkstemps>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
 "O_EXCL.  The filename is printed on standard output."
 msgstr ""
-"B<tempfile> cria um ficheiro temporário num modo seguro. Usa o B<tempnam>(3) "
+"B<tempfile> cria um ficheiro temporário num modo seguro. Usa B<mkstemps>(3) "
 "para escolher o nome e abre-o com O_RDWR | O_CREAT | O_EXCL. O nome do "
-"ficheiro é escrito na saída standard. Veja B<tempnam>(3) para os passos "
-"reais envolvidos em selecção de directório."
+"ficheiro é escrito na saída standard."
 
 # type: Plain text
 #. type: Plain text
 #: ../tempfile.1:19
-#, fuzzy
 #| msgid ""
 #| "The directory in which to create the file might be searched for in this "
 #| "order (but refer to B<tempnam>(3)  for authoritative answers):"
@@ -1215,8 +1212,7 @@ msgid ""
 "The directory in which to create the file might be searched for in this "
 "order:"
 msgstr ""
-"O directório onde se vai criar o ficheiro pode ser pesquisa por esta ordem "
-"(mas consulte o B<tempnam>(3) para respostas autoritárias):"
+"O directório onde se vai criar o ficheiro pode ser pesquisado por esta ordem:"
 
 # type: IP
 #. type: TP
@@ -1423,10 +1419,10 @@ msgstr "WHICH"
 # type: TH
 #. type: TH
 #: ../which.1:2
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid "27 Jun 2012"
 msgid "29 Jun 2016"
-msgstr "27 Jun 2012"
+msgstr "29 Jun 2016"
 
 # type: Plain text
 #. type: Plain text
@@ -1443,7 +1439,6 @@ msgstr "which [-a] nome_de_ficheiro ..."
 # type: Plain text
 #. type: Plain text
 #: ../which.1:14
-#, fuzzy
 #| msgid ""
 #| "B<which> returns the pathnames of the files (or links) which would be "
 #| "executed in the current environment, had its arguments been given as "
@@ -1461,7 +1456,7 @@ msgstr ""
 "executados no ambiente actual, tendo os seus argumentos sendo dados como "
 "comandos numa shell estritamente compatível com POSIX. Ele faz isto ao "
 "pesquisar a PATH por ficheiros executáveis que correspondem aos nomes dos "
-"argumentos. Não segue os links simbólicos."
+"argumentos. Não canoniza os nomes de caminho."
 
 # type: TP
 #. type: TP
