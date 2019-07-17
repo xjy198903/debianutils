@@ -1,3 +1,10 @@
+debianutils (4.8.6.3) unstable; urgency=medium
+
+  * pt.po: updated Portuguese translation from Américo Monteiro.
+    closes: #927399.
+
+ -- Clint Adams <clint@debian.org>  Tue, 16 Jul 2019 21:26:03 -0400
+
 debianutils (4.8.6.2) unstable; urgency=medium
 
   * fr.po: updated French translation from Baptiste Jammet.
