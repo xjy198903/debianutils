@@ -11,6 +11,7 @@
  * Based on run-parts.pl version 0.2, Copyright (C) 1994 Ian Jackson.
  *
  */
+#define _GNU_SOURCE
 
 #include <stdio.h>
 #include <stdarg.h>
@@ -44,6 +45,9 @@ int exitstatus = 0;
 int regex_mode = 0;
 int exit_on_error_mode = 0;
 int new_session_mode = 0;
+int stdin_mode = 0;
+int stdin_fd = -1; // initialized in run_parts() if {stdin_mode} != 0
+
 
 int argcount = 0, argsize = 0;
 char **args = 0;
@@ -95,6 +99,7 @@ void usage()
 	  "      --reverse       reverse execution order of scripts.\n"
 	  "      --exit-on-error exit as soon as a script returns with a non-zero exit\n"
 	  "                      code.\n"
+	  "      --stdin         multiplex stdin to scripts being run, using temporary file\n"
 	  "      --lsbsysinit    validate filenames based on LSB sysinit specs.\n"
 	  "      --new-session   run each script in a separate process session\n"
 	  "      --regex=PATTERN validate filenames based on POSIX ERE pattern PATTERN.\n"
@@ -184,6 +189,17 @@ void run_part(char *progname)
     restore_signals();
     if (new_session_mode)
       setsid();
+
+    if (stdin_mode) {
+      if (dup2(stdin_fd, STDIN_FILENO) == -1) {
+        error("dup2: %s", strerror(errno));
+        exit(1);
+      }
+      if (lseek(STDIN_FILENO, 0, SEEK_SET) == (off_t) -1) {
+        error("run-parts: failed to rewind temporary file: %s\n", strerror(errno));
+        exit(1);
+      }
+    }
     if (report_mode) {
       if (dup2(pout[1], STDOUT_FILENO) == -1 ||
 	  dup2(perr[1], STDERR_FILENO) == -1) {
@@ -370,6 +386,52 @@ static void restore_signals()
     sigprocmask(SIG_UNBLOCK, &set, NULL);
 }
 
+/* 
+ * Copy stdin into temporary read-write file, and return file descriptor to it.
+ */
+static int copy_stdin(void)
+{
+  int fd;
+  const char *tmpdir;
+  char buffer[4096];
+  ssize_t bytes;
+  
+  tmpdir = getenv("TMPDIR");
+  if (!tmpdir) {
+    tmpdir = "/tmp";
+  };
+
+  fd = open(tmpdir, O_TMPFILE|O_RDWR|O_EXCL, S_IRUSR | S_IWUSR);
+  if (fd < 0) {
+    return -1;
+  };
+
+  do {
+    ssize_t rest;
+
+    bytes = rest = read(STDIN_FILENO, buffer, sizeof(buffer));
+    if (bytes < 0) {
+      error("run-parts: failed to read from stdin\n");
+      close(fd);
+      return -1;
+    }
+
+    while (rest > 0) {
+      ssize_t written;
+
+      written = write(fd, buffer, rest);
+      if (written < 0) {
+        error("run-parts: failed to write to temporary file\n");
+        close(fd);
+        return -1;
+      }
+      rest -= written;
+    }
+  } while (bytes > 0);
+
+  return fd;
+}
+
 /* Find the parts to run & call run_part() */
 void run_parts(char *dirname)
 {
@@ -395,6 +457,14 @@ void run_parts(char *dirname)
   if (entries < 0) {
     error("failed to open directory %s: %s", dirname, strerror(errno));
     exit(1);
+  }
+
+  if (stdin_mode) {
+    stdin_fd = copy_stdin();
+    if (stdin_fd < 0) {
+      error("run-parts: failed to copy content of stdin\n");
+      exit(1);
+    }
   }
 
   i = reverse_mode ? 0 : entries;
@@ -497,6 +567,7 @@ int main(int argc, char *argv[])
       {"version", 0, 0, 'V'},
       {"lsbsysinit", 0, &regex_mode, RUNPARTS_LSBSYSINIT},
       {"regex", 1, &regex_mode, RUNPARTS_ERE},
+      {"stdin", 0, &stdin_mode, 1},
       {"exit-on-error", 0, &exit_on_error_mode, 1},
       {"new-session", 0, &new_session_mode, 1},
       {0, 0, 0, 0}
