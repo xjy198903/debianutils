@@ -1,3 +1,10 @@
+debianutils (4.9) unstable; urgency=medium
+
+  * run-parts: patch from Dmitry Bogatov to add option to multiplex
+    stdin for children.  closes: #719692.
+
+ -- Clint Adams <clint@debian.org>  Fri, 06 Sep 2019 18:29:50 -0400
+
 debianutils (4.8.6.3) unstable; urgency=medium
 
   * pt.po: updated Portuguese translation from Américo Monteiro.
