@@ -298,7 +298,7 @@ void run_part(char *progname)
 	  else if (c < 0) {
 	    close(pout[0]);
 	    pout[0] = -1;
-	    error("failed to read from stdout pipe: %s", strerror (errno)); 
+	    error("failed to read from stdout pipe: %s", strerror (errno));
 	  }
 	}
 	if (perr[0] >= 0 && FD_ISSET(perr[0], &set)) {
@@ -318,7 +318,7 @@ void run_part(char *progname)
 	  else if (c < 0) {
 	    close(perr[0]);
 	    perr[0] = -1;
-	    error("failed to read from error pipe: %s", strerror (errno)); 
+	    error("failed to read from error pipe: %s", strerror (errno));
 	  }
 	}
       }
@@ -386,7 +386,7 @@ static void restore_signals()
     sigprocmask(SIG_UNBLOCK, &set, NULL);
 }
 
-/* 
+/*
  * Copy stdin into temporary read-write file, and return file descriptor to it.
  */
 static int copy_stdin(void)
@@ -395,7 +395,7 @@ static int copy_stdin(void)
   const char *tmpdir;
   char buffer[4096];
   ssize_t bytes;
-  
+
   tmpdir = getenv("TMPDIR");
   if (!tmpdir) {
     tmpdir = "/tmp";
