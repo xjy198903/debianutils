@@ -386,6 +386,37 @@ static void restore_signals()
     sigprocmask(SIG_UNBLOCK, &set, NULL);
 }
 
+#ifdef O_TMPFILE
+static int open_tmpfile_rw(void)
+{
+	const char *tmpdir;
+
+	tmpdir = getenv("TMPDIR");
+	if (!tmpdir) {
+		tmpdir = "/tmp";
+	}
+
+	return open(tmpdir, O_TMPFILE|O_RDWR|O_EXCL, S_IRUSR | S_IWUSR);
+}
+#else
+static char tmpfile_path[] = "/tmp/run-parts.stdin.XXXXXX";
+static int cleanup_tmpfile(void)
+{
+	unlink(tmpfile_path);
+}
+
+static int open_tmpfile_rw(void)
+{
+	int fd;
+
+	fd = mkstemp(tmpfile_path);
+	if (fd != -1) {
+		atexit(&cleanup_tmpfile);
+	}
+	return fd;
+}
+#endif
+
 /*
  * Copy stdin into temporary read-write file, and return file descriptor to it.
  */
@@ -396,15 +427,7 @@ static int copy_stdin(void)
   char buffer[4096];
   ssize_t bytes;
 
-  tmpdir = getenv("TMPDIR");
-  if (!tmpdir) {
-    tmpdir = "/tmp";
-  };
-
-  fd = open(tmpdir, O_TMPFILE|O_RDWR|O_EXCL, S_IRUSR | S_IWUSR);
-  if (fd < 0) {
-    return -1;
-  };
+  fd = open_tmpfile_rw();
 
   do {
     ssize_t rest;
