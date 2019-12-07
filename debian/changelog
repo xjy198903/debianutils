@@ -1,3 +1,10 @@
+debianutils (4.9.1) unstable; urgency=medium
+
+  * run-parts: patch from Dmitry Bogatov to fix MacOS build.
+    closes: #943998.
+
+ -- Clint Adams <clint@debian.org>  Fri, 06 Dec 2019 21:13:44 -0500
+
 debianutils (4.9) unstable; urgency=medium
 
   * run-parts: patch from Dmitry Bogatov to add option to multiplex
