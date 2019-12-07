@@ -508,9 +508,6 @@ msgstr "B<--list>"
 # type: Plain text
 #. type: Plain text
 #: ../run-parts.8:57
-#| msgid ""
-#| "print the names of the all matching files (not limited to executables), "
-#| "but don't actually run them. This option cannot be used with --test."
 msgid ""
 "print the names of the all matching files (not limited to executables), but "
 "don't actually run them.  This option cannot be used with --test."
@@ -781,7 +778,6 @@ msgstr "SAVELOG"
 #. type: TH
 #: ../savelog.8:2
 #, no-wrap
-#| msgid "30 May 2011"
 msgid "30 Dec 2017"
 msgstr "30 décembre 2017"
 
@@ -1081,10 +1077,10 @@ msgid ""
 "total amount of physical RAM. Note that xz can use a very large amount of "
 "memory for the higher compression levels."
 msgstr ""
-"Pour xz, aucune option de compression n'est fixée, xz choisira la valeur "
-"par défaut en fonction de la quantité disponible de mémoire physique. "
-"Veuillez noter que xz peut utiliser des quantités importantes de mémoire "
-"pour les niveaux de compression les plus élevés."
+"Pour xz, aucune option de compression n'est fixée, xz choisira la valeur par "
+"défaut en fonction de la quantité disponible de mémoire physique. Veuillez "
+"noter que xz peut utiliser des quantités importantes de mémoire pour les "
+"niveaux de compression les plus élevés."
 
 #. type: TP
 #: ../savelog.8:127
@@ -1225,11 +1221,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../tempfile.1:16
-#| msgid ""
-#| "B<tempfile> creates a temporary file in a safe manner.  It uses "
-#| "B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
-#| "O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  "
-#| "for the actual steps involved in directory selection."
 msgid ""
 "B<tempfile> creates a temporary file in a safe manner.  It uses "
 "B<mkstemps>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
@@ -1242,9 +1233,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../tempfile.1:19
-#| msgid ""
-#| "The directory in which to create the file might be searched for in this "
-#| "order (but refer to B<tempnam>(3)  for authoritative answers):"
 msgid ""
 "The directory in which to create the file might be searched for in this "
 "order:"

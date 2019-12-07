@@ -488,9 +488,6 @@ msgstr "B<--list>"
 # type: Plain text
 #. type: Plain text
 #: ../run-parts.8:57
-#| msgid ""
-#| "print the names of the all matching files (not limited to executables), "
-#| "but don't actually run them. This option cannot be used with --test."
 msgid ""
 "print the names of the all matching files (not limited to executables), but "
 "don't actually run them.  This option cannot be used with --test."
@@ -760,7 +757,6 @@ msgstr "SAVELOG"
 #. type: TH
 #: ../savelog.8:2
 #, no-wrap
-#| msgid "30 May 2011"
 msgid "30 Dec 2017"
 msgstr "30 Dez 2011"
 
@@ -1188,11 +1184,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../tempfile.1:16
-#| msgid ""
-#| "B<tempfile> creates a temporary file in a safe manner.  It uses "
-#| "B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
-#| "O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  "
-#| "for the actual steps involved in directory selection."
 msgid ""
 "B<tempfile> creates a temporary file in a safe manner.  It uses "
 "B<mkstemps>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
@@ -1205,9 +1196,6 @@ msgstr ""
 # type: Plain text
 #. type: Plain text
 #: ../tempfile.1:19
-#| msgid ""
-#| "The directory in which to create the file might be searched for in this "
-#| "order (but refer to B<tempnam>(3)  for authoritative answers):"
 msgid ""
 "The directory in which to create the file might be searched for in this "
 "order:"
@@ -1420,7 +1408,6 @@ msgstr "WHICH"
 #. type: TH
 #: ../which.1:2
 #, no-wrap
-#| msgid "27 Jun 2012"
 msgid "29 Jun 2016"
 msgstr "29 Jun 2016"
 
@@ -1439,12 +1426,6 @@ msgstr "which [-a] nome_de_ficheiro ..."
 # type: Plain text
 #. type: Plain text
 #: ../which.1:14
-#| msgid ""
-#| "B<which> returns the pathnames of the files (or links) which would be "
-#| "executed in the current environment, had its arguments been given as "
-#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
-#| "the PATH for executable files matching the names of the arguments. It "
-#| "does not follow symbolic links."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
