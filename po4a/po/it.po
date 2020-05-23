@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
 "POT-Creation-Date: 2018-05-15 07:57-0400\n"
-"PO-Revision-Date: 2017-03-28 07:45+0200\n"
+"PO-Revision-Date: 2020-05-06 19:44+0200\n"
 "Last-Translator: Beatrice Torracca <beatricet@libero.it>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #. type: TH
 #: ../add-shell.8:1
@@ -443,10 +443,6 @@ msgstr "B<--list>"
 
 #. type: Plain text
 #: ../run-parts.8:57
-#, fuzzy
-#| msgid ""
-#| "print the names of the all matching files (not limited to executables), "
-#| "but don't actually run them. This option cannot be used with --test."
 msgid ""
 "print the names of the all matching files (not limited to executables), but "
 "don't actually run them.  This option cannot be used with --test."
@@ -681,10 +677,9 @@ msgstr "SAVELOG"
 
 #. type: TH
 #: ../savelog.8:2
-#, fuzzy, no-wrap
-#| msgid "30 May 2011"
+#, no-wrap
 msgid "30 Dec 2017"
-msgstr "30 maggio 2011"
+msgstr "30 dicembre 2017"
 
 #. type: Plain text
 #: ../savelog.8:5
@@ -988,6 +983,7 @@ msgstr "B<-D formatodata>"
 msgid ""
 "override date format, in the syntax understood by the B<date>(1)  command"
 msgstr ""
+"scavalca il formato della data, con la sintassi usata dal comando B<date>(1)"
 
 #. type: TP
 #: ../savelog.8:141
@@ -1060,34 +1056,22 @@ msgstr ""
 
 #. type: Plain text
 #: ../tempfile.1:16
-#, fuzzy
-#| msgid ""
-#| "B<tempfile> creates a temporary file in a safe manner.  It uses "
-#| "B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
-#| "O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  "
-#| "for the actual steps involved in directory selection."
 msgid ""
 "B<tempfile> creates a temporary file in a safe manner.  It uses "
 "B<mkstemps>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
 "O_EXCL.  The filename is printed on standard output."
 msgstr ""
-"B<tempfile> crea un file temporaneo in maniera sicura. Usa B<tempnam>(3) per "
-"scegliere il nome e lo apre con O_RDWR | O_CREAT | O_EXCL. Il nome di file "
-"viene stampato sullo standard output. Vedere B<tempnam>(3) per i passi "
-"effettivi che la selezione della directory comporta."
+"B<tempfile> crea un file temporaneo in maniera sicura. Usa B<mkstemps>(3) "
+"per scegliere il nome e lo apre con O_RDWR | O_CREAT | O_EXCL. Il nome di "
+"file viene stampato sullo standard output."
 
 #. type: Plain text
 #: ../tempfile.1:19
-#, fuzzy
-#| msgid ""
-#| "The directory in which to create the file might be searched for in this "
-#| "order (but refer to B<tempnam>(3)  for authoritative answers):"
 msgid ""
 "The directory in which to create the file might be searched for in this "
 "order:"
 msgstr ""
-"La directory in cui creare il file può essere ricercata in questo ordine (ma "
-"fare riferimento a B<tempnam>(3) per risposte autoritative):"
+"La directory in cui creare il file può essere ricercata in questo ordine:"
 
 #. type: TP
 #: ../tempfile.1:19
