@@ -1,3 +1,18 @@
+debianutils (4.9.3) unstable; urgency=medium
+
+  * which.1: patch from Bjarni Ingi Gislason to fix mandoc errors.
+    closes: #961306.
+  * add-shell.8: patch from Bjarni Ingi Gislason to fix mandoc errors.
+    closes: #961308.
+  * installkernel.1: patch from Bjarni Ingi Gislason to fix mandoc
+    errors.  closes: #961309.
+  * remove-shell.8: patch from Bjarni Ingi Gislason to fix mandoc
+    errors.  closes: #961310.
+  * savelog.8: patch from Bjarni Ingi Gislason to fix mandoc errors.
+    closes: #961312.
+
+ -- Clint Adams <clint@debian.org>  Sat, 23 May 2020 08:03:09 -0400
+
 debianutils (4.9.2) unstable; urgency=medium
 
   [ Helmut Grohne ]
