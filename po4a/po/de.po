@@ -5,13 +5,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils man page 4.8.6\n"
-"POT-Creation-Date: 2018-05-15 07:57-0400\n"
+"POT-Creation-Date: 2020-05-22 20:15-0400\n"
 "PO-Revision-Date: 2018-06-17 10:01+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: utf-8\n"
 
 #. type: TH
@@ -52,7 +52,7 @@ msgstr "B<add-shell> I<Shell-Name> [I<Shell-Name>…]"
 
 #. type: SH
 #: ../add-shell.8:8 ../installkernel.8:6 ../ischroot.1:8 ../remove-shell.8:8
-#: ../run-parts.8:20 ../savelog.8:9 ../tempfile.1:9 ../which.1:7
+#: ../run-parts.8:20 ../savelog.8:9 ../tempfile.1:10 ../which.1:7
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "BESCHREIBUNG"
@@ -184,8 +184,12 @@ msgstr "B<ischroot> [--default-false] [--default-true] [--help] [--version]"
 
 #. type: Plain text
 #: ../ischroot.1:12
+#, fuzzy
+#| msgid ""
+#| "B<ischroot> detects if it is currently running in a chroot. The exit "
+#| "status is:"
 msgid ""
-"B<ischroot> detects if it is currently running in a chroot. The exit status "
+"B<ischroot> detects if it is currently running in a chroot.  The exit status "
 "is:"
 msgstr ""
 "B<ischroot> erkennt, ob es innerhalb einer Chroot läuft. Die Exit-Status "
@@ -238,8 +242,9 @@ msgstr "OPTIONEN"
 
 #. type: TP
 #: ../ischroot.1:23
-#, no-wrap
-msgid "B<-f, --default-false >"
+#, fuzzy, no-wrap
+#| msgid "B<-f, --default-false >"
+msgid "B<-f, --default-false>"
 msgstr "B<-f, --default-false >"
 
 #. type: Plain text
@@ -249,8 +254,9 @@ msgstr "mit Status 1 beenden, falls die Erkennung nicht möglich ist"
 
 #. type: TP
 #: ../ischroot.1:26
-#, no-wrap
-msgid "B<-t, --default-true >"
+#, fuzzy, no-wrap
+#| msgid "B<-t, --default-true >"
+msgid "B<-t, --default-true>"
 msgstr "B<-t, --default-true >"
 
 #. type: Plain text
@@ -285,9 +291,13 @@ msgstr ""
 "beenden"
 
 #. type: Plain text
-#: ../ischroot.1:37
+#: ../ischroot.1:38
+#, fuzzy
+#| msgid ""
+#| "On GNU/Linux, chroot detection is not possible when not root. This works "
+#| "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgid ""
-"On GNU/Linux, chroot detection is not possible when not root. This works "
+"On GNU/Linux, chroot detection is not possible when not root.  This works "
 "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgstr ""
 "Unter GNU/Linux ist die Chroot-Erkennung nur als Root möglich. Dies "
@@ -1045,7 +1055,7 @@ msgstr ""
 "tempfile - eine temporäre Datei in einer sicheren Art und Weise erstellen"
 
 #. type: Plain text
-#: ../tempfile.1:9
+#: ../tempfile.1:10
 msgid ""
 "B<tempfile> [-d DIR] [-p STRING] [-s STRING] [-m MODE] [-n FILE] [--"
 "directory=DIR] [--prefix=STRING] [--suffix=STRING] [--mode=MODE] [--"
@@ -1128,7 +1138,9 @@ msgstr "d)"
 
 #. type: Plain text
 #: ../tempfile.1:42
-msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
+#, fuzzy
+#| msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
+msgid "Finally an implementation-defined directory (I</tmp>)  may be used."
 msgstr ""
 "Abschließend könnte ein implementierungsdefiniertes Verzeichnis I<(/tmp)> "
 "verwandt werden."
@@ -1210,18 +1222,23 @@ msgstr ""
 "erstellt wurde. Jeder andere Rückgabewert zeigt einen Fehler an."
 
 #. type: Plain text
-#: ../tempfile.1:73
+#: ../tempfile.1:75
+#, fuzzy
+#| msgid ""
+#| "Exclusive creation is not guaranteed when creating files on NFS "
+#| "partitions.  tempfile cannot make temporary directories.  tempfile is "
+#| "deprecated; you should use mktemp(1) instead."
 msgid ""
 "Exclusive creation is not guaranteed when creating files on NFS partitions.  "
 "tempfile cannot make temporary directories.  tempfile is deprecated; you "
-"should use mktemp(1) instead."
+"should use B<mktemp>(1)  instead."
 msgstr ""
 "Exklusive Erstellung wird bei Dateien auf NFS-Partitionen nicht garantiert. "
 "Tempfile kann keine temporären Verzeichnisse erstellen. Tempfile ist "
 "veraltet, Sie sollten stattdessen mktemp(1) verwenden."
 
 #. type: SH
-#: ../tempfile.1:73
+#: ../tempfile.1:75
 #, no-wrap
 msgid "EXAMPLE"
 msgstr "BEISPIEL"

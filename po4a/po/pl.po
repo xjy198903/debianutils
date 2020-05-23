@@ -16,7 +16,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils 4.3.4\n"
-"POT-Creation-Date: 2018-05-15 07:57-0400\n"
+"POT-Creation-Date: 2020-05-22 20:15-0400\n"
 "PO-Revision-Date: 2013-05-26 22:18+0200\n"
 "Last-Translator: Robert Luberda <robert@debian.org>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -66,7 +66,7 @@ msgstr "B<add-shell> I<nazwa_powłoki> [I<nazwa_powłoki>...]"
 
 #. type: SH
 #: ../add-shell.8:8 ../installkernel.8:6 ../ischroot.1:8 ../remove-shell.8:8
-#: ../run-parts.8:20 ../savelog.8:9 ../tempfile.1:9 ../which.1:7
+#: ../run-parts.8:20 ../savelog.8:9 ../tempfile.1:10 ../which.1:7
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "OPIS"
@@ -198,8 +198,12 @@ msgstr "B<ischroot> [--default-false] [--default-true] [--help] [--version]"
 
 #. type: Plain text
 #: ../ischroot.1:12
+#, fuzzy
+#| msgid ""
+#| "B<ischroot> detects if it is currently running in a chroot. The exit "
+#| "status is:"
 msgid ""
-"B<ischroot> detects if it is currently running in a chroot. The exit status "
+"B<ischroot> detects if it is currently running in a chroot.  The exit status "
 "is:"
 msgstr ""
 "B<ischroot> wykrywa, czy zostało uruchomione wewnątrz chroot. Kod wyjścia "
@@ -251,8 +255,9 @@ msgstr "OPCJE"
 
 #. type: TP
 #: ../ischroot.1:23
-#, no-wrap
-msgid "B<-f, --default-false >"
+#, fuzzy, no-wrap
+#| msgid "B<-f, --default-false >"
+msgid "B<-f, --default-false>"
 msgstr "B<-f, --default-false >"
 
 #. type: Plain text
@@ -262,8 +267,9 @@ msgstr "Zwraca kod wyjścia 1, gdy wykrycie nie jest możliwe."
 
 #. type: TP
 #: ../ischroot.1:26
-#, no-wrap
-msgid "B<-t, --default-true >"
+#, fuzzy, no-wrap
+#| msgid "B<-t, --default-true >"
+msgid "B<-t, --default-true>"
 msgstr "B<-t, --default-true >"
 
 #. type: Plain text
@@ -298,9 +304,13 @@ msgstr ""
 "pracę."
 
 #. type: Plain text
-#: ../ischroot.1:37
+#: ../ischroot.1:38
+#, fuzzy
+#| msgid ""
+#| "On GNU/Linux, chroot detection is not possible when not root. This works "
+#| "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgid ""
-"On GNU/Linux, chroot detection is not possible when not root. This works "
+"On GNU/Linux, chroot detection is not possible when not root.  This works "
 "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgstr ""
 "W systemie GNU/Linux wykrycie chroot nie jest możliwe, jeśli nie jest się "
@@ -1075,7 +1085,7 @@ msgstr "tempfile - w bezpieczny sposób tworzy plik tymczasowy"
 
 #
 #. type: Plain text
-#: ../tempfile.1:9
+#: ../tempfile.1:10
 msgid ""
 "B<tempfile> [-d DIR] [-p STRING] [-s STRING] [-m MODE] [-n FILE] [--"
 "directory=DIR] [--prefix=STRING] [--suffix=STRING] [--mode=MODE] [--"
@@ -1170,7 +1180,9 @@ msgstr "d)"
 
 #. type: Plain text
 #: ../tempfile.1:42
-msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
+#, fuzzy
+#| msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
+msgid "Finally an implementation-defined directory (I</tmp>)  may be used."
 msgstr ""
 "W końcu może zostać użyty katalog zdefiniowany podczas implementacji (I</"
 "tmp>)."
@@ -1255,18 +1267,23 @@ msgstr ""
 "kod wskazuje błąd."
 
 #. type: Plain text
-#: ../tempfile.1:73
+#: ../tempfile.1:75
+#, fuzzy
+#| msgid ""
+#| "Exclusive creation is not guaranteed when creating files on NFS "
+#| "partitions.  tempfile cannot make temporary directories.  tempfile is "
+#| "deprecated; you should use mktemp(1) instead."
 msgid ""
 "Exclusive creation is not guaranteed when creating files on NFS partitions.  "
 "tempfile cannot make temporary directories.  tempfile is deprecated; you "
-"should use mktemp(1) instead."
+"should use B<mktemp>(1)  instead."
 msgstr ""
 "Podczas tworzenia plików na partycji NFS nie jest gwarantowane utworzenie "
 "pliku na wyłączność. tempfile nie potrafi utworzyć tymczasowych katalogów. "
 "tempfile nie jest zalecany; zamiast niego należy używać mktemp(1)."
 
 #. type: SH
-#: ../tempfile.1:73
+#: ../tempfile.1:75
 #, no-wrap
 msgid "EXAMPLE"
 msgstr "PRZYKŁAD"

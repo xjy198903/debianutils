@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debianutils 4.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 07:57-0400\n"
+"POT-Creation-Date: 2020-05-22 20:15-0400\n"
 "PO-Revision-Date: 2012-08-07 11:43+0200\n"
 "Last-Translator: Omar Campagne <ocampagne@gmail.com>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -81,7 +81,7 @@ msgstr "B<add-shell> I<nombre-consola> [I<nombre-consola>...]"
 
 #. type: SH
 #: ../add-shell.8:8 ../installkernel.8:6 ../ischroot.1:8 ../remove-shell.8:8
-#: ../run-parts.8:20 ../savelog.8:9 ../tempfile.1:9 ../which.1:7
+#: ../run-parts.8:20 ../savelog.8:9 ../tempfile.1:10 ../which.1:7
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "DESCRIPCIÓN"
@@ -213,8 +213,12 @@ msgstr "B<ischroot> [--default-false] [--default-true] [--help] [--version]"
 
 #. type: Plain text
 #: ../ischroot.1:12
+#, fuzzy
+#| msgid ""
+#| "B<ischroot> detects if it is currently running in a chroot. The exit "
+#| "status is:"
 msgid ""
-"B<ischroot> detects if it is currently running in a chroot. The exit status "
+"B<ischroot> detects if it is currently running in a chroot.  The exit status "
 "is:"
 msgstr ""
 "B<ischroot> detecta si se ha ejecutado en el momento presente desde una "
@@ -266,8 +270,9 @@ msgstr "OPCIONES"
 
 #. type: TP
 #: ../ischroot.1:23
-#, no-wrap
-msgid "B<-f, --default-false >"
+#, fuzzy, no-wrap
+#| msgid "B<-f, --default-false >"
+msgid "B<-f, --default-false>"
 msgstr "B<-f, --default-false >"
 
 #. type: Plain text
@@ -277,8 +282,9 @@ msgstr "Cierra con un estado de salida 1 si la detección no es posible."
 
 #. type: TP
 #: ../ischroot.1:26
-#, no-wrap
-msgid "B<-t, --default-true >"
+#, fuzzy, no-wrap
+#| msgid "B<-t, --default-true >"
+msgid "B<-t, --default-true>"
 msgstr "B<-t, --default-true >"
 
 #. type: Plain text
@@ -310,9 +316,13 @@ msgstr ""
 "Muestra información de la versión por la salida estándar y cierra con éxito."
 
 #. type: Plain text
-#: ../ischroot.1:37
+#: ../ischroot.1:38
+#, fuzzy
+#| msgid ""
+#| "On GNU/Linux, chroot detection is not possible when not root. This works "
+#| "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgid ""
-"On GNU/Linux, chroot detection is not possible when not root. This works "
+"On GNU/Linux, chroot detection is not possible when not root.  This works "
 "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgstr ""
 "En sistemas GNU/Linux, no es posible detectar una jaula chroot si no se "
@@ -1075,7 +1085,7 @@ msgid "tempfile - create a temporary file in a safe manner"
 msgstr "tempfile - Crea un fichero temporal de forma segura"
 
 #. type: Plain text
-#: ../tempfile.1:9
+#: ../tempfile.1:10
 msgid ""
 "B<tempfile> [-d DIR] [-p STRING] [-s STRING] [-m MODE] [-n FILE] [--"
 "directory=DIR] [--prefix=STRING] [--suffix=STRING] [--mode=MODE] [--"
@@ -1169,7 +1179,9 @@ msgstr "d)"
 
 #. type: Plain text
 #: ../tempfile.1:42
-msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
+#, fuzzy
+#| msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
+msgid "Finally an implementation-defined directory (I</tmp>)  may be used."
 msgstr "Por último, se puede utilizar el directorio implementado I<(/tmp)>. "
 
 #. type: TP
@@ -1247,18 +1259,23 @@ msgstr ""
 "con éxito. Cualquier otro estado de salida indica un fallo."
 
 #. type: Plain text
-#: ../tempfile.1:73
+#: ../tempfile.1:75
+#, fuzzy
+#| msgid ""
+#| "Exclusive creation is not guaranteed when creating files on NFS "
+#| "partitions.  tempfile cannot make temporary directories.  tempfile is "
+#| "deprecated; you should use mktemp(1) instead."
 msgid ""
 "Exclusive creation is not guaranteed when creating files on NFS partitions.  "
 "tempfile cannot make temporary directories.  tempfile is deprecated; you "
-"should use mktemp(1) instead."
+"should use B<mktemp>(1)  instead."
 msgstr ""
 "No se garantiza la creación exclusiva al crear ficheros en particiones NFS. "
 "tempfile no puede crear directorios temporales. tempfile está obsoleto, debe "
 "utilizar mktemp(1) en su lugar."
 
 #. type: SH
-#: ../tempfile.1:73
+#: ../tempfile.1:75
 #, no-wrap
 msgid "EXAMPLE"
 msgstr "EJEMPLO"

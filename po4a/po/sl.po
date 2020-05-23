@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2018-05-15 07:57-0400\n"
+"POT-Creation-Date: 2020-05-22 20:15-0400\n"
 "PO-Revision-Date: 2012-07-29 11:31+0100\n"
 "Last-Translator: Andrej Žnidaršič <andrej.znidarsic@gmail.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -56,7 +56,7 @@ msgstr "B<add-shell> I<ime lupine> [I<ime lupine> ...]"
 
 #. type: SH
 #: ../add-shell.8:8 ../installkernel.8:6 ../ischroot.1:8 ../remove-shell.8:8
-#: ../run-parts.8:20 ../savelog.8:9 ../tempfile.1:9 ../which.1:7
+#: ../run-parts.8:20 ../savelog.8:9 ../tempfile.1:10 ../which.1:7
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "OPIS"
@@ -186,8 +186,12 @@ msgstr "B<ischroot> [--default-false] [--default-true] [--help] [--version]"
 
 #. type: Plain text
 #: ../ischroot.1:12
+#, fuzzy
+#| msgid ""
+#| "B<ischroot> detects if it is currently running in a chroot. The exit "
+#| "status is:"
 msgid ""
-"B<ischroot> detects if it is currently running in a chroot. The exit status "
+"B<ischroot> detects if it is currently running in a chroot.  The exit status "
 "is:"
 msgstr "B<ischroot> zazna, le se trenutno izvaja v chroot. Stanje končanja je:"
 
@@ -237,8 +241,9 @@ msgstr "MOŽNOSTI"
 
 #. type: TP
 #: ../ischroot.1:23
-#, no-wrap
-msgid "B<-f, --default-false >"
+#, fuzzy, no-wrap
+#| msgid "B<-f, --default-false >"
+msgid "B<-f, --default-false>"
 msgstr "B<-f, --default-false >"
 
 #. type: Plain text
@@ -248,8 +253,9 @@ msgstr "Končaj s stanjem 1, če zaznava ni mogoča."
 
 #. type: TP
 #: ../ischroot.1:26
-#, no-wrap
-msgid "B<-t, --default-true >"
+#, fuzzy, no-wrap
+#| msgid "B<-t, --default-true >"
+msgid "B<-t, --default-true>"
 msgstr "B<-t, --default-true >"
 
 #. type: Plain text
@@ -280,9 +286,13 @@ msgid "Print version information on standard output and exit successfully."
 msgstr "Izpiše podrobnosti o različici na standardni izhod in uspešno konča."
 
 #. type: Plain text
-#: ../ischroot.1:37
+#: ../ischroot.1:38
+#, fuzzy
+#| msgid ""
+#| "On GNU/Linux, chroot detection is not possible when not root. This works "
+#| "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgid ""
-"On GNU/Linux, chroot detection is not possible when not root. This works "
+"On GNU/Linux, chroot detection is not possible when not root.  This works "
 "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgstr ""
 "Na GNU/Linux zaznavanje chroot ni mogoče, če niste skrbnik. To deluje "
@@ -1024,7 +1034,7 @@ msgid "tempfile - create a temporary file in a safe manner"
 msgstr "tempfile - ustvari začasno datoteko v varnem načinu"
 
 #. type: Plain text
-#: ../tempfile.1:9
+#: ../tempfile.1:10
 msgid ""
 "B<tempfile> [-d DIR] [-p STRING] [-s STRING] [-m MODE] [-n FILE] [--"
 "directory=DIR] [--prefix=STRING] [--suffix=STRING] [--mode=MODE] [--"
@@ -1116,7 +1126,9 @@ msgstr "d)"
 
 #. type: Plain text
 #: ../tempfile.1:42
-msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
+#, fuzzy
+#| msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
+msgid "Finally an implementation-defined directory (I</tmp>)  may be used."
 msgstr "Končno se lahko uporabi mapa I<(/tmp)> navedena z implementacijo."
 
 #. type: TP
@@ -1194,18 +1206,23 @@ msgstr ""
 "Katerokoli drugo izhodno stanje predstavlja napako."
 
 #. type: Plain text
-#: ../tempfile.1:73
+#: ../tempfile.1:75
+#, fuzzy
+#| msgid ""
+#| "Exclusive creation is not guaranteed when creating files on NFS "
+#| "partitions.  tempfile cannot make temporary directories.  tempfile is "
+#| "deprecated; you should use mktemp(1) instead."
 msgid ""
 "Exclusive creation is not guaranteed when creating files on NFS partitions.  "
 "tempfile cannot make temporary directories.  tempfile is deprecated; you "
-"should use mktemp(1) instead."
+"should use B<mktemp>(1)  instead."
 msgstr ""
 "Izključno ustvarjanje ni zagotovljeno ob ustvarjanju datotek na razdelkih "
 "NFS. začasna datoteka ne more ustvariti začasnih map. začasna datoteka je "
 "zastarela, namesto nje uporabite mktemp(1)."
 
 #. type: SH
-#: ../tempfile.1:73
+#: ../tempfile.1:75
 #, no-wrap
 msgid "EXAMPLE"
 msgstr "PRIMERI"
