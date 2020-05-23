@@ -5,9 +5,9 @@ tempfile \- create a temporary file in a safe manner
 .SH SYNOPSIS
 .B tempfile
 [\-d DIR] [\-p STRING] [\-s STRING] [\-m MODE] [\-n FILE] [\-\-directory=DIR]
-[\-\-prefix=STRING] [\-\-suffix=STRING] [\-\-mode=MODE] [\-\-name=FILE] [\-\-help] [\-\-version]
+[\-\-prefix=STRING] [\-\-suffix=STRING] [\-\-mode=MODE]
+[\-\-name=FILE] [\-\-help] [\-\-version]
 .SH DESCRIPTION
-.PP
 .B tempfile
 creates a temporary file in a safe manner.  It uses
 .BR mkstemps (3)
@@ -37,31 +37,31 @@ is used when appropriate.
 .TP
 d)
 Finally an implementation-defined directory
-.IR (/tmp)
+.RI ( /tmp )
 may be used.
 .SH OPTIONS
 .TP
-.BI "-d, --directory " DIR
+.BI "\-d, \-\-directory " DIR
 Place the file in DIR.
 .TP
-.BI "-m, --mode " MODE
+.BI "\-m, \-\-mode " MODE
 Open the file with MODE instead of 0600.
 .TP
-.BI "-n, --name " FILE
+.BI "\-n, \-\-name " FILE
 Use FILE for the name instead of
 .BR tempnam (3) .
-The options -d, -p, and -s are ignored if this option is given.
+The options \-d, \-p, and \-s are ignored if this option is given.
 .TP
-.BI "-p, --prefix " STRING
+.BI "\-p, \-\-prefix " STRING
 Use up to five letters of STRING to generate the name.
 .TP
-.BI "-s, --suffix " STRING
+.BI "\-s, \-\-suffix " STRING
 Generate the file with STRING as the suffix.
 .TP
-.B "--help"
+.B \-\-help
 Print a usage message on standard output and exit successfully.
 .TP
-.B "--version"
+.B \-\-version
 Print version information on standard output and exit successfully.
 .SH RETURN VALUES
 An exit status of 0 means the temporary file was created successfully.
@@ -69,20 +69,20 @@ Any other exit status indicates an error.
 .SH BUGS
 Exclusive creation is not guaranteed when creating files on NFS
 partitions.  tempfile cannot make temporary directories.
-tempfile is deprecated; you should use mktemp(1) instead.
+tempfile is deprecated; you should use
+.BR mktemp (1)
+instead.
 .SH EXAMPLE
-
-.RS
 .nf
 #!/bin/sh
 #[...]
 t=$(tempfile) || exit
-trap "rm -f -- '$t'" EXIT
+trap "rm \-f \-\- '$t'" EXIT
 #[...]
-rm -f -- "$t"
+rm \-f \-\- "$t"
 trap - EXIT
 exit
 .fi
-.SH "SEE ALSO"
+.SH SEE ALSO
 .BR tempnam (3),
 .BR mktemp (1)
