@@ -7,10 +7,15 @@ add-shell \- add shells to the list of valid login shells
 .RI [ shellname ...]
 .SH DESCRIPTION
 .B add-shell
-copies \fI/etc/shells\fR to \fI/etc/shells.tmp\fR, adds the given shells to
-this file if they are not already present, and copies this temporary file
-back to \fI/etc/shells\fR.
-
+copies
+.I /etc/shells
+to
+.IR /etc/shells.tmp ,
+adds the given shells to this file
+if they are not already present,
+and copies this temporary file back to
+.IR /etc/shells .
+.sp 1
 The shells must be provided by their full pathnames.
-.SH "SEE ALSO"
+.SH SEE ALSO
 .BR shells (5)
