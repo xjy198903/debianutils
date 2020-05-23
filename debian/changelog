@@ -1,3 +1,22 @@
+debianutils (4.9.2) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * implement proper quoting on add-shell and remove-shell
+
+  [ Clint Adams ]
+  * Add autopkgtest.
+  * Patch from gentoo_eshoes@tutanota.com to fix installkernel's
+    handling of broken symlinks.  closes: #951424.
+  * ischroot.1: patch from Bjarni Ingi Gislason to fix mandoc errors.
+    closes: #961304.
+  * tempfile.1: patch from Bjarni Ingi Gislason to fix mandoc errors.
+    closes: #961305.
+  * Updated Italian translation from Beatrice Torracca.
+    closes: #959894.
+  * po4a update
+
+ -- Clint Adams <clint@debian.org>  Fri, 22 May 2020 20:16:13 -0400
+
 debianutils (4.9.1) unstable; urgency=medium
 
   * run-parts: patch from Dmitry Bogatov to fix MacOS build.
