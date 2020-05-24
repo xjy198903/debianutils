@@ -74,6 +74,8 @@ main (int argc, char **argv)
   };
   progname = argv[0];
 
+  fprintf(stderr, "WARNING: tempfile is deprecated; consider using mktemp instead.\n");
+
   while ((optc = getopt_long (argc, argv, "p:s:d:m:n:", long_options, 0))
 	 != EOF) {
     switch (optc) {
