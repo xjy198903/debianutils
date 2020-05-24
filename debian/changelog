@@ -1,3 +1,10 @@
+debianutils (4.10) unstable; urgency=medium
+
+  * installkernel: stay in /sbin. closes: #961476.
+  * tempfile: add run-time deprecation warning.
+
+ -- Clint Adams <clint@debian.org>  Sun, 24 May 2020 19:40:59 -0400
+
 debianutils (4.9.3) unstable; urgency=medium
 
   * which.1: patch from Bjarni Ingi Gislason to fix mandoc errors.
