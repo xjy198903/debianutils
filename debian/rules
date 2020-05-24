@@ -53,6 +53,7 @@ binary-arch:	build
 	-rm -rf debian/tmp
 	$(INSTALL_DIR) debian/tmp/DEBIAN \
 		       debian/tmp/bin \
+		       debian/tmp/sbin \
 		       debian/tmp/usr/bin \
 		       debian/tmp/usr/sbin \
 		       debian/tmp/usr/share/man/man1 \
@@ -72,7 +73,9 @@ ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 	   	debian/tmp/usr/bin/ischroot
 endif
 
-ifneq ($(DEB_HOST_ARCH_OS),linux)
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+	mv debian/tmp/usr/sbin/installkernel debian/tmp/sbin/
+else
 	rm debian/tmp/usr/sbin/installkernel \
 	   debian/tmp/usr/share/man/man8/installkernel.8
 endif
