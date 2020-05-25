@@ -63,7 +63,6 @@ binary-arch:	build
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp INSTALL_PROGRAM="$(INSTALL_PROGRAM)"
 	mv debian/tmp/usr/bin/run-parts \
 	   debian/tmp/usr/bin/tempfile \
-	   debian/tmp/usr/bin/which \
 	   debian/tmp/bin/
 
 ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
