@@ -3,7 +3,7 @@
  * Debian run-parts program
  * Copyright (C) 1996 Jeff Noxon <jeff@router.patch.net>,
  * Copyright (C) 1996-1999 Guy Maor <maor@debian.org>
- * Copyright (C) 2002-2012 Clint Adams <clint@debian.org>
+ * Copyright (C) 2002-2020 Clint Adams <clint@debian.org>
  *
  * This is free software; see the GNU General Public License version 2
  * or later for copying conditions.  There is NO warranty.
@@ -78,10 +78,10 @@ void error(char *format, ...)
 
 void version()
 {
-  fprintf(stderr, "Debian run-parts program, version " PACKAGE_VERSION
+  printf( "Debian run-parts program, version " PACKAGE_VERSION
 	  "\nCopyright (C) 1994 Ian Jackson, Copyright (C) 1996 Jeff Noxon.\n"
 	  "Copyright (C) 1996,1997,1998,1999 Guy Maor\n"
-	  "Copyright (C) 2002-2012 Clint Adams\n"
+	  "Copyright (C) 2002-2020 Clint Adams\n"
 	  "This is free software; see the GNU General Public License version 2\n"
 	  "or later for copying conditions.  There is NO warranty.\n");
   exit(0);
