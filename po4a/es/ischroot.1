@@ -1,0 +1,40 @@
+.\" -*- nroff -*-
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH ISCHROOT 1 "30 de mayo de 2011" Debian 
+.SH NOMBRE
+ischroot \- Detecta si se ejecuta dentro de una jaula chroot
+.SH SINOPSIS
+\fBischroot\fP [\-\-default\-false] [\-\-default\-true] [\-\-help] [\-\-version]
+.SH DESCRIPCIÓN
+\fBischroot\fP detects if it is currently running in a chroot.  The exit status
+is:
+.TP 
+0
+Si se ejecuta desde una jaula chroot.
+.TP 
+1
+Si no se ejecuta desde una jaula chroot.
+.TP 
+2
+Si no es posible detectarlo (Ocurre en sistemas GNU/Linux si el script no se
+ejecuta como administrador).
+.SH OPCIONES
+.TP 
+\fB\-f, \-\-default\-false\fP
+Cierra con un estado de salida 1 si la detección no es posible.
+.TP 
+\fB\-t, \-\-default\-true\fP
+Cierra con un estado de salida 0 si la detección no es posible.
+.TP 
+\fB\-\-help\fP
+Muestra información de uso por la salida estándar y cierra con éxito.
+.TP 
+\fB\-\-version\fP
+Muestra información de la versión por la salida estándar y cierra con éxito.
+.SH FALLOS
+On GNU/Linux, chroot detection is not possible when not root.  This works
+correctly on GNU/Hurd and GNU/kFreeBSD.

@@ -1,0 +1,78 @@
+.\" -*- nroff -*-
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH TEMPFILE 1 "27 giugno 2012" Debian 
+.SH NOME
+tempfile \- crea un file temporaneo in maniera sicura
+.SH SINTASSI
+\fBtempfile\fP [\-d DIR] [\-p STRINGA] [\-s STRINGA] [\-m MODALITÀ] [\-n FILE]
+[\-\-directory=DIR] [\-\-prefix=STRINGA] [\-\-suffix=STRINGA] [\-\-mode=MODALITÀ]
+[\-\-name=FILE] [\-\-help] [\-\-version]
+.SH DESCRIZIONE
+\fBtempfile\fP crea un file temporaneo in maniera sicura. Usa \fBmkstemps\fP(3)
+per scegliere il nome e lo apre con O_RDWR | O_CREAT | O_EXCL. Il nome di
+file viene stampato sullo standard output.
+.PP
+La directory in cui creare il file può essere ricercata in questo ordine:
+.TP  3
+a)
+Se la variabile d'ambiente \fBTMPDIR\fP esiste e contiene il nome di una
+directory appropriata, viene usata tale directory.
+.TP 
+b)
+Altrimenti, se viene specificato un appropriato argomento \fI\-\-directory\fP,
+viene usato tale argomento.
+.TP 
+c)
+Altimenti, viene usata \fIP_tmpdir\fP (come definita in \fI<stdio.h>\fP)
+quando è appropriata.
+.TP 
+d)
+Finally an implementation\-defined directory (\fI/tmp\fP)  may be used.
+.SH OPZIONI
+.TP 
+\fB\-d, \-\-directory \fP\fIDIR\fP
+Posiziona il file in DIR.
+.TP 
+\fB\-m, \-\-mode \fP\fIMODALITÀ\fP
+Apre il file con MODALITÀ invece di 0600.
+.TP 
+\fB\-n, \-\-name \fP\fIFILE\fP
+Usa FILE come nome invece di \fBtempnam\fP(3)\fB.\fP Se viene specificata questa
+opzione le opzioni \-d, \-p e \-s vengono ignorate.
+.TP 
+\fB\-p, \-\-prefix \fP\fISTRINGA\fP
+Usa fino a cinque lettere di STRINGA per generare il nome.
+.TP 
+\fB\-s, \-\-suffix \fP\fISTRINGA\fP
+Genera il file con STRINGA come suffisso.
+.TP 
+\fB\-\-help\fP
+Stampa un messaggio sull'uso sullo standard output e termina con successo.
+.TP 
+\fB\-\-version\fP
+Stampa informazioni sulla versione sullo standard output e termina con
+successo.
+.SH "VALORI RESTITUITI"
+Uno stato di uscita 0 significa che il file temporaneo è stato creato con
+successo. Qualsiasi altro stato di uscita indica un errore.
+.SH BUG
+Exclusive creation is not guaranteed when creating files on NFS partitions.
+tempfile cannot make temporary directories.  tempfile is deprecated; you
+should use \fBmktemp\fP(1)  instead.
+.SH ESEMPIO
+.nf
+#!/bin/sh
+#[...]
+t=$(tempfile) || exit
+trap "rm \-f \-\- '$t'" EXIT
+#[...]
+rm \-f \-\- "$t"
+trap \- EXIT
+exit
+.fi
+.SH "VEDERE ANCHE"
+\fBtempnam\fP(3), \fBmktemp\fP(1)

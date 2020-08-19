@@ -1,0 +1,79 @@
+.\" -*- nroff -*-
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH TEMPFILE 1 "27 Jun 2012" Debian 
+.SH 名前
+tempfile \- 安全な一時ファイルの作成
+.SH 書式
+\fBtempfile\fP [\-d DIR] [\-p STRING] [\-s STRING] [\-m MODE] [\-n FILE]
+[\-\-directory=DIR] [\-\-prefix=STRING] [\-\-suffix=STRING] [\-\-mode=MODE]
+[\-\-name=FILE] [\-\-help] [\-\-version]
+.SH 説明
+\fBtempfile\fP creates a temporary file in a safe manner.  It uses
+\fBmkstemps\fP(3)  to choose the name and opens it with O_RDWR | O_CREAT |
+O_EXCL.  The filename is printed on standard output.
+.PP
+The directory in which to create the file might be searched for in this
+order:
+.TP  3
+a)
+環境変数 \fBTMPDIR\fP が存在し、適切なディレクトリ名が設定されていれば、これを使用します。
+.TP 
+b)
+そうでない場合、\fI\-\-directory\fP 引数が指定されていて適切であれば、これを使用します。
+.TP 
+c)
+そうでない場合、\fIP_tmpdir\fP (\fI<stdio.h>\fP で定義) が適切であれば、これを使用します。
+.TP 
+d)
+Finally an implementation\-defined directory (\fI/tmp\fP)  may be used.
+.SH オプション
+.TP 
+\fB\-d, \-\-directory \fP\fIDIR\fP
+ファイルを DIR に配置します。
+.TP 
+\fB\-m, \-\-mode \fP\fIMODE\fP
+ファイルのモードを 0600 に代えて MODE で開きます。
+.TP 
+\fB\-n, \-\-name \fP\fIFILE\fP
+ファイル名として \fBtempnam\fP(3) に代えて FILE を使用します。このオプションを与えると、\-d, \-p, \-s
+の各オプションを無視します。
+.TP 
+\fB\-p, \-\-prefix \fP\fISTRING\fP
+STRING の 5 文字までを名前の生成に使用します。
+.TP 
+\fB\-s, \-\-suffix \fP\fISTRING\fP
+STRING を末尾にするファイルを生成します。
+.TP 
+\fB\-\-help\fP
+使用方法を標準出力に表示し、正常終了します。
+.TP 
+\fB\-\-version\fP
+バージョン情報を標準出力に表示し、正常終了します。
+.SH 戻り値
+終了ステータスが 0 は一時ファイルが正常に作成できたことを意味します。その他の終了ステータスはエラーです。
+.SH バグ
+Exclusive creation is not guaranteed when creating files on NFS partitions.
+tempfile cannot make temporary directories.  tempfile is deprecated; you
+should use \fBmktemp\fP(1)  instead.
+.SH 例
+.nf
+#!/bin/sh
+#[...]
+t=$(tempfile) || exit
+trap "rm \-f \-\- '$t'" EXIT
+#[...]
+rm \-f \-\- "$t"
+trap \- EXIT
+exit
+.fi
+.SH 関連項目
+\fBtempnam\fP(3), \fBmktemp\fP(1)
+.SH 翻訳
+倉澤 望 <nabetaro@debian.or.jp>, 2012
+.br
+Debian JP Documentation ML <debian-doc@debian.or.jp>
+

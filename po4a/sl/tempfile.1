@@ -1,0 +1,84 @@
+.\" -*- nroff -*-
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH TEMPFILE 1 "27. jun 2012" Debian 
+.SH IME
+tempfile \- ustvari začasno datoteko v varnem načinu
+.SH POVZETEK
+\fBtempfile\fP [\-d MAPA] [\-p NIZ] [\-s NIZ] [\-m NAČIN] [\-n DATOTAKA]
+[\-\-directory=MAPA] [\-\-prefix=NIZ] [\-\-suffix=NIZ] [\-\-mode=NAČIN]
+[\-\-name=DATOTEKA] [\-\-help] [\-\-version]
+.SH OPIS
+\fBtempfile\fP creates a temporary file in a safe manner.  It uses
+\fBmkstemps\fP(3)  to choose the name and opens it with O_RDWR | O_CREAT |
+O_EXCL.  The filename is printed on standard output.
+.PP
+The directory in which to create the file might be searched for in this
+order:
+.TP  3
+a)
+V primeru, ko okoljska spremenljivka \fBTMPDIR\fP obstaja in vsebuje ime
+primerne mape,  se le\-ta uporabi.
+.TP 
+b)
+Drugače se uporabi argument \fI\-\-directory\fP, če je določen in primeren.
+.TP 
+c)
+Drugače se, ko je primerno, uporabi \fIP_tmpdir\fP (kot je naveden v
+\fI<stdio.h>\fP).
+.TP 
+d)
+Finally an implementation\-defined directory (\fI/tmp\fP)  may be used.
+.SH MOŽNOSTI
+.TP 
+\fB\-d, \-\-directory \fP\fIMAPA\fP
+Vstavite datoteko v MAPO
+.TP 
+\fB\-m, \-\-mode \fP\fINAČIN\fP
+Odprite datoteko v NAČINU namesto 0600.
+.TP 
+\fB\-n, \-\-name \fP\fIFILE\fP
+Uporabite DATOTEKA za ime namesto \fBtempnam\fP(3)\fB.\fP Možnosti \-d, \-p in \-s so
+prezrte, ko je podana ta možnost.
+.TP 
+\fB\-p, \-\-prefix \fP\fINIZ\fP
+Uporabite do pet črk iz NIZA za ustvarjanje imena.
+.TP 
+\fB\-s, \-\-suffix \fP\fINIZ\fP
+Ustvarite datoteko z NIZOM kot pripono.
+.TP 
+\fB\-\-help\fP
+Izpiše sporočilo uporabe na standarden izhod in uspešno konča.
+.TP 
+\fB\-\-version\fP
+Izpiše podrobnosti o različici na standardni izhod in uspešno konča.
+.SH "VRNJENE VREDNOSTI"
+Stanje končanja 0 pomeni, da je bila začasna datoteka uspešno
+ustvarjena. Katerokoli drugo izhodno stanje predstavlja napako.
+.SH HROŠČI
+Exclusive creation is not guaranteed when creating files on NFS partitions.
+tempfile cannot make temporary directories.  tempfile is deprecated; you
+should use \fBmktemp\fP(1)  instead.
+.SH PRIMERI
+.nf
+#!/bin/sh
+#[...]
+t=$(tempfile) || exit
+trap "rm \-f \-\- '$t'" EXIT
+#[...]
+rm \-f \-\- "$t"
+trap \- EXIT
+exit
+.fi
+.SH "OGLEJTE SI TUDI"
+\fBtempnam\fP(3), \fBmktemp\fP(1)
+.SH TRANSLATION
+This document is a translation.
+
+Regarding errors such as tihs one, contact
+.nh
+<\fIsl@li.org\fR>,
+.hy
