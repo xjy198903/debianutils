@@ -1,7 +1,8 @@
 debianutils (4.11.1) unstable; urgency=medium
 
   * Mark smoke autopkgtest as superficial
-  * run-parts: print version output to stdout instead of stderr.  closes: #961872.
+  * run-parts: print version output to stdout instead of stderr.
+    closes: #961872.
 
  -- Clint Adams <clint@debian.org>  Wed, 19 Aug 2020 09:12:19 -0400
 
