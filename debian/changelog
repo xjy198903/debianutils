@@ -1,3 +1,9 @@
+debianutils (4.11.1+nmu1) unstable; urgency=medium
+
+  * Redirect ischroot output to stdin in autopkgtest closes: #961872
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 24 Sep 2020 10:41:35 +0200
+
 debianutils (4.11.1) unstable; urgency=medium
 
   * Mark smoke autopkgtest as superficial
