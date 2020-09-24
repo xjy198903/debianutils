@@ -3,5 +3,5 @@
 run-parts --version
 tempfile 2>&1
 which sh
-ischroot --version
+ischroot --version 2>&1
 savelog
