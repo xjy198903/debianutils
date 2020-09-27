@@ -1,3 +1,13 @@
+debianutils (4.11.2) unstable; urgency=medium
+
+  * ischroot: send usage and version to stdout.  closes: #961872.
+  * Updated German man page translation from Helge Kreutzmann.
+    closes: #961911.
+  * Updated Portuguese man page translation from Américo Monteiro.
+    closes: #962416.
+
+ -- Clint Adams <clint@debian.org>  Sun, 27 Sep 2020 13:25:47 -0400
+
 debianutils (4.11.1) unstable; urgency=medium
 
   * Mark smoke autopkgtest as superficial
