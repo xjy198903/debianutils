@@ -1,12 +1,12 @@
 # Translation of debianutils man page template to German
-# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2011, 2012, 2017, 2018.
+# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2011, 2012, 2017, 2018, 2020.
 # This file is distributed under the same license as the debianutils package.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debianutils man page 4.8.6\n"
+"Project-Id-Version: debianutils man page 4.11\n"
 "POT-Creation-Date: 2020-05-23 08:02-0400\n"
-"PO-Revision-Date: 2018-06-17 10:01+0200\n"
+"PO-Revision-Date: 2020-05-31 06:39+0200\n"
 "Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
 "Language-Team: de <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -145,17 +145,12 @@ msgstr "FEHLER"
 
 #. type: Plain text
 #: ../installkernel.8:29
-#, fuzzy
-#| msgid ""
-#| "installkernel resides in /sbin only because the Linux kernel makefiles "
-#| "call it from there.  It should really be in /usr/sbin.  It isn't needed "
-#| "to boot a system."
 msgid ""
 "B<installkernel> resides in /sbin only because the Linux kernel makefiles "
 "call it from there.  It should really be in /usr/sbin.  It isn't needed to "
 "boot a system."
 msgstr ""
-"installkernel liegt nur in /sbin, da die Makefiles des Linux-Kernels es von "
+"B<installkernel> liegt nur in /sbin, da die Makefiles des Linux-Kernels es von "
 "dort aufrufen. Es sollte sich wirklich in /usr/sbin befinden. Es wird nicht "
 "benötigt, um ein System zu starten."
 
@@ -189,10 +184,6 @@ msgstr "B<ischroot> [--default-false] [--default-true] [--help] [--version]"
 
 #. type: Plain text
 #: ../ischroot.1:12
-#, fuzzy
-#| msgid ""
-#| "B<ischroot> detects if it is currently running in a chroot. The exit "
-#| "status is:"
 msgid ""
 "B<ischroot> detects if it is currently running in a chroot.  The exit status "
 "is:"
@@ -247,10 +238,9 @@ msgstr "OPTIONEN"
 
 #. type: TP
 #: ../ischroot.1:23
-#, fuzzy, no-wrap
-#| msgid "B<-f, --default-false >"
+#, no-wrap
 msgid "B<-f, --default-false>"
-msgstr "B<-f, --default-false >"
+msgstr "B<-f, --default-false>"
 
 #. type: Plain text
 #: ../ischroot.1:26
@@ -259,10 +249,9 @@ msgstr "mit Status 1 beenden, falls die Erkennung nicht möglich ist"
 
 #. type: TP
 #: ../ischroot.1:26
-#, fuzzy, no-wrap
-#| msgid "B<-t, --default-true >"
+#, no-wrap
 msgid "B<-t, --default-true>"
-msgstr "B<-t, --default-true >"
+msgstr "B<-t, --default-true>"
 
 #. type: Plain text
 #: ../ischroot.1:29
@@ -297,10 +286,6 @@ msgstr ""
 
 #. type: Plain text
 #: ../ischroot.1:38
-#, fuzzy
-#| msgid ""
-#| "On GNU/Linux, chroot detection is not possible when not root. This works "
-#| "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgid ""
 "On GNU/Linux, chroot detection is not possible when not root.  This works "
 "correctly on GNU/Hurd and GNU/kFreeBSD."
@@ -765,14 +750,6 @@ msgstr "1)"
 
 #. type: Plain text
 #: ../savelog.8:61
-#, fuzzy
-#| msgid ""
-#| "Version numbered files are cycled.  Version I<file>.I<2> is moved to "
-#| "version I<file>.I<3>, version I<file>.I<1> is moved to version I<file>."
-#| "I<2>, and so on.  Finally version I<file>.I<0> is moved to version "
-#| "I<file>.I<1>, and version I<file> is deleted.  Both compressed names and "
-#| "uncompressed names are cycled, regardless of B<-l>.  Missing version "
-#| "files are ignored."
 msgid ""
 "Version numbered files are cycled.  Version I<file>B<\\&.2> is moved to "
 "version I<file>B<\\&.3>, version I<file>B<\\&.1> is moved to version "
@@ -781,9 +758,9 @@ msgid ""
 "names and uncompressed names are cycled, regardless of B<-l>.  Missing "
 "version files are ignored."
 msgstr ""
-"Versionsnummern werden zyklisch verschoben. Version I<Datei>.I<2> wird "
-"I<Datei>.I<3>, Version I<Datei>.I<1> wird I<Datei>.I<2> und so weiter. "
-"Schließlich wird Version I<Datei>.I<0> zu I<Datei>.I<1> und I<Datei> wird "
+"Versionsnummern werden zyklisch verschoben. Version I<Datei>.B<\\&.2> wird "
+"I<Datei>.B<\\&.3>, Version I<Datei>.B<\\&.1> wird I<Datei>.B<\\&.2> und so weiter. "
+"Schließlich wird Version I<Datei>.B<\\&.0> zu I<Datei>.B<\\&.1> und I<Datei> wird "
 "gelöscht. Sowohl komprimierte als auch unkomprimierte Namen werden zyklisch "
 "verschoben, unabhängig von B<-l>. Fehlende Versionen werden ignoriert."
 
@@ -795,15 +772,11 @@ msgstr "2)"
 
 #. type: Plain text
 #: ../savelog.8:70
-#, fuzzy
-#| msgid ""
-#| "The new I<file>.I<1> is compressed unless the B<-l> flag was given.  It "
-#| "is changed subject to the B<-m>, B<-u>, and B<-g> flags."
 msgid ""
 "The new I<file>B<\\&.1> is compressed unless the B<-l> flag was given.  It "
 "is changed subject to the B<-m>, B<-u>, and B<-g> flags."
 msgstr ""
-"Die neue I<Datei>.I<1> wird komprimiert, falls der Schalter B<-l> nicht "
+"Die neue I<Datei>.B<\\&.1> wird komprimiert, falls der Schalter B<-l> nicht "
 "übergeben wurde. Sie wird gemäß den Schaltern B<-m>, B<-u> und B<-g> "
 "geändert."
 
@@ -815,10 +788,8 @@ msgstr "3)"
 
 #. type: Plain text
 #: ../savelog.8:76
-#, fuzzy
-#| msgid "The main I<file> is moved to I<file>.I<0>."
 msgid "The main I<file> is moved to I<file>B<.0>."
-msgstr "Die Haupt-I<Datei> wird zu I<Datei>.I<0>."
+msgstr "Die Haupt-I<Datei> wird zu I<Datei>.B<0>."
 
 #. type: IP
 #: ../savelog.8:77
@@ -846,15 +817,11 @@ msgstr "5)"
 
 #. type: Plain text
 #: ../savelog.8:93
-#, fuzzy
-#| msgid ""
-#| "The new I<file>.I<0> is changed subject to the B<-m>, B<-u>, and B<-g> "
-#| "flags."
 msgid ""
 "The new I<file>B<\\&.0> is changed subject to the B<-m>, B<-u>, and B<-g> "
 "flags."
 msgstr ""
-"Die neue I<Datei>.I<0> wird entsprechend der Schalter B<-m>, B<-u> und B<-g> "
+"Die neue I<Datei>.B<\\&.0> wird entsprechend der Schalter B<-m>, B<-u> und B<-g> "
 "geändert."
 
 #. type: TP
@@ -898,10 +865,6 @@ msgstr "B<-c Zyklus>"
 
 #. type: Plain text
 #: ../savelog.8:113
-#, fuzzy
-#| msgid ""
-#| "Save cycle versions of the logfile (default: 7). The I<cycle> count must "
-#| "be at least 2."
 msgid ""
 "Save cycle versions of the logfile (default: 7).  The I<cycle> count must be "
 "at least 2."
@@ -966,11 +929,6 @@ msgstr "mit Xz statt mit Gzip komprimieren"
 
 #. type: Plain text
 #: ../savelog.8:134
-#, fuzzy
-#| msgid ""
-#| "For xz no strength option is set, and xz decides on the default based on "
-#| "the total amount of physical RAM. Note that xz can use a very large "
-#| "amount of memory for the higher compression levels."
 msgid ""
 "For xz no strength option is set, and xz decides on the default based on the "
 "total amount of physical RAM.  Note that xz can use a very large amount of "
@@ -1037,10 +995,8 @@ msgstr "B<-r>"
 
 #. type: Plain text
 #: ../savelog.8:153
-#, fuzzy
-#| msgid "use I<rolldir> instead of . to roll files"
 msgid "use I<rolldir> instead of \\&.\\& to roll files"
-msgstr "verwende I<WandVerz> statt . um Dateien zu wandeln"
+msgstr "verwende I<WandVerz> statt \\&.\\&, um Dateien zu wandeln"
 
 #. type: TP
 #: ../savelog.8:153
@@ -1066,16 +1022,12 @@ msgstr "nichts ausgeben"
 
 #. type: Plain text
 #: ../savelog.8:165
-#, fuzzy
-#| msgid ""
-#| "If a process is still writing to I<file.0>, and savelog moves it to "
-#| "I<file.1> and compresses it, data could be lost."
 msgid ""
 "If a process is still writing to I<file>B<\\&.0>, and savelog moves it to "
 "I<file>B<\\&.1> and compresses it, data could be lost."
 msgstr ""
-"Falls ein Prozess noch in I<Datei.0> schreibt und Savelog diese Datei in "
-"I<Datei.1> verschiebt und dann komprimiert, könnten Daten verloren gehen."
+"Falls ein Prozess noch in I<Datei>B<\\&.0> schreibt und Savelog diese Datei in "
+"I<Datei>B<\\&.1> verschiebt und dann komprimiert, könnten Daten verloren gehen."
 
 #. type: Plain text
 #: ../savelog.8:167
@@ -1178,11 +1130,9 @@ msgstr "d)"
 
 #. type: Plain text
 #: ../tempfile.1:42
-#, fuzzy
-#| msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
 msgid "Finally an implementation-defined directory (I</tmp>)  may be used."
 msgstr ""
-"Abschließend könnte ein implementierungsdefiniertes Verzeichnis I<(/tmp)> "
+"Abschließend könnte ein implementierungsdefiniertes Verzeichnis (I</tmp>) "
 "verwandt werden."
 
 #. type: TP
@@ -1263,11 +1213,6 @@ msgstr ""
 
 #. type: Plain text
 #: ../tempfile.1:75
-#, fuzzy
-#| msgid ""
-#| "Exclusive creation is not guaranteed when creating files on NFS "
-#| "partitions.  tempfile cannot make temporary directories.  tempfile is "
-#| "deprecated; you should use mktemp(1) instead."
 msgid ""
 "Exclusive creation is not guaranteed when creating files on NFS partitions.  "
 "tempfile cannot make temporary directories.  tempfile is deprecated; you "
@@ -1275,7 +1220,7 @@ msgid ""
 msgstr ""
 "Exklusive Erstellung wird bei Dateien auf NFS-Partitionen nicht garantiert. "
 "Tempfile kann keine temporären Verzeichnisse erstellen. Tempfile ist "
-"veraltet, Sie sollten stattdessen mktemp(1) verwenden."
+"veraltet, Sie sollten stattdessen B<mktemp>(1) verwenden."
 
 #. type: SH
 #: ../tempfile.1:75
@@ -1334,13 +1279,6 @@ msgstr "which [-a] Dateiname …"
 
 #. type: Plain text
 #: ../which.1:16
-#, fuzzy
-#| msgid ""
-#| "B<which> returns the pathnames of the files (or links) which would be "
-#| "executed in the current environment, had its arguments been given as "
-#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
-#| "the PATH for executable files matching the names of the arguments. It "
-#| "does not canonicalize path names."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
