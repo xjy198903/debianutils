@@ -22,7 +22,7 @@
 
 void version()
 {
-  fprintf(stderr, "Debian ischroot, version " PACKAGE_VERSION
+  printf( "Debian ischroot, version " PACKAGE_VERSION
           "Copyright (C) 2011 Aurelien Jarno\n"
           "This is free software; see the GNU General Public License version 2\n"
           "or later for copying conditions.  There is NO warranty.\n");
@@ -31,7 +31,7 @@ void version()
 
 void usage()
 {
-  fprintf(stderr, "Usage: ischroot [OPTION]\n"
+  printf( "Usage: ischroot [OPTION]\n"
           "  -f, --default-false return false if detection fails\n"
           "  -t, --default-true  return true if detection fails\n"
           "  -V, --version       output version information and exit.\n"
