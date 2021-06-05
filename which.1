@@ -3,7 +3,7 @@
 .SH NAME
 which \- locate a command
 .SH SYNOPSIS
-which [\-a] filename ...
+which [\-as] filename ...
 .SH DESCRIPTION
 .B which
 returns the pathnames of the files (or links) which would be executed
@@ -17,6 +17,10 @@ It does not canonicalize path names.
 .TP
 .B \-a
 print all matching pathnames of each argument
+.TP
+.B \-s
+silently return 0 if all of the executables were found 
+or 1 otherwise
 .SH EXIT STATUS
 .TP
 .B 0
