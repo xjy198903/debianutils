@@ -39,6 +39,7 @@
 int test_mode = 0;
 int list_mode = 0;
 int verbose_mode = 0;
+int debug_mode = 0;
 int report_mode = 0;
 int reverse_mode = 0;
 int exitstatus = 0;
@@ -95,6 +96,7 @@ void usage()
 	  "      --list          print names of all valid files (can not be used with\n"
 	  "                      --test)\n"
 	  "  -v, --verbose       print script names before running them.\n"
+	  "  -d, --debug         print script names while checking them.\n"
 	  "      --report        print script names if they produce output.\n"
 	  "      --reverse       reverse execution order of scripts.\n"
 	  "      --exit-on-error exit as soon as a script returns with a non-zero exit\n"
@@ -151,19 +153,30 @@ int valid_name(const struct dirent *d)
 
     s = (char *)&(d->d_name);
 
-    if (regex_mode == RUNPARTS_ERE)
+    if (regex_mode == RUNPARTS_ERE) {
         retval = !regexec(&customre, s, 0, NULL, 0);
+	if (debug_mode)
+	    fprintf(stderr, "\"%s\": customre %s\n", s, retval ? "pass" : "fail");
 
-    else if (regex_mode == RUNPARTS_LSBSYSINIT) {
+    } else if (regex_mode == RUNPARTS_LSBSYSINIT) {
 
-        if (!regexec(&hierre, s, 0, NULL, 0))
+        if (!regexec(&hierre, s, 0, NULL, 0)) {
             retval = regexec(&excsre, s, 0, NULL, 0);
+	    if (debug_mode)
+		fprintf(stderr, "\"%s\": hierre pass, excsre %s\n", s, retval ? "pass" : "fail");
 
-	else
+	} else {
             retval = !regexec(&tradre, s, 0, NULL, 0);
+	    if (debug_mode)
+		fprintf(stderr, "\"%s\": tradre %s\n", s, retval ? "pass" : "fail");
 
-    } else
+	}
+    } else {
         retval = !regexec(&classicalre, s, 0, NULL, 0);
+	if (debug_mode)
+	    fprintf(stderr, "\"%s\": classicalre %s\n", s, retval ? "pass" : "fail");
+
+    }
 
     return retval;
 }
@@ -582,6 +595,7 @@ int main(int argc, char *argv[])
       {"test", 0, &test_mode, 1},
       {"list", 0, &list_mode, 1},
       {"verbose", 0, 0, 'v'},
+      {"debug", 0, 0, 'd'},
       {"report", 0, &report_mode, 1},
       {"reverse", 0, &reverse_mode, 1},
       {"umask", 1, 0, 'u'},
@@ -601,7 +615,7 @@ int main(int argc, char *argv[])
       break;
     switch (c) {
     case 0:
-      if(option_index==10) { /* hardcoding this will lead to trouble */
+      if(option_index==11) { /* hardcoding this will lead to trouble */
         custom_ere = strdup(optarg);
       }
       break;
@@ -616,6 +630,9 @@ int main(int argc, char *argv[])
       break;
     case 'v':
       verbose_mode = 1;
+      break;
+    case 'd':
+      debug_mode = 1;
       break;
     case 'V':
       version();
