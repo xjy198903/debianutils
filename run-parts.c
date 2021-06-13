@@ -703,7 +703,7 @@ regex_compile_pattern (void)
         pt_regex = &classicalre;
 
     if (err != 0) {
-        fprintf(stderr, "Unable to build regexp: %s", \
+        fprintf(stderr, "Unable to build regexp: %s\n", \
                             regex_get_error(err, pt_regex));
         exit(1);
     }
