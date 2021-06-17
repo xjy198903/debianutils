@@ -11,7 +11,7 @@ run\-parts \- run scripts or programs in a directory
 .SH SYNOPSIS
 .PP
 .B run\-parts
-[\-\-test] [\-\-verbose] [\-\-report] [\-\-lsbsysinit] [\-\-regex=RE]
+[\-\-test] [\-\-verbose] [\-\-debug] [\-\-report] [\-\-lsbsysinit] [\-\-regex=RE]
 [\-\-umask=umask] [\-\-arg=argument] [\-\-exit\-on\-error] [\-\-help]
 [\-\-version] [\-\-list] [\-\-reverse] [\-\-] DIRECTORY
 .PP
@@ -64,6 +64,9 @@ similar to
 but only prints the name of scripts which produce output.
 The script's name is printed to whichever of stdout or stderr the
 script first produces output on.
+.TP
+.B \-d, \-\-debug
+print to stderr which scripts get selected for running and which don't.
 .TP
 .B \-\-reverse
 reverse the scripts' execution order.
