@@ -1,7 +1,6 @@
 #!/bin/sh -e
 
 run-parts --version
-tempfile 2>&1
 which sh
 ischroot --version
 savelog

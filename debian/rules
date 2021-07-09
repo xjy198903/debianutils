@@ -62,13 +62,11 @@ binary-arch:	build
 		       debian/tmp/usr/share/$(package)
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp INSTALL_PROGRAM="$(INSTALL_PROGRAM)"
 	mv debian/tmp/usr/bin/run-parts \
-	   debian/tmp/usr/bin/tempfile \
 	   debian/tmp/bin/
 
 ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 	$(STRIP) --remove-section=.comment --remove-section=.note \
 		debian/tmp/bin/run-parts \
-	   	debian/tmp/bin/tempfile \
 	   	debian/tmp/usr/bin/ischroot
 endif
 
@@ -99,7 +97,6 @@ endif
 	find debian/tmp ! -type l -print0 | xargs -0r chmod go=rX,u+rw,a-s
 
 	dpkg-shlibdeps debian/tmp/bin/run-parts \
-			debian/tmp/bin/tempfile \
 			debian/tmp/usr/bin/ischroot
 	dpkg-gencontrol -isp
 	find debian/tmp -depth -newermt '$(BUILD_DATE)' -print0 | \

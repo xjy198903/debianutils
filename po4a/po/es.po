@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debianutils 4.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-23 08:02-0400\n"
+"POT-Creation-Date: 2021-07-09 08:23-0400\n"
 "PO-Revision-Date: 2012-08-07 11:43+0200\n"
 "Last-Translator: Omar Campagne <ocampagne@gmail.com>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -57,7 +57,7 @@ msgstr "12 de mayo de 2011"
 
 #. type: SH
 #: ../add-shell.8:2 ../installkernel.8:2 ../ischroot.1:3 ../remove-shell.8:2
-#: ../run-parts.8:9 ../savelog.8:3 ../tempfile.1:3 ../which.1:3
+#: ../run-parts.8:9 ../savelog.8:3 ../which.1:3
 #, no-wrap
 msgid "NAME"
 msgstr "NOMBRE"
@@ -69,7 +69,7 @@ msgstr "add-shell - Añade consolas a la lista de consolas de sesión admitidas"
 
 #. type: SH
 #: ../add-shell.8:4 ../installkernel.8:4 ../ischroot.1:5 ../remove-shell.8:4
-#: ../run-parts.8:11 ../savelog.8:5 ../tempfile.1:5 ../which.1:5
+#: ../run-parts.8:11 ../savelog.8:5 ../which.1:5
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr "SINOPSIS"
@@ -81,7 +81,7 @@ msgstr "B<add-shell> I<nombre-consola> [I<nombre-consola>...]"
 
 #. type: SH
 #: ../add-shell.8:8 ../installkernel.8:6 ../ischroot.1:8 ../remove-shell.8:8
-#: ../run-parts.8:20 ../savelog.8:11 ../tempfile.1:10 ../which.1:7
+#: ../run-parts.8:20 ../savelog.8:11 ../which.1:7
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "DESCRIPCIÓN"
@@ -103,7 +103,7 @@ msgid "The shells must be provided by their full pathnames."
 msgstr "Las consolas se deben introducir con sus nombres de ruta completos."
 
 #. type: SH
-#: ../add-shell.8:20 ../remove-shell.8:17 ../savelog.8:166 ../tempfile.1:86
+#: ../add-shell.8:20 ../remove-shell.8:17 ../savelog.8:166
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "VÉASE TAMBIÉN"
@@ -167,7 +167,7 @@ msgstr ""
 "anteriormente instalado seguirá disponible como I<{directorio}/vmlinuz.old>. "
 
 #. type: SH
-#: ../installkernel.8:24 ../ischroot.1:35 ../savelog.8:159 ../tempfile.1:69
+#: ../installkernel.8:24 ../ischroot.1:35 ../savelog.8:159
 #, no-wrap
 msgid "BUGS"
 msgstr "FALLOS"
@@ -201,7 +201,7 @@ msgid "30 May 2011"
 msgstr "30 de mayo de 2011"
 
 #. type: TH
-#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2 ../which.1:2
+#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../which.1:2
 #, no-wrap
 msgid "Debian"
 msgstr "Debian"
@@ -267,8 +267,7 @@ msgstr ""
 "ejecuta como administrador). "
 
 #. type: SH
-#: ../ischroot.1:22 ../run-parts.8:47 ../savelog.8:94 ../tempfile.1:42
-#: ../which.1:16
+#: ../ischroot.1:22 ../run-parts.8:47 ../savelog.8:94 ../which.1:16
 #, no-wrap
 msgid "OPTIONS"
 msgstr "OPCIONES"
@@ -298,24 +297,24 @@ msgid "Exit with status 0 if the detection is not possible."
 msgstr "Cierra con un estado de salida 0 si la detección no es posible."
 
 #. type: TP
-#: ../ischroot.1:29 ../tempfile.1:60
+#: ../ischroot.1:29
 #, no-wrap
 msgid "B<--help>"
 msgstr "B<--help>"
 
 #. type: Plain text
-#: ../ischroot.1:32 ../tempfile.1:63
+#: ../ischroot.1:32
 msgid "Print a usage message on standard output and exit successfully."
 msgstr "Muestra información de uso por la salida estándar y cierra con éxito."
 
 #. type: TP
-#: ../ischroot.1:32 ../tempfile.1:63
+#: ../ischroot.1:32
 #, no-wrap
 msgid "B<--version>"
 msgstr "B<--version>"
 
 #. type: Plain text
-#: ../ischroot.1:35 ../tempfile.1:66
+#: ../ischroot.1:35
 msgid "Print version information on standard output and exit successfully."
 msgstr ""
 "Muestra información de la versión por la salida estándar y cierra con éxito."
@@ -375,7 +374,7 @@ msgid "RUN-PARTS"
 msgstr "RUN-PARTS"
 
 #. type: TH
-#: ../run-parts.8:8 ../tempfile.1:2
+#: ../run-parts.8:8
 #, no-wrap
 msgid "27 Jun 2012"
 msgstr "27 de junio de 2012"
@@ -1114,240 +1113,6 @@ msgid "B<logrotate>(8)"
 msgstr "B<logrotate>(8)"
 
 #. type: TH
-#: ../tempfile.1:2
-#, no-wrap
-msgid "TEMPFILE"
-msgstr "TEMPFILE"
-
-#. type: Plain text
-#: ../tempfile.1:5
-msgid "tempfile - create a temporary file in a safe manner"
-msgstr "tempfile - Crea un fichero temporal de forma segura"
-
-#. type: Plain text
-#: ../tempfile.1:10
-msgid ""
-"B<tempfile> [-d DIR] [-p STRING] [-s STRING] [-m MODE] [-n FILE] [--"
-"directory=DIR] [--prefix=STRING] [--suffix=STRING] [--mode=MODE] [--"
-"name=FILE] [--help] [--version]"
-msgstr ""
-"B<tempfile> [-d DIRECTORIO] [-p CADENA] [-s CADENA] [-m MODO] [-n FICHERO] "
-"[--directory=DIRECTORIO] [--prefix=CADENA] [--suffix=CADENA] [--mode=MODO] "
-"[--name=FICHERO] [--help] [--version]"
-
-#. type: Plain text
-#: ../tempfile.1:16
-#, fuzzy
-#| msgid ""
-#| "B<tempfile> creates a temporary file in a safe manner.  It uses "
-#| "B<tempnam>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
-#| "O_EXCL.  The filename is printed on standard output. See B<tempnam>(3)  "
-#| "for the actual steps involved in directory selection."
-msgid ""
-"B<tempfile> creates a temporary file in a safe manner.  It uses "
-"B<mkstemps>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
-"O_EXCL.  The filename is printed on standard output."
-msgstr ""
-"B<tempfile> crea un fichero temporal de manera segura. Utiliza B<tempnam>(3) "
-"para seleccionar un nombre, y lo abre con « O_RDWR | O_CREAT | O_EXCL». El "
-"nombre de fichero se muestra por la salida estándar. Consulte B<tempnam>(3) "
-"para ver los pasos que se toman para la selección del directorio."
-
-#. type: Plain text
-#: ../tempfile.1:19
-#, fuzzy
-#| msgid ""
-#| "The directory in which to create the file might be searched for in this "
-#| "order (but refer to B<tempnam>(3)  for authoritative answers):"
-msgid ""
-"The directory in which to create the file might be searched for in this "
-"order:"
-msgstr ""
-"Se busca el directorio en el que crear el fichero en el siguiente orden (sin "
-"embargo, consulte B<tempnam>(3) para ver información de la fuente original):"
-
-#. type: TP
-#: ../tempfile.1:19
-#, no-wrap
-msgid "a)"
-msgstr "a)"
-
-#. type: Plain text
-#: ../tempfile.1:25
-msgid ""
-"In case the environment variable B<TMPDIR> exists and contains the name of "
-"an appropriate directory, that is used."
-msgstr ""
-"Si existe la variable de entorno B<TMPDIR>, y contiene el nombre de un "
-"directorio adecuado, se utiliza."
-
-#. type: TP
-#: ../tempfile.1:25
-#, no-wrap
-msgid "b)"
-msgstr "b)"
-
-#. type: Plain text
-#: ../tempfile.1:30
-msgid ""
-"Otherwise, if the I<--directory> argument is specified and appropriate, it "
-"is used."
-msgstr ""
-"En caso contrario, si se define el argumento I<--directory>, y es adecuado, "
-"se utiliza este."
-
-#. type: TP
-#: ../tempfile.1:30
-#, no-wrap
-msgid "c)"
-msgstr "c)"
-
-#. type: Plain text
-#: ../tempfile.1:37
-msgid ""
-"Otherwise, I<P_tmpdir> (as defined in I<E<lt>stdio.hE<gt>>)  is used when "
-"appropriate."
-msgstr ""
-"De no ser así, se utiliza I<P_tmpdir> (tal y como se define en I<E<lt>stdio."
-"hE<gt>>) cuando es apropiado."
-
-#. type: TP
-#: ../tempfile.1:37
-#, no-wrap
-msgid "d)"
-msgstr "d)"
-
-#. type: Plain text
-#: ../tempfile.1:42
-#, fuzzy
-#| msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
-msgid "Finally an implementation-defined directory (I</tmp>)  may be used."
-msgstr "Por último, se puede utilizar el directorio implementado I<(/tmp)>. "
-
-#. type: TP
-#: ../tempfile.1:43
-#, no-wrap
-msgid "B<-d, --directory >I<DIR>"
-msgstr "B<-d, --directory >I<DIRECTORIO>"
-
-#. type: Plain text
-#: ../tempfile.1:46
-msgid "Place the file in DIR."
-msgstr "Copia el fichero al DIRECTORIO."
-
-#. type: TP
-#: ../tempfile.1:46
-#, no-wrap
-msgid "B<-m, --mode >I<MODE>"
-msgstr "B<-m, --mode >I<MODO>"
-
-#. type: Plain text
-#: ../tempfile.1:49
-msgid "Open the file with MODE instead of 0600."
-msgstr "Utiliza el MODO para abrir el fichero, en lugar de 0600."
-
-#. type: TP
-#: ../tempfile.1:49
-#, no-wrap
-msgid "B<-n, --name >I<FILE>"
-msgstr "B<-n, --name >I<FICHERO>"
-
-#. type: Plain text
-#: ../tempfile.1:54
-msgid ""
-"Use FILE for the name instead of B<tempnam>(3)B<.> The options -d, -p, and -"
-"s are ignored if this option is given."
-msgstr ""
-"Utiliza el FICHERO para el nombre, en lugar de B<tempnam>(3)B<.> Si se "
-"introduce esta opción, se ignoran las opciones «-d», «-p» y «-s»."
-
-#. type: TP
-#: ../tempfile.1:54
-#, no-wrap
-msgid "B<-p, --prefix >I<STRING>"
-msgstr "B<-p, --prefix >I<CADENA>"
-
-#. type: Plain text
-#: ../tempfile.1:57
-msgid "Use up to five letters of STRING to generate the name."
-msgstr "Utiliza hasta cinco letras de la CADENA para generar el nombre."
-
-#. type: TP
-#: ../tempfile.1:57
-#, no-wrap
-msgid "B<-s, --suffix >I<STRING>"
-msgstr "B<-s, --suffix >I<CADENA>"
-
-#. type: Plain text
-#: ../tempfile.1:60
-msgid "Generate the file with STRING as the suffix."
-msgstr "Genera el fichero con la CADENA como sufijo."
-
-#. type: SH
-#: ../tempfile.1:66
-#, no-wrap
-msgid "RETURN VALUES"
-msgstr "ESTADOS DE SALIDA"
-
-#. type: Plain text
-#: ../tempfile.1:69
-msgid ""
-"An exit status of 0 means the temporary file was created successfully.  Any "
-"other exit status indicates an error."
-msgstr ""
-"Un estado de salida cero significa que el fichero temporal ha sido creado "
-"con éxito. Cualquier otro estado de salida indica un fallo."
-
-#. type: Plain text
-#: ../tempfile.1:75
-#, fuzzy
-#| msgid ""
-#| "Exclusive creation is not guaranteed when creating files on NFS "
-#| "partitions.  tempfile cannot make temporary directories.  tempfile is "
-#| "deprecated; you should use mktemp(1) instead."
-msgid ""
-"Exclusive creation is not guaranteed when creating files on NFS partitions.  "
-"tempfile cannot make temporary directories.  tempfile is deprecated; you "
-"should use B<mktemp>(1)  instead."
-msgstr ""
-"No se garantiza la creación exclusiva al crear ficheros en particiones NFS. "
-"tempfile no puede crear directorios temporales. tempfile está obsoleto, debe "
-"utilizar mktemp(1) en su lugar."
-
-#. type: SH
-#: ../tempfile.1:75
-#, no-wrap
-msgid "EXAMPLE"
-msgstr "EJEMPLO"
-
-#. type: Plain text
-#: ../tempfile.1:85
-#, no-wrap
-msgid ""
-"#!/bin/sh\n"
-"#[...]\n"
-"t=$(tempfile) || exit\n"
-"trap \"rm -f -- '$t'\" EXIT\n"
-"#[...]\n"
-"rm -f -- \"$t\"\n"
-"trap - EXIT\n"
-"exit\n"
-msgstr ""
-"#!/bin/sh\n"
-"#[...]\n"
-"t=$(tempfile) || exit\n"
-"trap \"rm -f -- '$t'\" EXIT\n"
-"#[...]\n"
-"rm -f -- \"$t\"\n"
-"trap - EXIT\n"
-"exit\n"
-
-#. type: Plain text
-#: ../tempfile.1:88
-msgid "B<tempnam>(3), B<mktemp>(1)"
-msgstr "B<tempnam>(3), B<mktemp>(1)"
-
-#. type: TH
 #: ../which.1:2
 #, no-wrap
 msgid "WHICH"
@@ -1442,14 +1207,3 @@ msgstr "B<2>"
 #: ../which.1:29
 msgid "if an invalid option is specified"
 msgstr "La opción definida no es válida."
-
-#~ msgid "30 Jun 2010"
-#~ msgstr "30 de junio de 2010"
-
-#~ msgid "override date format, in the form of I<[MMDDhhmm[[CC]YY][.ss]]>"
-#~ msgstr ""
-#~ "Sobreescribe el formato de fecha, con el siguiente formato "
-#~ "I<[MMDDhhmm[[CC]YY][.ss]]>"
-
-#~ msgid "1 May 2009"
-#~ msgstr "1 de mayo de 2009"

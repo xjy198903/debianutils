@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils 4.11\n"
-"POT-Creation-Date: 2020-05-23 08:02-0400\n"
+"POT-Creation-Date: 2021-07-09 08:23-0400\n"
 "PO-Revision-Date: 2020-06-07 19:10+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <>\n"
@@ -36,7 +36,7 @@ msgstr "12 May 2011"
 # type: SH
 #. type: SH
 #: ../add-shell.8:2 ../installkernel.8:2 ../ischroot.1:3 ../remove-shell.8:2
-#: ../run-parts.8:9 ../savelog.8:3 ../tempfile.1:3 ../which.1:3
+#: ../run-parts.8:9 ../savelog.8:3 ../which.1:3
 #, no-wrap
 msgid "NAME"
 msgstr "NOME"
@@ -50,7 +50,7 @@ msgstr "add-shell - adiciona shells à lista de shells de login válidas"
 # type: SH
 #. type: SH
 #: ../add-shell.8:4 ../installkernel.8:4 ../ischroot.1:5 ../remove-shell.8:4
-#: ../run-parts.8:11 ../savelog.8:5 ../tempfile.1:5 ../which.1:5
+#: ../run-parts.8:11 ../savelog.8:5 ../which.1:5
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr "SINOPSE"
@@ -64,7 +64,7 @@ msgstr "B<add-shell> I<nome_shell> [I<nome_shell>...]"
 # type: SH
 #. type: SH
 #: ../add-shell.8:8 ../installkernel.8:6 ../ischroot.1:8 ../remove-shell.8:8
-#: ../run-parts.8:20 ../savelog.8:11 ../tempfile.1:10 ../which.1:7
+#: ../run-parts.8:20 ../savelog.8:11 ../which.1:7
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "DESCRIÇÃO"
@@ -89,7 +89,7 @@ msgstr "As shells devem ser fornecidas com os seus nomes de caminho completos."
 
 # type: SH
 #. type: SH
-#: ../add-shell.8:20 ../remove-shell.8:17 ../savelog.8:166 ../tempfile.1:86
+#: ../add-shell.8:20 ../remove-shell.8:17 ../savelog.8:166
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "VEJA TAMBÉM"
@@ -161,7 +161,7 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: ../installkernel.8:24 ../ischroot.1:35 ../savelog.8:159 ../tempfile.1:69
+#: ../installkernel.8:24 ../ischroot.1:35 ../savelog.8:159
 #, no-wrap
 msgid "BUGS"
 msgstr "BUGS"
@@ -169,18 +169,14 @@ msgstr "BUGS"
 # type: Plain text
 #. type: Plain text
 #: ../installkernel.8:29
-#| msgid ""
-#| "installkernel resides in /sbin only because the Linux kernel makefiles "
-#| "call it from there.  It should really be in /usr/sbin.  It isn't needed "
-#| "to boot a system."
 msgid ""
 "B<installkernel> resides in /sbin only because the Linux kernel makefiles "
 "call it from there.  It should really be in /usr/sbin.  It isn't needed to "
 "boot a system."
 msgstr ""
-"B<installkernel> reside apenas em /sbin porque a chamada makefiles do "
-"kernel Linux é feita a partir de lá. Deveria realmente estar em /usr/sbin. "
-"Não é necessário para arrancar o sistema."
+"B<installkernel> reside apenas em /sbin porque a chamada makefiles do kernel "
+"Linux é feita a partir de lá. Deveria realmente estar em /usr/sbin. Não é "
+"necessário para arrancar o sistema."
 
 #. type: TH
 #: ../ischroot.1:2
@@ -197,7 +193,7 @@ msgstr "30 May 2011"
 
 # type: TH
 #. type: TH
-#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../tempfile.1:2 ../which.1:2
+#: ../ischroot.1:2 ../run-parts.8:8 ../savelog.8:2 ../which.1:2
 #, no-wrap
 msgid "Debian"
 msgstr "Debian"
@@ -214,9 +210,6 @@ msgstr "B<ischroot> [--default-false] [--default-true] [--help] [--version]"
 
 #. type: Plain text
 #: ../ischroot.1:12
-#| msgid ""
-#| "B<ischroot> detects if it is currently running in a chroot. The exit "
-#| "status is:"
 msgid ""
 "B<ischroot> detects if it is currently running in a chroot.  The exit status "
 "is:"
@@ -265,8 +258,7 @@ msgstr ""
 
 # type: SH
 #. type: SH
-#: ../ischroot.1:22 ../run-parts.8:47 ../savelog.8:94 ../tempfile.1:42
-#: ../which.1:16
+#: ../ischroot.1:22 ../run-parts.8:47 ../savelog.8:94 ../which.1:16
 #, no-wrap
 msgid "OPTIONS"
 msgstr "OPÇÕES"
@@ -274,7 +266,6 @@ msgstr "OPÇÕES"
 #. type: TP
 #: ../ischroot.1:23
 #, no-wrap
-#| msgid "B<-f, --default-false >"
 msgid "B<-f, --default-false>"
 msgstr "B<-f, --default-false>"
 
@@ -286,7 +277,6 @@ msgstr "Termina com o estado 1 se a detecção não for possível."
 #. type: TP
 #: ../ischroot.1:26
 #, no-wrap
-#| msgid "B<-t, --default-true >"
 msgid "B<-t, --default-true>"
 msgstr "B<-t, --default-true>"
 
@@ -297,36 +287,33 @@ msgstr "Termina com o estado 0 se a detecção não for possível."
 
 # type: TP
 #. type: TP
-#: ../ischroot.1:29 ../tempfile.1:60
+#: ../ischroot.1:29
 #, no-wrap
 msgid "B<--help>"
 msgstr "B<--help>"
 
 # type: Plain text
 #. type: Plain text
-#: ../ischroot.1:32 ../tempfile.1:63
+#: ../ischroot.1:32
 msgid "Print a usage message on standard output and exit successfully."
 msgstr ""
 "Escreve uma mensagem de utilização na saída standard e termina com sucesso."
 
 # type: TP
 #. type: TP
-#: ../ischroot.1:32 ../tempfile.1:63
+#: ../ischroot.1:32
 #, no-wrap
 msgid "B<--version>"
 msgstr "B<--version>"
 
 # type: Plain text
 #. type: Plain text
-#: ../ischroot.1:35 ../tempfile.1:66
+#: ../ischroot.1:35
 msgid "Print version information on standard output and exit successfully."
 msgstr "Escreve informação da versão na saída standard e termina com sucesso."
 
 #. type: Plain text
 #: ../ischroot.1:38
-#| msgid ""
-#| "On GNU/Linux, chroot detection is not possible when not root. This works "
-#| "correctly on GNU/Hurd and GNU/kFreeBSD."
 msgid ""
 "On GNU/Linux, chroot detection is not possible when not root.  This works "
 "correctly on GNU/Hurd and GNU/kFreeBSD."
@@ -381,7 +368,7 @@ msgstr "RUN-PARTS"
 
 # type: TH
 #. type: TH
-#: ../run-parts.8:8 ../tempfile.1:2
+#: ../run-parts.8:8
 #, no-wrap
 msgid "27 Jun 2012"
 msgstr "27 Jun 2012"
@@ -848,13 +835,6 @@ msgstr "1)"
 # type: Plain text
 #. type: Plain text
 #: ../savelog.8:61
-#| msgid ""
-#| "Version numbered files are cycled.  Version I<file>.I<2> is moved to "
-#| "version I<file>.I<3>, version I<file>.I<1> is moved to version I<file>."
-#| "I<2>, and so on.  Finally version I<file>.I<0> is moved to version "
-#| "I<file>.I<1>, and version I<file> is deleted.  Both compressed names and "
-#| "uncompressed names are cycled, regardless of B<-l>.  Missing version "
-#| "files are ignored."
 msgid ""
 "Version numbered files are cycled.  Version I<file>B<\\&.2> is moved to "
 "version I<file>B<\\&.3>, version I<file>B<\\&.1> is moved to version "
@@ -863,13 +843,13 @@ msgid ""
 "names and uncompressed names are cycled, regardless of B<-l>.  Missing "
 "version files are ignored."
 msgstr ""
-"É feito um ciclo aos ficheiros com número de versão. O I<ficheiro> versão "
-"B<\\&.2> é movido para I<ficheiro> versão B<\\&.3>, I<ficheiro> versão "
-"B<\\&.1> é movido para I<ficheiro> versão B<\\&.2>, e assim sucessivamente. "
-"Finalmente o I<ficheiro> versão B<\\&.0> é movido para I<ficheiro> versão "
-"B<\\&.1> e o I<ficheiro> versão é apagado. É feito esta reciclagem a ambos "
-"nomes comprimidos e nomes não comprimidos, independentemente de B<-l>. "
-"Os ficheiros de versão em falta são ignorados."
+"É feito um ciclo aos ficheiros com número de versão. O I<ficheiro> versão B<"
+"\\&.2> é movido para I<ficheiro> versão B<\\&.3>, I<ficheiro> versão B<"
+"\\&.1> é movido para I<ficheiro> versão B<\\&.2>, e assim sucessivamente. "
+"Finalmente o I<ficheiro> versão B<\\&.0> é movido para I<ficheiro> versão B<"
+"\\&.1> e o I<ficheiro> versão é apagado. É feito esta reciclagem a ambos "
+"nomes comprimidos e nomes não comprimidos, independentemente de B<-l>. Os "
+"ficheiros de versão em falta são ignorados."
 
 # type: IP
 #. type: IP
@@ -881,9 +861,6 @@ msgstr "2)"
 # type: Plain text
 #. type: Plain text
 #: ../savelog.8:70
-#| msgid ""
-#| "The new I<file>.I<1> is compressed unless the B<-l> flag was given.  It "
-#| "is changed subject to the B<-m>, B<-u>, and B<-g> flags."
 msgid ""
 "The new I<file>B<\\&.1> is compressed unless the B<-l> flag was given.  It "
 "is changed subject to the B<-m>, B<-u>, and B<-g> flags."
@@ -901,7 +878,6 @@ msgstr "3)"
 # type: Plain text
 #. type: Plain text
 #: ../savelog.8:76
-#| msgid "The main I<file> is moved to I<file>.I<0>."
 msgid "The main I<file> is moved to I<file>B<.0>."
 msgstr "O I<ficheiro> principal é movido para I<ficheiro>B<.0>."
 
@@ -934,15 +910,12 @@ msgstr "5)"
 # type: Plain text
 #. type: Plain text
 #: ../savelog.8:93
-#| msgid ""
-#| "The new I<file>.I<0> is changed subject to the B<-m>, B<-u>, and B<-g> "
-#| "flags."
 msgid ""
 "The new I<file>B<\\&.0> is changed subject to the B<-m>, B<-u>, and B<-g> "
 "flags."
 msgstr ""
-"O novo I<ficheiro>B<\\&.0> é alterado de acordo com as flags B<-m>, B<-u>, "
-"e B<-g>."
+"O novo I<ficheiro>B<\\&.0> é alterado de acordo com as flags B<-m>, B<-u>, e "
+"B<-g>."
 
 # type: TP
 #. type: TP
@@ -993,9 +966,6 @@ msgstr "B<-c ciclo>"
 # type: Plain text
 #. type: Plain text
 #: ../savelog.8:113
-#| msgid ""
-#| "Save cycle versions of the logfile (default: 7). The I<cycle> count must "
-#| "be at least 2."
 msgid ""
 "Save cycle versions of the logfile (default: 7).  The I<cycle> count must be "
 "at least 2."
@@ -1070,10 +1040,6 @@ msgstr "comprime com xz em vez de gzip"
 
 #. type: Plain text
 #: ../savelog.8:134
-#| msgid ""
-#| "For xz no strength option is set, and xz decides on the default based on "
-#| "the total amount of physical RAM. Note that xz can use a very large "
-#| "amount of memory for the higher compression levels."
 msgid ""
 "For xz no strength option is set, and xz decides on the default based on the "
 "total amount of physical RAM.  Note that xz can use a very large amount of "
@@ -1147,7 +1113,6 @@ msgstr "B<-r>"
 # type: Plain text
 #. type: Plain text
 #: ../savelog.8:153
-#| msgid "use I<rolldir> instead of . to roll files"
 msgid "use I<rolldir> instead of \\&.\\& to roll files"
 msgstr "usa I<rolldir> em vez de \\&.\\& para rodar os ficheiros"
 
@@ -1180,9 +1145,6 @@ msgstr "fica silencioso"
 # type: Plain text
 #. type: Plain text
 #: ../savelog.8:165
-#| msgid ""
-#| "If a process is still writing to I<file.0>, and savelog moves it to "
-#| "I<file.1> and compresses it, data could be lost."
 msgid ""
 "If a process is still writing to I<file>B<\\&.0>, and savelog moves it to "
 "I<file>B<\\&.1> and compresses it, data could be lost."
@@ -1194,252 +1156,6 @@ msgstr ""
 #: ../savelog.8:167
 msgid "B<logrotate>(8)"
 msgstr "B<logrotate>(8)"
-
-# type: TH
-#. type: TH
-#: ../tempfile.1:2
-#, no-wrap
-msgid "TEMPFILE"
-msgstr "TEMPFILE"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:5
-msgid "tempfile - create a temporary file in a safe manner"
-msgstr "tempfile - cria um ficheiro temporário de um modo seguro"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:10
-msgid ""
-"B<tempfile> [-d DIR] [-p STRING] [-s STRING] [-m MODE] [-n FILE] [--"
-"directory=DIR] [--prefix=STRING] [--suffix=STRING] [--mode=MODE] [--"
-"name=FILE] [--help] [--version]"
-msgstr ""
-"B<tempfile> [-d DIR] [-p STRING] [-s STRING] [-m MODO] [-n FICHEIRO] [--"
-"directory=DIR] [--prefix=STRING] [--suffix=STRING] [--mode=MODO] [--"
-"name=FICHEIRO] [--help] [--version]"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:16
-msgid ""
-"B<tempfile> creates a temporary file in a safe manner.  It uses "
-"B<mkstemps>(3)  to choose the name and opens it with O_RDWR | O_CREAT | "
-"O_EXCL.  The filename is printed on standard output."
-msgstr ""
-"B<tempfile> cria um ficheiro temporário num modo seguro. Usa B<mkstemps>(3) "
-"para escolher o nome e abre-o com O_RDWR | O_CREAT | O_EXCL. O nome do "
-"ficheiro é escrito na saída standard."
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:19
-msgid ""
-"The directory in which to create the file might be searched for in this "
-"order:"
-msgstr ""
-"O directório onde se vai criar o ficheiro pode ser pesquisado por esta ordem:"
-
-# type: IP
-#. type: TP
-#: ../tempfile.1:19
-#, no-wrap
-msgid "a)"
-msgstr "a)"
-
-#. type: Plain text
-#: ../tempfile.1:25
-msgid ""
-"In case the environment variable B<TMPDIR> exists and contains the name of "
-"an appropriate directory, that is used."
-msgstr ""
-"No caso da variável de ambiente B<TMPDIR> existir e conter o nome dum "
-"directório apropriado, esse é usado."
-
-# type: IP
-#. type: TP
-#: ../tempfile.1:25
-#, no-wrap
-msgid "b)"
-msgstr "b)"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:30
-msgid ""
-"Otherwise, if the I<--directory> argument is specified and appropriate, it "
-"is used."
-msgstr ""
-"Caso contrário, se o argumento I<--directório> for específico e apropriado, "
-"ele é usado."
-
-# type: IP
-#. type: TP
-#: ../tempfile.1:30
-#, no-wrap
-msgid "c)"
-msgstr "c)"
-
-#. type: Plain text
-#: ../tempfile.1:37
-msgid ""
-"Otherwise, I<P_tmpdir> (as defined in I<E<lt>stdio.hE<gt>>)  is used when "
-"appropriate."
-msgstr ""
-"Caso contrário, I<P_tmpdir> (como definido em I<E<lt>stdio.hE<gt>>)  é usado "
-"quando apropriado."
-
-#. type: TP
-#: ../tempfile.1:37
-#, no-wrap
-msgid "d)"
-msgstr "d)"
-
-#. type: Plain text
-#: ../tempfile.1:42
-#| msgid "Finally an implementation-defined directory I<(/tmp)> may be used."
-msgid "Finally an implementation-defined directory (I</tmp>)  may be used."
-msgstr ""
-"Finalmente pode ser usado um directório de implementação definida (I</tmp>)."
-
-# type: TP
-#. type: TP
-#: ../tempfile.1:43
-#, no-wrap
-msgid "B<-d, --directory >I<DIR>"
-msgstr "B<-d, --directory >I<DIR>"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:46
-msgid "Place the file in DIR."
-msgstr "Coloca o ficheiro em DIR."
-
-# type: TP
-#. type: TP
-#: ../tempfile.1:46
-#, no-wrap
-msgid "B<-m, --mode >I<MODE>"
-msgstr "B<-m, --mode >I<MODO>"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:49
-msgid "Open the file with MODE instead of 0600."
-msgstr "Abre o ficheiro com MODO em vez de 0600."
-
-# type: TP
-#. type: TP
-#: ../tempfile.1:49
-#, no-wrap
-msgid "B<-n, --name >I<FILE>"
-msgstr "B<-n, --name >I<FICHEIRO>"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:54
-msgid ""
-"Use FILE for the name instead of B<tempnam>(3)B<.> The options -d, -p, and -"
-"s are ignored if this option is given."
-msgstr ""
-"Usa FICHEIRO para o nome em vez de B<tempnam>(3)B<.> As opções -d, -p, e -s "
-"são ignoradas se for usada esta opção."
-
-# type: TP
-#. type: TP
-#: ../tempfile.1:54
-#, no-wrap
-msgid "B<-p, --prefix >I<STRING>"
-msgstr "B<-p, --prefix >I<STRING>"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:57
-msgid "Use up to five letters of STRING to generate the name."
-msgstr "Usa até cinco letras de STRING para gerar o nome."
-
-# type: TP
-#. type: TP
-#: ../tempfile.1:57
-#, no-wrap
-msgid "B<-s, --suffix >I<STRING>"
-msgstr "B<-s, --suffix >I<STRING>"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:60
-msgid "Generate the file with STRING as the suffix."
-msgstr "Gera o ficheiro com STRING sendo o sufixo."
-
-# type: SH
-#. type: SH
-#: ../tempfile.1:66
-#, no-wrap
-msgid "RETURN VALUES"
-msgstr "VALORES DE RETORNO"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:69
-msgid ""
-"An exit status of 0 means the temporary file was created successfully.  Any "
-"other exit status indicates an error."
-msgstr ""
-"Um estado ao terminar de 0 significa que o ficheiro temporário foi criado "
-"com sucesso. Qualquer outro estado ao terminar indica um erro."
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:75
-#| msgid ""
-#| "Exclusive creation is not guaranteed when creating files on NFS "
-#| "partitions.  tempfile cannot make temporary directories.  tempfile is "
-#| "deprecated; you should use mktemp(1) instead."
-msgid ""
-"Exclusive creation is not guaranteed when creating files on NFS partitions.  "
-"tempfile cannot make temporary directories.  tempfile is deprecated; you "
-"should use B<mktemp>(1)  instead."
-msgstr ""
-"Não é garantida a criação exclusiva quando se criam ficheiros em partições "
-"NFS, o tempfile não pode fazer directórios temporários. O tempfile está "
-"abandonado, você deve usar o B<mktemp>(1) em vez deste."
-
-# type: SH
-#. type: SH
-#: ../tempfile.1:75
-#, no-wrap
-msgid "EXAMPLE"
-msgstr "EXEMPLO"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:85
-#, no-wrap
-msgid ""
-"#!/bin/sh\n"
-"#[...]\n"
-"t=$(tempfile) || exit\n"
-"trap \"rm -f -- '$t'\" EXIT\n"
-"#[...]\n"
-"rm -f -- \"$t\"\n"
-"trap - EXIT\n"
-"exit\n"
-msgstr ""
-"#!/bin/sh\n"
-"#[...]\n"
-"t=$(tempfile) || exit\n"
-"trap \"rm -f -- '$t'\" EXIT\n"
-"#[...]\n"
-"rm -f -- \"$t\"\n"
-"trap - EXIT\n"
-"exit\n"
-
-# type: Plain text
-#. type: Plain text
-#: ../tempfile.1:88
-msgid "B<tempnam>(3), B<mktemp>(1)"
-msgstr "B<tempnam>(3), B<mktemp>(1)"
 
 # type: TH
 #. type: TH
@@ -1470,12 +1186,6 @@ msgstr "which [-a] nome_de_ficheiro ..."
 # type: Plain text
 #. type: Plain text
 #: ../which.1:16
-#| msgid ""
-#| "B<which> returns the pathnames of the files (or links) which would be "
-#| "executed in the current environment, had its arguments been given as "
-#| "commands in a strictly POSIX-conformant shell.  It does this by searching "
-#| "the PATH for executable files matching the names of the arguments. It "
-#| "does not canonicalize path names."
 msgid ""
 "B<which> returns the pathnames of the files (or links) which would be "
 "executed in the current environment, had its arguments been given as "
@@ -1548,22 +1258,3 @@ msgstr "B<2>"
 #: ../which.1:29
 msgid "if an invalid option is specified"
 msgstr "se for especificada uma opção inválida"
-
-# type: TH
-#~ msgid "30 Jun 2010"
-#~ msgstr "30 Jun 2010"
-
-# type: Plain text
-#~ msgid "override date format, in the form of I<[MMDDhhmm[[CC]YY][.ss]]>"
-#~ msgstr "sobrepõe o formato da data, no formato I<[MMDDhhmm[[CC]YY][.ss]]>"
-
-# type: TH
-#~ msgid "1 May 2009"
-#~ msgstr "1 May 2009"
-
-#~ msgid "14 Nov 2010"
-#~ msgstr "14 novembre 2010"
-
-# type: TH
-#~ msgid "9 Aug 2009"
-#~ msgstr "9 août 2009"

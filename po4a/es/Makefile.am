@@ -1,7 +1,7 @@
 AUTOMAKE_OPTIONS=foreign
 
 manesonedir = $(mandir)/es/man1
-manesone_DATA = tempfile.1 which.1
+manesone_DATA = which.1
 # readlink.1 is now distributed by coreutils
 
 maneseightdir = $(mandir)/es/man8
