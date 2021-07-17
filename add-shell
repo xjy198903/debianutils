@@ -17,7 +17,7 @@ cleanup() {
 }
 trap cleanup EXIT
 
-if ! awk '{print}' "$file" > "$tmpfile"
+if ! cat "$file" > "$tmpfile"
 then
         cat 1>&2 <<EOF
 Either another instance of $0 is running, or it was previously interrupted.
