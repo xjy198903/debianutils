@@ -1,6 +1,13 @@
 stages:
 - build
 - test
+- upload
+- release
+
+variables:
+  PACKAGE_VERSION: '0.0.0.0.TEST'
+  PACKAGE_REGISTRY_URL: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/debianutils"
+
 build-job:
   image: debian:unstable
   stage: build
@@ -9,12 +16,46 @@ build-job:
   - apt -u upgrade -y
   - apt install -y automake build-essential po4a
   - "(cd po4a && po4a --no-backups po4a.conf)"
+  - printf "define(DEBIANUTILS_VERSION, ${PACKAGE_VERSION})\n" >acinclude.m4
   - autoreconf -fiv
   - "./configure"
   - make distcheck
+  - mkdir tarballs
+  - mv debianutils-*.tar.gz tarballs/
   - make
+  artifacts:
+    paths:
+    - ./tarballs
 
 sast:
   stage: test
 include:
 - template: Security/SAST.gitlab-ci.yml
+
+upload-job:
+  stage: upload
+  image: curlimages/curl:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: never
+    - when: always
+  script:
+    - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file "tarballs/debianutils-${PACKAGE_VERSION}.tar.gz" "${PACKAGE_REGISTRY_URL}/${PACKAGE_VERSION}/debianutils-${PACKAGE_VERSION}.tar.gz"'
+    - 'echo curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file "tarballs/debianutils-${PACKAGE_VERSION}.tar.gz" "${PACKAGE_REGISTRY_URL}/${PACKAGE_VERSION}/debianutils-${PACKAGE_VERSION}.tar.gz"'
+    - 'curl --request DELETE --header "JOB-TOKEN: $CI_JOB_TOKEN" "${PACKAGE_REGISTRY_URL}/${PACKAGE_VERSION}/debianutils-${PACKAGE_VERSION}.tar.gz"'
+
+release-tarball:
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  stage: release
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - echo "This job releases a tarball for $CI_COMMIT_TAG."
+    - release-cli create --name "Release $CI_COMMIT_TAG" --tag-name $CI_COMMIT_TAG \
+        --assets-link "{\"name\":\"debianutils-${PACKAGE_VERSION}.tar.gz\",\"url\":\"${PACKAGE_REGISTRY_URL}/${DARWIN_AMD64_BINARY}\"}" \
+        --assets-link "{\"name\":\"${LINUX_AMD64_BINARY}\",\"url\":\"${PACKAGE_REGISTRY_URL}/${LINUX_AMD64_BINARY}\"}"
+
+  release:
+    name: 'Release $CI_COMMIT_TAG'
+    description: 'Release $CI_COMMIT_SHA as $CI_COMMIT_TAG'
+    tag_name: '$CI_COMMIT_TAG'
