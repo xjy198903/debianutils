@@ -1,7 +1,7 @@
 AUTOMAKE_OPTIONS=foreign
 
-mandeonedir = $(mandir)/pt/man1
-mandeone_DATA = which.1
+manptonedir = $(mandir)/pt/man1
+dist_manptone_DATA = which.1
 
-mandeeightdir = $(mandir)/pt/man8
-mandeeight_DATA = add-shell.8 installkernel.8 remove-shell.8 run-parts.8 savelog.8
+manpteightdir = $(mandir)/pt/man8
+dist_manpteight_DATA = add-shell.8 installkernel.8 remove-shell.8 run-parts.8 savelog.8

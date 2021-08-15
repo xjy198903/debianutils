@@ -1,8 +1,7 @@
 AUTOMAKE_OPTIONS=foreign
 
 manfronedir = $(mandir)/fr/man1
-manfrone_DATA = which.1
-# readlink.1 is now distributed by coreutils
+dist_manfrone_DATA = which.1
 
 manfreightdir = $(mandir)/fr/man8
-manfreight_DATA = add-shell.8 installkernel.8 remove-shell.8 run-parts.8 savelog.8
+dist_manfreight_DATA = add-shell.8 installkernel.8 remove-shell.8 run-parts.8 savelog.8
