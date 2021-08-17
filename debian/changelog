@@ -1,3 +1,19 @@
+debianutils (5.0-1) unstable; urgency=medium
+
+  [ Tomas Pospisek ]
+  * run-parts.8: document --debug flag introduced in commit 37596c61
+  * run-parts.8: mention that run-parts runs parts sequentially
+
+  [ Clint Adams ]
+  * run-parts: Apply patch from Christoph Biedl to add --debug flag.
+    closes: #243676.
+  * Add missing newline to regexp build error, thanks to Christoph Biedl.
+  * Remove tempfile.
+  * Deprecate which.
+  * Move run-parts to /usr/bin and installkernel to /usr/sbin.
+
+ -- Clint Adams <clint@debian.org>  Tue, 17 Aug 2021 17:03:42 -0400
+
 debianutils (4.11.2) unstable; urgency=medium
 
   * ischroot: send usage and version to stdout.  closes: #961872.
