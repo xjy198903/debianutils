@@ -60,6 +60,8 @@ binary-arch:	build
 		       debian/tmp/usr/share/doc/$(package) \
 		       debian/tmp/usr/share/$(package)
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp INSTALL_PROGRAM="$(INSTALL_PROGRAM)"
+	mv debian/tmp/usr/bin/which debian/tmp/usr/bin/which.debianutils
+	mv debian/tmp/usr/share/man/man1/which.1 debian/tmp/usr/share/man/man1/which.debianutils.1
 
 ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 	$(STRIP) --remove-section=.comment --remove-section=.note \
@@ -87,6 +89,7 @@ endif
 	$(INSTALL_FILE) debian/copyright debian/tmp/usr/share/doc/$(package)
 	$(INSTALL_SCRIPT) debian/postinst debian/tmp/DEBIAN/
 	$(INSTALL_SCRIPT) debian/postrm debian/tmp/DEBIAN/
+	$(INSTALL_SCRIPT) debian/prerm debian/tmp/DEBIAN/
 	$(INSTALL_FILE) debian/triggers debian/tmp/DEBIAN/
 
 	cd debian/tmp && find * -type f ! -regex '^DEBIAN/.*' -print0 | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums

@@ -6,15 +6,21 @@ then
 fi
 
 case "$1" in
-    configure|triggered)
+    (configure)
+	update-shells --root "${DPKG_ROOT:-}"
+        update-alternatives --install /usr/bin/which which /usr/bin/which.debianutils 0 \
+		--slave /usr/share/man/man1/which.1.gz which.1.gz /usr/share/man/man1/which.debianutils.1.gz
+    ;;
+    (triggered)
 	update-shells --root "${DPKG_ROOT:-}"
     ;;
 
-    abort-upgrade|abort-remove|abort-deconfigure)
-
+    (abort-upgrade|abort-remove|abort-deconfigure)
+        update-alternatives --install /usr/bin/which which /usr/bin/which.debianutils 0 \
+		--slave /usr/share/man/man1/which.1.gz which.1.gz /usr/share/man/man1/which.debianutils.1.gz
     ;;
 
-    *)
+    (*)
         echo "postinst called with unknown argument \`$1'" >&2
         exit 1
     ;;
