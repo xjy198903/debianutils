@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
 run-parts --version
-which sh
+which sh 2>/dev/null
 ischroot --version
 savelog
