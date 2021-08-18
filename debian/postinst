@@ -6,7 +6,8 @@ then
 fi
 
 case "$1" in
-    configure)
+    configure|triggered)
+	update-shells --root "${DPKG_ROOT:-}"
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

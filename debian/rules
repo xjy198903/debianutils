@@ -54,6 +54,7 @@ binary-arch:	build
 	$(INSTALL_DIR) debian/tmp/DEBIAN \
 		       debian/tmp/usr/bin \
 		       debian/tmp/usr/sbin \
+		       debian/tmp/usr/share/debianutils/shells.d \
 		       debian/tmp/usr/share/man/man1 \
 		       debian/tmp/usr/share/man/man8 \
 		       debian/tmp/usr/share/doc/$(package) \
@@ -85,6 +86,8 @@ endif
              debian/tmp/usr/share/doc/$(package) -type f | xargs gzip -9n
 	$(INSTALL_FILE) debian/copyright debian/tmp/usr/share/doc/$(package)
 	$(INSTALL_SCRIPT) debian/postinst debian/tmp/DEBIAN/
+	$(INSTALL_SCRIPT) debian/postrm debian/tmp/DEBIAN/
+	$(INSTALL_FILE) debian/triggers debian/tmp/DEBIAN/
 
 	cd debian/tmp && find * -type f ! -regex '^DEBIAN/.*' -print0 | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums
 
