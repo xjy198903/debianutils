@@ -22,5 +22,5 @@ Description: Miscellaneous utilities specific to Debian
  .
  The specific utilities included are:
  add-shell installkernel ischroot remove-shell run-parts savelog
- which
+ update-shells which
 
