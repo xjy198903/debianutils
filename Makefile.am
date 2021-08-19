@@ -2,6 +2,8 @@ AUTOMAKE_OPTIONS = foreign
 
 SUBDIRS = po4a
 
+EXTRA_DIST = CHANGELOG CONTRIBUTING
+
 bin_PROGRAMS = run-parts ischroot
 run_parts_SOURCES = run-parts.c
 ischroot_SOURCES = ischroot.c
