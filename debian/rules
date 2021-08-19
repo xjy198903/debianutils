@@ -74,7 +74,7 @@ ifneq ($(DEB_HOST_ARCH_OS),linux)
 	   debian/tmp/usr/share/man/man8/installkernel.8
 endif
 	$(INSTALL_FILE) debian/shells debian/tmp/usr/share/$(package)
-	$(INSTALL_FILE) CHANGELOG.md debian/tmp/usr/share/doc/$(package)/changelog
+	$(INSTALL_FILE) CHANGELOG debian/tmp/usr/share/doc/$(package)/changelog
 	$(INSTALL_FILE) debian/changelog debian/tmp/usr/share/doc/$(package)/changelog.Debian
 	$(INSTALL_FILE) debian/README.shells debian/tmp/usr/share/doc/$(package)
 	find debian/tmp/usr/share/man/man[18] \
