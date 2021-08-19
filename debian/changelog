@@ -1,3 +1,9 @@
+debianutils (5.2-2) unstable; urgency=medium
+
+  * Add Breaks on ifupdown (<< 0.8.36+nmu1).  closes: #992410.
+
+ -- Clint Adams <clint@debian.org>  Thu, 19 Aug 2021 11:35:38 -0400
+
 debianutils (5.2-1) unstable; urgency=medium
 
   * New upstream version.
