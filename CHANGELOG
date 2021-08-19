@@ -1,3 +1,8 @@
+# 5.2
+
+ * savelog: use `command -v` instead of `which`, since
+   `which` is deprecated.
+
 # 5.1
 
  * Add update-shells by Helmut Grohne.
