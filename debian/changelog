@@ -1,3 +1,12 @@
+debianutils (5.3-1) unstable; urgency=medium
+
+  * New upstream version
+    - * update-shells, update-shells.8: multiple fixes.  closes: #992559.
+  * Add NEWS.Debian with text from Christoph Anton Mitterer and
+    Michael Gold.  closes: #992383, #992466.
+
+ -- Clint Adams <clint@debian.org>  Fri, 20 Aug 2021 07:31:04 -0400
+
 debianutils (5.2-2) unstable; urgency=medium
 
   * Add Breaks on ifupdown (<< 0.8.36+nmu1).  closes: #992410.
