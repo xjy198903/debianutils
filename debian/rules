@@ -77,6 +77,7 @@ endif
 	$(INSTALL_FILE) CHANGELOG debian/tmp/usr/share/doc/$(package)/changelog
 	$(INSTALL_FILE) debian/changelog debian/tmp/usr/share/doc/$(package)/changelog.Debian
 	$(INSTALL_FILE) debian/README.shells debian/tmp/usr/share/doc/$(package)
+	$(INSTALL_FILE) debian/NEWS debian/tmp/usr/share/doc/$(package)/NEWS.Debian
 	find debian/tmp/usr/share/man/man[18] \
 	     debian/tmp/usr/share/man/de/man[18] \
 	     debian/tmp/usr/share/man/es/man[18] \
