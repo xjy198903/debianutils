@@ -1,3 +1,10 @@
+# 5.3
+
+ * update-shells: multiple fixes, thanks to Helmut Grohne for the
+   patch and Guillem Jover and Johannes Schauer for testing.
+ * update-shells.8: FILES section from Helmut Grohne, suggested by
+   Guillem Jover.
+
 # 5.2
 
  * savelog: use `command -v` instead of `which`, since
