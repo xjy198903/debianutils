@@ -63,9 +63,14 @@ done
 
 PKG_DIR="$ROOT/usr/share/debianutils/shells.d"
 STATE_FILE="$ROOT/var/lib/shells.state"
-ETC_FILE="$ROOT/etc/shells"
-NEW_ETC_FILE="$ETC_FILE.tmp"
+TARGET_ETC_FILE="$ROOT/etc/shells"
+SOURCE_ETC_FILE="$TARGET_ETC_FILE"
+NEW_ETC_FILE="$TARGET_ETC_FILE.tmp"
 NEW_STATE_FILE="$STATE_FILE.tmp"
+
+if ! test -e "$SOURCE_ETC_FILE"; then
+	SOURCE_ETC_FILE="$ROOT/usr/share/debianutils/shells"
+fi
 
 PKG_SHELLS='#'
 LC_COLLATE=C.UTF-8  # glob in reproducible order
@@ -106,7 +111,7 @@ while IFS= read -r line; do
 	else
 		log "removing shell $shell"
 	fi
-done < "$ETC_FILE"
+done < "$SOURCE_ETC_FILE"
 
 : > "$NEW_STATE_FILE"
 saved_IFS=$IFS
@@ -133,12 +138,14 @@ if [ "$NOACT" = 0 ]; then
 	else
 		chmod 0644 "$NEW_STATE_FILE"
 	fi
-	chmod --reference="$ETC_FILE" "$NEW_ETC_FILE"
-	chown --reference="$ETC_FILE" "$NEW_ETC_FILE"
+	chmod --reference="$SOURCE_ETC_FILE" "$NEW_ETC_FILE"
+	chown --reference="$SOURCE_ETC_FILE" "$NEW_ETC_FILE"
 	sync --data "$NEW_ETC_FILE" "$NEW_STATE_FILE"
-	mv "$NEW_ETC_FILE" "$ETC_FILE"
-	sync "$ETC_FILE"
+	mv "$NEW_ETC_FILE" "$TARGET_ETC_FILE"
+	sync "$TARGET_ETC_FILE"
+	sync "$(dirname "$TARGET_ETC_FILE")"
 	mv "$NEW_STATE_FILE" "$STATE_FILE"
 	sync "$STATE_FILE"
+	sync "$(dirname "$STATE_FILE")"
 	trap "" EXIT
 fi
