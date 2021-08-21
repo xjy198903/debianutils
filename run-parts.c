@@ -63,7 +63,8 @@ static char* regex_get_error(int errcode, regex_t *compiled);
 static void  regex_compile_pattern(void);
 static void  regex_clean(void);
 
-void error(char *format, ...)
+__attribute__((format (printf, 1, 2)))
+void error(const char *format, ...)
 {
   va_list ap;
 
@@ -436,7 +437,6 @@ static int open_tmpfile_rw(void)
 static int copy_stdin(void)
 {
   int fd;
-  const char *tmpdir;
   char buffer[4096];
   ssize_t bytes;
 
@@ -503,7 +503,6 @@ void run_parts(char *dirname)
     }
   }
 
-  i = reverse_mode ? 0 : entries;
   for (i = reverse_mode ? (entries - 1) : 0;
        reverse_mode ? (i >= 0) : (i < entries); reverse_mode ? i-- : i++) {
     if (filename_length < dirname_length + strlen(namelist[i]->d_name) + 1) {
@@ -539,7 +538,7 @@ void run_parts(char *dirname)
 	    printf("%s\n", filename);
 	}
 	else {
-	  if (verbose_mode)
+	  if (verbose_mode) {
 	    if (argcount) {
 	      char **a = args;
 
@@ -550,6 +549,7 @@ void run_parts(char *dirname)
 	    } else {
 	      fprintf(stderr, "run-parts: executing %s\n", filename);
 	    }
+	  }
 	  run_part(filename);
 	  if (exitstatus != 0 && exit_on_error_mode) return;
 	}
