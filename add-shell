@@ -41,7 +41,7 @@ done
 chmod --reference="$file" "$tmpfile"
 chown --reference="$file" "$tmpfile"
 
-mv "$tmpfile" "$file"
+mv -Z "$tmpfile" "$file"
 
 trap "" EXIT
 exit 0
