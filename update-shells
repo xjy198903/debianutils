@@ -141,7 +141,7 @@ if [ "$NOACT" = 0 ]; then
 	chmod --reference="$SOURCE_ETC_FILE" "$NEW_ETC_FILE"
 	chown --reference="$SOURCE_ETC_FILE" "$NEW_ETC_FILE"
 	sync --data "$NEW_ETC_FILE" "$NEW_STATE_FILE"
-	mv "$NEW_ETC_FILE" "$TARGET_ETC_FILE"
+	mv -Z "$NEW_ETC_FILE" "$TARGET_ETC_FILE"
 	sync "$TARGET_ETC_FILE"
 	sync "$(dirname "$TARGET_ETC_FILE")"
 	mv "$NEW_STATE_FILE" "$STATE_FILE"
