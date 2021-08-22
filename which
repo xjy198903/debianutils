@@ -1,7 +1,7 @@
 #! /bin/sh
 set -ef
 
-echo >&2 "$0: this version of 'which' is deprecated and should not be used."
+echo >&2 "$0: this version of \`which' is deprecated; use \`command -v' in scripts instead."
 
 if test -n "$KSH_VERSION"; then
 	puts() {
