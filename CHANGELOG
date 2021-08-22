@@ -1,3 +1,11 @@
+# 5.4
+
+ * add-shell, remove-shell, update-shells: create /etc/shells with
+   default SELinux context, by Christian Göttsche
+ * add-shell, remove-shell, update-shells: fall back to
+   busybox-compatible arguments if certain calls fail.
+ * which: directly recommend `command -v` in the deprecation warning
+
 # 5.3
 
  * update-shells: multiple fixes, thanks to Helmut Grohne for the
