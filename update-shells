@@ -133,14 +133,14 @@ done
 
 if [ "$NOACT" = 0 ]; then
 	if [ -e "$STATE_FILE" ]; then
-		chmod --reference="$STATE_FILE" "$NEW_STATE_FILE"
-		chown --reference="$STATE_FILE" "$NEW_STATE_FILE"
+		chmod --reference="${STATE_FILE}" "${NEW_STATE_FILE}" || chmod $(stat -c %a "${STATE_FILE}") "${NEW_STATE_FILE}"
+		chown --reference="${STATE_FILE}" "${NEW_STATE_FILE}" || chown $(stat -c %U "${STATE_FILE}") "${NEW_STATE_FILE}"
 	else
 		chmod 0644 "$NEW_STATE_FILE"
 	fi
-	chmod --reference="$SOURCE_ETC_FILE" "$NEW_ETC_FILE"
-	chown --reference="$SOURCE_ETC_FILE" "$NEW_ETC_FILE"
-	sync --data "$NEW_ETC_FILE" "$NEW_STATE_FILE"
+	chmod --reference="${SOURCE_ETC_FILE}" "${NEW_ETC_FILE}" || chmod $(stat -c %a "${SOURCE_ETC_FILE}") "${NEW_ETC_FILE}"
+	chown --reference="${SOURCE_ETC_FILE}" "${NEW_ETC_FILE}" || chown $(stat -c %U "${SOURCE_ETC_FILE}") "${NEW_ETC_FILE}"
+	sync -d "$NEW_ETC_FILE" "$NEW_STATE_FILE"
 	mv -Z "${NEW_ETC_FILE}" "${TARGET_ETC_FILE}" || mv "${NEW_ETC_FILE}" "${TARGET_ETC_FILE}"
 	sync "$TARGET_ETC_FILE"
 	sync "$(dirname "$TARGET_ETC_FILE")"

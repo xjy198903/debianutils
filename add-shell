@@ -38,8 +38,8 @@ do
         done
 done
 
-chmod --reference="$file" "$tmpfile"
-chown --reference="$file" "$tmpfile"
+chmod --reference="${file}" "${tmpfile}" || chmod $(stat -c %a "${file}") "${tmpfile}"
+chown --reference="${file}" "${tmpfile}" || chown $(stat -c %U "${file}") "${tmpfile}"
 
 mv -Z "${tmpfile}" "${file}" || mv "${tmpfile}" "${file}"
 
