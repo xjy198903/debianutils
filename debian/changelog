@@ -1,3 +1,14 @@
+debianutils (5.4-1) unstable; urgency=medium
+
+  * New upstream version:
+    - add-shell, remove-shell, update-shells: restore busybox
+      compatibility thanks to Johannes Schauer Marin Rodrigues.
+      closes: #992695.
+    - which: change the deprecation warning so people won't need
+      to read the man page.  closes: #992383.
+
+ -- Clint Adams <clint@debian.org>  Sun, 22 Aug 2021 12:24:58 -0400
+
 debianutils (5.3-1) unstable; urgency=medium
 
   * New upstream version
