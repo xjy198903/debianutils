@@ -2,7 +2,7 @@
 
 if test -z "$2" && test ! -f /etc/shells
 then
-        cp -pZ /usr/share/debianutils/shells /etc/shells
+	cp -pZ /usr/share/debianutils/shells /etc/shells || cp -p /usr/share/debianutils/shells /etc/shells
 fi
 
 case "$1" in
