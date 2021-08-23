@@ -1,3 +1,10 @@
+debianutils (5.4-2) unstable; urgency=medium
+
+  * Patch from Johannes Schauer Marin Rodrigues for busybox fallback
+    in postinst.
+
+ -- Clint Adams <clint@debian.org>  Mon, 23 Aug 2021 13:20:28 -0400
+
 debianutils (5.4-1) unstable; urgency=medium
 
   * New upstream version:
