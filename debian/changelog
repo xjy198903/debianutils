@@ -1,3 +1,10 @@
+debianutils (5.4-3) unstable; urgency=medium
+
+  * Handle translated which(1) man pages with alternatives as well.
+    closes: #992480.
+
+ -- Clint Adams <clint@debian.org>  Tue, 24 Aug 2021 15:54:11 -0400
+
 debianutils (5.4-2) unstable; urgency=medium
 
   * Patch from Johannes Schauer Marin Rodrigues for busybox fallback
