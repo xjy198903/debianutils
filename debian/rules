@@ -62,6 +62,7 @@ binary-arch:	build
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp INSTALL_PROGRAM="$(INSTALL_PROGRAM)"
 	mv debian/tmp/usr/bin/which debian/tmp/usr/bin/which.debianutils
 	mv debian/tmp/usr/share/man/man1/which.1 debian/tmp/usr/share/man/man1/which.debianutils.1
+	for i in de es fr it ja pl sl; do mv debian/tmp/usr/share/man/$${i}/man1/which.1 debian/tmp/usr/share/man/$${i}/man1/which.debianutils.1; done
 
 ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 	$(STRIP) --remove-section=.comment --remove-section=.note \
