@@ -14,7 +14,7 @@ Architecture: any
 Pre-Depends: ${shlibs:Depends}
 Essential: yes
 Multi-Arch: foreign
-Breaks: x11-common (<< 1:7.7+23~), ifupdown (<< 0.8.36+nmu1)
+Breaks: printer-driver-pnm2ppa (<< 1.13-12), x11-common (<< 1:7.7+23~), ifupdown (<< 0.8.36+nmu1)
 Description: Miscellaneous utilities specific to Debian
  This package provides a number of small utilities which are used
  primarily by the installation scripts of Debian packages, although
