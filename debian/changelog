@@ -1,3 +1,9 @@
+debianutils (5.4-4) unstable; urgency=medium
+
+  * Add Breaks on printer-driver-pnm2ppa.  closes: #993665.
+
+ -- Clint Adams <clint@debian.org>  Wed, 08 Sep 2021 16:57:40 -0400
+
 debianutils (5.4-3) unstable; urgency=medium
 
   * Handle translated which(1) man pages with alternatives as well.
