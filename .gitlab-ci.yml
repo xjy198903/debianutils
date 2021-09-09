@@ -8,7 +8,6 @@ build-job:
   - apt update
   - apt -u upgrade -y
   - apt install -y automake build-essential po4a
-  - "(cd po4a && po4a --no-backups po4a.conf)"
   - autoreconf -fiv
   - "./configure"
   - make distcheck
