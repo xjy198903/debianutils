@@ -2,8 +2,9 @@ AC_INIT([debianutils],[DEBIANUTILS_VERSION])
 AM_INIT_AUTOMAKE
 
 AC_PROG_CC
+AC_PATH_PROG([po4a_translate],[po4a-translate])
+AM_CONDITIONAL([TRANSLATE_DOCS], [test -n "$po4a_translate"])
 
-AC_HEADER_STDC
 AC_CHECK_HEADERS(paths.h getopt.h)
 
 AC_SYS_LARGEFILE
