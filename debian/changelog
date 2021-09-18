@@ -1,3 +1,10 @@
+debianutils (5.5-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Add debian/watch and debian/upstream/metadata
+
+ -- Clint Adams <clint@debian.org>  Sat, 18 Sep 2021 16:23:29 -0400
+
 debianutils (5.4-4) unstable; urgency=medium
 
   * Add Breaks on printer-driver-pnm2ppa.  closes: #993665.
