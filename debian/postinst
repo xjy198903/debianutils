@@ -12,9 +12,9 @@ ua() {
 		--slave /usr/share/man/sl/man1/which.1.gz which.sl1.gz /usr/share/man/sl/man1/which.debianutils.1.gz
 }
 
-if test -z "$2" && test ! -f /etc/shells
+if test -z "$2" && test ! -f "$DPKG_ROOT/etc/shells"
 then
-	cp -pZ /usr/share/debianutils/shells /etc/shells || cp -p /usr/share/debianutils/shells /etc/shells
+	cp -pZ "$DPKG_ROOT/usr/share/debianutils/shells" "$DPKG_ROOT/etc/shells" || cp -p "$DPKG_ROOT/usr/share/debianutils/shells" "$DPKG_ROOT/etc/shells"
 fi
 
 case "$1" in
