@@ -1,4 +1,4 @@
-.TH REMOVE-SHELL 8 "7 Apr 2005"
+.TH REMOVE-SHELL 8 "23 Sep 2021"
 .SH NAME
 remove-shell \- remove shells from the list of valid login shells
 .SH SYNOPSIS
@@ -14,5 +14,11 @@ and
 to remove the given shells from the list of valid login shells,
 and copy the result back to
 .IR /etc/shells .
+.SH "ENVIRONMENT"
+.TP
+.I DPKG_ROOT
+specifies the base path under which
+.IR /etc/shells
+resides.
 .SH SEE ALSO
 .BR shells (5)
