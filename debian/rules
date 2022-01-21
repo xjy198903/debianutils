@@ -52,6 +52,8 @@ binary-arch:	build
 	$(checkdir)
 	-rm -rf debian/tmp
 	$(INSTALL_DIR) debian/tmp/DEBIAN \
+		       debian/tmp/bin \
+		       debian/tmp/sbin \
 		       debian/tmp/usr/bin \
 		       debian/tmp/usr/sbin \
 		       debian/tmp/usr/share/debianutils/shells.d \
@@ -63,14 +65,20 @@ binary-arch:	build
 	mv debian/tmp/usr/bin/which debian/tmp/usr/bin/which.debianutils
 	mv debian/tmp/usr/share/man/man1/which.1 debian/tmp/usr/share/man/man1/which.debianutils.1
 	for i in de es fr it ja pl sl; do mv debian/tmp/usr/share/man/$${i}/man1/which.1 debian/tmp/usr/share/man/$${i}/man1/which.debianutils.1; done
+	mv debian/tmp/usr/bin/run-parts \
+	   debian/tmp/usr/bin/tempfile \
+	   debian/tmp/bin/
 
 ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 	$(STRIP) --remove-section=.comment --remove-section=.note \
-		debian/tmp/usr/bin/run-parts \
+		debian/tmp/bin/run-parts \
+		debian/tmp/bin/tempfile \
 	   	debian/tmp/usr/bin/ischroot
 endif
 
-ifneq ($(DEB_HOST_ARCH_OS),linux)
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+	mv debian/tmp/usr/sbin/installkernel debian/tmp/sbin/
+else
 	rm debian/tmp/usr/sbin/installkernel \
 	   debian/tmp/usr/share/man/man8/installkernel.8
 endif
@@ -98,7 +106,8 @@ endif
 
 	find debian/tmp ! -type l -print0 | xargs -0r chmod go=rX,u+rw,a-s
 
-	dpkg-shlibdeps debian/tmp/usr/bin/run-parts \
+	dpkg-shlibdeps debian/tmp/bin/run-parts \
+			debian/tmp/bin/tempfile \
 			debian/tmp/usr/bin/ischroot
 	dpkg-gencontrol -isp
 	find debian/tmp -depth -newermt '$(BUILD_DATE)' -print0 | \
