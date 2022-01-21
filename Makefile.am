@@ -2,7 +2,7 @@ AUTOMAKE_OPTIONS = foreign
 
 SUBDIRS = po4a
 
-EXTRA_DIST = CHANGELOG CONTRIBUTING
+EXTRA_DIST = CHANGELOG CONTRIBUTING .gitlab-ci.yml
 
 bin_PROGRAMS = run-parts tempfile ischroot
 run_parts_SOURCES = run-parts.c

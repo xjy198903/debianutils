@@ -9,5 +9,5 @@ AC_CHECK_HEADERS(paths.h getopt.h)
 
 AC_SYS_LARGEFILE
 
-AC_CONFIG_FILES([Makefile po4a/Makefile po4a/de/Makefile po4a/es/Makefile po4a/fr/Makefile po4a/it/Makefile po4a/ja/Makefile po4a/pl/Makefile po4a/sl/Makefile])
+AC_CONFIG_FILES([Makefile po4a/Makefile po4a/de/Makefile po4a/es/Makefile po4a/fr/Makefile po4a/it/Makefile po4a/ja/Makefile po4a/pl/Makefile po4a/pt/Makefile po4a/sl/Makefile])
 AC_OUTPUT
