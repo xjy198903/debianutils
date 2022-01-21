@@ -3,7 +3,7 @@ AUTOMAKE_OPTIONS=foreign
 l = es
 addendum =
 
-TRANSLATE = po4a-translate -f man $(addendum) -p $(top_srcdir)/po4a/po/$(l).po
+TRANSLATE = po4a-translate -k 0 -f man $(addendum) -p $(top_srcdir)/po4a/po/$(l).po
 
 manlangonedir = $(mandir)/$(l)/man1
 dist_manlangone_DATA = which.1

@@ -1,3 +1,22 @@
+debianutils (5.6-0.1) UNRELEASED; urgency=medium
+
+  [ Bastian Blank ]
+  * Non-maintainer upload.
+  * Implement CTTE ruling #994275.
+  * Revert deprecation of which (no. 2).
+    closes: #993582, #993700
+  * Restore tempfile (no. 4).
+  * Revert move to /usr (no. 5).
+    closes: #992481, #992615, #992639, #992649
+  * Remove not longer applicable NEWS entry.
+  * Force creation of translated man-pages to fix all build.
+
+  [ Johannes Schauer Marin Rodrigues ]
+  * also distribute *.po files and *.add files in dist tarball
+    (closes: #1000866)
+
+ -- Bastian Blank <waldi@debian.org>  Fri, 21 Jan 2022 08:41:44 +0100
+
 debianutils (5.5-1) unstable; urgency=medium
 
   * New upstream version.
