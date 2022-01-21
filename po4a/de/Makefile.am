@@ -9,6 +9,8 @@ else
   TRANSLATE = @echo po4a-translate not installed, failing to rebuild changed man page translation; exit 1;
 endif
 
+EXTRA_DIST = translator_german.add
+
 manlangonedir = $(mandir)/$(l)/man1
 dist_manlangone_DATA = which.1
 
