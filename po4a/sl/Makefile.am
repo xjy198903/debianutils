@@ -5,6 +5,8 @@ addendum = -a $(top_srcdir)/po4a/$(l)/translator_slovene.add
 
 TRANSLATE = po4a-translate -f man $(addendum) -p $(top_srcdir)/po4a/po/$(l).po
 
+EXTRA_DIST = translator_slovene.add
+
 manlangonedir = $(mandir)/$(l)/man1
 dist_manlangone_DATA = which.1
 
