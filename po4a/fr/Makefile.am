@@ -3,7 +3,7 @@ AUTOMAKE_OPTIONS=foreign
 l = fr
 addendum = -a $(top_srcdir)/po4a/$(l)/translator_french.add
 
-TRANSLATE = po4a-translate -f man $(addendum) -p $(top_srcdir)/po4a/po/$(l).po
+TRANSLATE = po4a-translate -k 0 -f man $(addendum) -p $(top_srcdir)/po4a/po/$(l).po
 
 EXTRA_DIST = translator_french.add savelog.8.fr.add which.1.fr.add
 

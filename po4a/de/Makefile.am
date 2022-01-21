@@ -4,7 +4,7 @@ l = de
 addendum = -a $(top_srcdir)/po4a/$(l)/translator_german.add
 
 if TRANSLATE_DOCS
-  TRANSLATE = po4a-translate -f man $(addendum) -p $(top_srcdir)/po4a/po/$(l).po
+  TRANSLATE = po4a-translate -k 0 -f man $(addendum) -p $(top_srcdir)/po4a/po/$(l).po
 else
   TRANSLATE = @echo po4a-translate not installed, failing to rebuild changed man page translation; exit 1;
 endif
