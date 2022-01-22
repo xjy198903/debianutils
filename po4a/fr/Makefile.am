@@ -8,7 +8,7 @@ TRANSLATE = po4a-translate -k 0 -f man $(addendum) -p $(top_srcdir)/po4a/po/$(l)
 EXTRA_DIST = translator_french.add savelog.8.fr.add which.1.fr.add
 
 manlangonedir = $(mandir)/$(l)/man1
-dist_manlangone_DATA = readlink.1 which.1
+dist_manlangone_DATA = which.1
 
 manlangeightdir = $(mandir)/$(l)/man8
 dist_manlangeight_DATA = add-shell.8 installkernel.8 remove-shell.8 run-parts.8 savelog.8
