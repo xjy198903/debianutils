@@ -24,6 +24,9 @@ LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS)
 
 BUILD_DATE := $(shell dpkg-parsechangelog | sed -n -e 's/^Date: //p')
 
+# don't create translation tarball (useful for Ubuntu)
+export NO_PKG_MANGLE=1
+
 build: build-indep build-arch
 build-indep:
 
