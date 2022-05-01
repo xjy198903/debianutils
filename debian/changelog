@@ -1,3 +1,11 @@
+debianutils (5.7-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * debian/rules:
+    - Set the NO_PKG_MANGLE variable (for Ubuntu). Closes: #1006970
+
+ -- Gunnar Hjalmarsson <gunnarhj@debian.org>  Sun, 01 May 2022 18:47:00 +0200
+
 debianutils (5.7-0.1) unstable; urgency=medium
 
   * Non-maintainer upload.
