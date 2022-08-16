@@ -1,0 +1,31 @@
+--- a/update-shells
++++ b/update-shells
+@@ -23,7 +23,7 @@ log() {
+ 	fi
+ }
+ 
+-ROOT=
++ROOT=${DPKG_ROOT:-}
+ VERBOSE=0
+ NOACT=0
+ 
+@@ -79,7 +79,7 @@ for f in "$PKG_DIR/"*; do
+ 	while IFS='#' read -r line _; do
+ 		[ -n "$line" ] || continue
+ 		PKG_SHELLS="$PKG_SHELLS$line#"
+-		realshell=$(dpkg-realpath --root "$ROOT" "$line")
++		realshell=$(dirname "$(dpkg-realpath --root "$ROOT" "$line")")/$(basename "$line")
+ 		if [ "$line" != "$realshell" ]; then
+ 			PKG_SHELLS="$PKG_SHELLS$realshell#"
+ 		fi
+--- a/update-shells.8
++++ b/update-shells.8
+@@ -24,6 +24,8 @@ Do not actually perform the changes to
+ 
+ Operate on a chroot at
+ .I ROOT .
++Defaults to the value of the environment variable
++.I DPKG_ROOT .
+ .TP
+ .B \-\-verbose
+ Print the shells that are being added or removed.

@@ -19,11 +19,11 @@ fi
 
 case "$1" in
     (configure)
-	update-shells --root "${DPKG_ROOT:-}"
+	update-shells
 	ua
     ;;
     (triggered)
-	update-shells --root "${DPKG_ROOT:-}"
+	update-shells
     ;;
 
     (abort-upgrade|abort-remove|abort-deconfigure)
